@@ -54,4 +54,4 @@
     <li>Employees</li>
     <li>Appraisals<li>
 </ul>
-<img src= "./public/DBs.jpg" height="1000px" width="800px">
+<img src= "./public/DBs.png" height="500px" width="400px">
