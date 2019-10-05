@@ -34,8 +34,6 @@
     <li>New Appraisal</li>
     <li>Read Appraisal</li>
     </ul>
-<h2>Wireframes</h2>
-<img src= "./public/wireframes.jpg" height="1000px" width="800px">
 <h2>Views</h2>
     <ul>
     <li>Login/Register</li>
@@ -45,6 +43,8 @@
     <li>New Appraisal</li>
     <li>Edit Employee</li>
     </ul>
+<h2>Wireframes</h2>
+<img src= "./public/wireframes.jpg" height="1000px" width="800px">
 
 <h2>ERD</h2>
 
