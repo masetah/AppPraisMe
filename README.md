@@ -19,7 +19,7 @@
     <ul>
     <li>Navbar</li>
     <li>Login</li>
-    <li>Register</li>>
+    <li>Register</li>
     <li>Employee Index</li>
     <li>Create Employee</li>
     <li>Read Employee</li>
@@ -40,8 +40,9 @@
     </ul>
 
 <h2>ERD</h2>
-<ul>Tables</ul>
+<ul>
+    <h3> Tables </h3>
     <li>Managers</li>
     <li>Employees</li>
     <li>Appraisals<li>
-
+</ul>
