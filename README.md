@@ -1,2 +1,2 @@
 # AppPraiseMe
-<img src="public/wireframes.HEIC" hight=500px width=400px>
+<img src="./public/wireframes" height="500px" width="400px">
