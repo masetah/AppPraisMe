@@ -1,4 +1,4 @@
-# AppPraiseMe
+# AppPraise-Me
 <h2>Project Description</h2>
     <p>AppPraise-Me aims to solve a tried and true issue seen in many workplaces. More often than not managers avoid completing empoyee appraisals in a timely manner because there is is not a quick and easy way for managers to repeat the appraisal process.  </p>
 <h2>User Story</h2>
@@ -14,7 +14,14 @@
     <li>Reactstrap</li>
     </ul>
 <h2>MVP/Post MVP</h2>
-
+    <ul> MVP
+    <li>A functional front end that translates backend information</li>
+     <li>A Manager is able to create login and only see his or her information when logging in. </li>
+     <li> Create: Employees, appraisals </li>
+     <li> Read: Employees List, Individual Employees Appraisals by employee, Individual Employee appraisals </li>
+     <li> Update: Employees </li>
+     <li> Delete: Employees </li>
+    </ul>
 <h2>Components</h2>
     <ul>
     <li>Navbar</li>
@@ -40,7 +47,8 @@
     </ul>
 
 <h2>ERD</h2>
-<ul>
+
+<ul>  
     <h3> Tables </h3>
     <li>Managers</li>
     <li>Employees</li>
