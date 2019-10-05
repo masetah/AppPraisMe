@@ -49,7 +49,7 @@
 <h2>ERD</h2>
 
 <ul>  
-    <h3> Tables </h3>
+    Tables
     <li>Managers</li>
     <li>Employees</li>
     <li>Appraisals<li>
