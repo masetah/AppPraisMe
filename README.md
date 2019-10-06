@@ -12,6 +12,7 @@
     <li>Session</li>
     <li>Bcrypt</li>
     <li>Reactstrap</li>
+    <li>React Router</li>
     </ul>
 <h2>MVP/Post MVP</h2>
     <ul> MVP
