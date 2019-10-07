@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Register from './Register'
 
 class Login extends Component {
     constructor(){
@@ -22,6 +23,7 @@ class Login extends Component {
     render(){
         return(
             <div>
+                <h1>AppPraise Me</h1>
                 <h3>Please log in here.</h3>
                 <form onSubmit={this.handleSubmit}>
                     <input type="text" placeholder="email" name="email" onChange={this.handleChange}></input>
@@ -30,6 +32,7 @@ class Login extends Component {
                     <br></br>
                     <input type="submit" value="Login"></input>
                 </form>
+                <Register/>
             </div>
         )
     }

@@ -20,10 +20,9 @@ class Register extends Component {
 
     createNewUser=(e)=>{
         e.preventDefault();
-        if(this.state.email===this.state.confemail && this.state.password===this.state.confpassword){
+        // if(this.state.email===this.state.confemail && this.state.password===this.state.confpassword){
             this.props.handleRegister(this.state);
-        }
-        
+        // }
     }
     
     render(){

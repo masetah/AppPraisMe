@@ -1,15 +1,15 @@
 import React, {Component} from 'react';
 import Navigation from '../Components/Navigation'
 
-class EmployeeShow extends Component {
+class Dashboard extends Component {
   render(){
     return (
         <div>
           <Navigation/>
-          <h1>Employee Show</h1>
+          <h1>Manager's Dashboard</h1>
         </div>
     );
   }
 }
 
-export default EmployeeShow;
+export default Dashboard;
