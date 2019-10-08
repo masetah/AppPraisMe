@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
-import Navigation from '../Components/Navigation'
+import Navigation from '../Components/Navigation';
+import EmployeeIndex from '../Components/EmployeeIndex';
+import NewEmployee from '../Components/NewEmployee';
 
 class Dashboard extends Component {
   render(){
@@ -7,6 +9,9 @@ class Dashboard extends Component {
         <div>
           <Navigation/>
           <h1>Manager's Dashboard</h1>
+          <NewEmployee/>
+          <EmployeeIndex/>
+          
         </div>
     );
   }
