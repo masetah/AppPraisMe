@@ -26,7 +26,8 @@ class NewEmployee extends Component {
         })
         const parsedResponse = await createEmployee.json();
         console.log(parsedResponse, "parsedResonse")
-          this.setState({
+          this.props.updateEmployeeArray(parsedResponse.employee)
+            this.setState({
             name:"",
             postion:"",
             hire_date:"",

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import UpdateEmployee from '../Components/EditEmployeeModal';
+import NewEmployee from './NewEmployee';
 import { Button } from 'reactstrap';
 
 class EmployeeIndex extends Component {
@@ -13,7 +14,15 @@ class EmployeeIndex extends Component {
     componentDidMount(){
         this.getEmployees();
     }
-
+    updateEmployeeArray=(employee)=>{
+        console.log(employee, "from employee index line 18")
+        this.setState(prevState=>{
+            prevState.employees.push(employee)
+            return{
+                employees:prevState.employees
+            }
+        })
+    }
     getEmployees = async () => {
         const employees =await fetch("http://localhost:3001/employees");
         const parsedResponse = await employees.json()
@@ -26,21 +35,18 @@ class EmployeeIndex extends Component {
     updateEmployee = async (id, formData) => {
         const updatedEmployee = await fetch(`http://localhost:3001/employees/${id}`, {
             method: "PUT",
-            // credentials: "include",
             body: JSON.stringify(formData),
             headers: {
                 "Content-Type": "application/json"
             }
         })
         const parsedResponse = await updatedEmployee.json();
-        this.setState({
-            employees: this.state.employees.map((employee)=>{
-                if(id===employee._id){
-                    return parsedResponse.data
-                }else{
-                    return employee
-                }
-            })
+        this.setState(prevState=>{
+            const filterEmployeeArray = prevState.employees.filter(element=>element.id!==id)
+            const updatedEmployee = parsedResponse.employee
+            return{
+                employees:[...filterEmployeeArray, updatedEmployee]
+            }
         })
         console.log(parsedResponse)
     }
@@ -50,12 +56,13 @@ class EmployeeIndex extends Component {
         try{
             const deleteEmployee = await fetch(`http://localhost:3001/employees/${id}`, {
             method:'DELETE',
-            // credentials: "include",
         });
-        const parsedResponse = await deleteEmployee.json();
-        if(parsedResponse.status.code===204){
+        console.log(deleteEmployee)
+        const parsedResponse = await deleteEmployee
+        console.log(parsedResponse, "Line 62")
+        if(parsedResponse.status===204){
             this.setState({
-                employees: this.state.eemployees.filter((employee,i) =>employee._id !==id)
+                employees: this.state.employees.filter((employee) => employee.id !==id)
             });
         }
     }catch(err){
@@ -64,22 +71,31 @@ class EmployeeIndex extends Component {
     }
 
     render(){
-        const employees = this.state.employees.map((employee)=>{
-            return <div key={employee.id}>
-                <Button color="link">{employee.name} ({employee.position}) </Button>
-                <UpdateEmployee updateEmployee={this.updateEmployee} employee={employee}/>
-                <Button color="danger" onClick={()=>{
-                    this.deleteEmployee(employee.id)
-                }}>Terminate</Button>
-            </div>
-        })
-        return(
-            <div>
-                <h2>Employees</h2>
-                {employees}
-            </div>
-        )
+        console.log(this.state.employees)
+        // if(this.state.employees.length!=0){
+            const employees = this.state.employees.map((employee, index)=>{
+                if(employee){
+                    return <div key={index}>
+                    <Button color="link">{employee.name} ({employee.position}) </Button>
+                    <UpdateEmployee updateEmployee={this.updateEmployee} employee={employee}/>
+                    <Button color="danger" onClick={()=>{
+                        this.deleteEmployee(employee.id)
+                    }}>Terminate</Button>
+                </div>
+                }
+                console.log(employee)
+        
+            })
+            return(
+                <div>
+                    <NewEmployee updateEmployeeArray={this.updateEmployeeArray}/>
+                    <h2>Employees</h2>
+                    {employees}
+                </div>
+            )
+        // }else{return null}
     }
+
 }
 
 export default EmployeeIndex;
