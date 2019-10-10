@@ -2402,3 +2402,1546 @@ Processing by EmployeesController#destroy as */*
 Completed 204 No Content in 5ms (Views: 0.1ms | ActiveRecord: 1.3ms | Allocations: 2238)
 
 
+Started GET "/employees" for ::1 at 2019-10-09 12:38:34 -0500
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (4.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 19ms (Views: 6.2ms | ActiveRecord: 9.8ms | Allocations: 5759)
+
+
+Started POST "/employees" for ::1 at 2019-10-09 12:38:56 -0500
+Processing by EmployeesController#create as */*
+  Parameters: {"name"=>"Frank Sinatra", "postion"=>"", "hire_date"=>"2019-10-09", "manager_id"=>1, "position"=>"Singer", "employee"=>{"name"=>"Frank Sinatra", "position"=>"Singer", "hire_date"=>"2019-10-09", "manager_id"=>1}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/employees_controller.rb:12:in `create'
+  [1m[36mEmployee Create (7.2ms)[0m  [1m[32mINSERT INTO "employees" ("name", "position", "hire_date", "manager_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Frank Sinatra"], ["position", "Singer"], ["hire_date", "2019-10-09"], ["manager_id", 1]]
+  ↳ app/controllers/employees_controller.rb:12:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/employees_controller.rb:12:in `create'
+Completed 201 Created in 12ms (Views: 0.3ms | ActiveRecord: 7.7ms | Allocations: 2458)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 12:48:48 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.7ms | Allocations: 2057)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 13:33:23 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 14ms (Views: 10.9ms | ActiveRecord: 0.7ms | Allocations: 2057)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 13:33:30 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.6ms | Allocations: 1986)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 13:33:34 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.3ms | Allocations: 1970)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 13:33:39 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms | Allocations: 1972)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 13:33:44 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms | Allocations: 1970)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 13:34:44 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.3ms | Allocations: 1970)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 13:36:13 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms | Allocations: 1970)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 13:37:44 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.3ms | Allocations: 1970)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 13:37:51 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms | Allocations: 1970)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 14:45:53 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.7ms | Allocations: 2043)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 14:45:56 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.4ms | Allocations: 1970)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 14:55:29 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 15ms (Views: 8.9ms | ActiveRecord: 4.7ms | Allocations: 5773)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 14:57:53 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (1.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 1.1ms | Allocations: 1986)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 15:16:01 -0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 14ms (Views: 6.9ms | ActiveRecord: 4.9ms | Allocations: 5773)
+
+
+Started GET "/employees/5" for ::1 at 2019-10-09 15:16:05 -0500
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:7:in `show'
+Completed 200 OK in 12ms (Views: 0.9ms | ActiveRecord: 1.1ms | Allocations: 1532)
+
+
+Started GET "/employees/5" for ::1 at 2019-10-09 15:16:44 -0500
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:7:in `show'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 715)
+
+
+Started GET "/employees/5" for ::1 at 2019-10-09 15:18:52 -0500
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:7:in `show'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 701)
+
+
+Started GET "/employees/5" for ::1 at 2019-10-09 15:19:30 -0500
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:7:in `show'
+Completed 200 OK in 4ms (Views: 1.4ms | ActiveRecord: 0.3ms | Allocations: 715)
+
+
+Started GET "/employees/5" for ::1 at 2019-10-09 15:20:19 -0500
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mEmployee Load (2.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:7:in `show'
+Completed 200 OK in 7ms (Views: 1.3ms | ActiveRecord: 2.7ms | Allocations: 701)
+
+
+Started GET "/employees/5" for ::1 at 2019-10-09 15:20:31 -0500
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:7:in `show'
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.4ms | Allocations: 715)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 15:25:30 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.3ms | Allocations: 1970)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 15:25:36 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.3ms | Allocations: 1970)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 15:26:57 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.8ms | Allocations: 1972)
+
+
+Started GET "/employees/5" for ::1 at 2019-10-09 15:27:02 -0500
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:7:in `show'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 702)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 15:27:08 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (6.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 2.5ms | ActiveRecord: 6.6ms | Allocations: 1970)
+
+
+Started GET "/employees/5" for ::1 at 2019-10-09 15:27:10 -0500
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:7:in `show'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 701)
+
+
+Started GET "/employees/5" for ::1 at 2019-10-09 15:43:32 -0500
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:7:in `show'
+Completed 200 OK in 15ms (Views: 1.7ms | ActiveRecord: 1.3ms | Allocations: 798)
+
+
+Started GET "/employees/27" for ::1 at 2019-10-09 15:44:05 -0500
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"27"}
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:7:in `show'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 701)
+
+
+Started GET "/employees/27" for ::1 at 2019-10-09 15:44:18 -0500
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"27"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:7:in `show'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 701)
+
+
+Started GET "/employees/27" for ::1 at 2019-10-09 15:56:15 -0500
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"27"}
+  [1m[36mEmployee Load (2.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:7:in `show'
+Completed 200 OK in 19ms (Views: 2.0ms | ActiveRecord: 8.8ms | Allocations: 798)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 15:56:25 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 17ms (Views: 13.8ms | ActiveRecord: 0.8ms | Allocations: 1972)
+
+
+Started GET "/employees/27" for ::1 at 2019-10-09 15:56:27 -0500
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"27"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:7:in `show'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 701)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 15:56:29 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.3ms | Allocations: 1970)
+
+
+Started DELETE "/employees/3" for ::1 at 2019-10-09 15:57:28 -0500
+Processing by EmployeesController#destroy as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:24:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/employees_controller.rb:24:in `destroy'
+  [1m[36mEmployee Destroy (0.3ms)[0m  [1m[31mDELETE FROM "employees" WHERE "employees"."id" = $1[0m  [["id", 3]]
+  ↳ app/controllers/employees_controller.rb:24:in `destroy'
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/employees_controller.rb:24:in `destroy'
+Completed 204 No Content in 16ms (Views: 0.1ms | ActiveRecord: 3.4ms | Allocations: 2282)
+
+
+Started DELETE "/employees/4" for ::1 at 2019-10-09 15:57:29 -0500
+Processing by EmployeesController#destroy as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:24:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/employees_controller.rb:24:in `destroy'
+  [1m[36mEmployee Destroy (0.3ms)[0m  [1m[31mDELETE FROM "employees" WHERE "employees"."id" = $1[0m  [["id", 4]]
+  ↳ app/controllers/employees_controller.rb:24:in `destroy'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/employees_controller.rb:24:in `destroy'
+Completed 204 No Content in 14ms (Views: 0.1ms | ActiveRecord: 1.3ms | Allocations: 2238)
+
+
+Started DELETE "/employees/5" for ::1 at 2019-10-09 15:57:29 -0500
+Processing by EmployeesController#destroy as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:24:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/employees_controller.rb:24:in `destroy'
+  [1m[36mEmployee Destroy (0.2ms)[0m  [1m[31mDELETE FROM "employees" WHERE "employees"."id" = $1[0m  [["id", 5]]
+  ↳ app/controllers/employees_controller.rb:24:in `destroy'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/employees_controller.rb:24:in `destroy'
+Completed 204 No Content in 9ms (Views: 0.1ms | ActiveRecord: 0.9ms | Allocations: 2238)
+
+
+Started DELETE "/employees/6" for ::1 at 2019-10-09 15:57:30 -0500
+Processing by EmployeesController#destroy as */*
+  Parameters: {"id"=>"6"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:24:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/employees_controller.rb:24:in `destroy'
+  [1m[36mEmployee Destroy (0.3ms)[0m  [1m[31mDELETE FROM "employees" WHERE "employees"."id" = $1[0m  [["id", 6]]
+  ↳ app/controllers/employees_controller.rb:24:in `destroy'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/employees_controller.rb:24:in `destroy'
+Completed 204 No Content in 12ms (Views: 0.1ms | ActiveRecord: 1.2ms | Allocations: 2239)
+
+
+Started DELETE "/employees/7" for ::1 at 2019-10-09 15:57:30 -0500
+Processing by EmployeesController#destroy as */*
+  Parameters: {"id"=>"7"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:24:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/employees_controller.rb:24:in `destroy'
+  [1m[36mEmployee Destroy (0.3ms)[0m  [1m[31mDELETE FROM "employees" WHERE "employees"."id" = $1[0m  [["id", 7]]
+  ↳ app/controllers/employees_controller.rb:24:in `destroy'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/employees_controller.rb:24:in `destroy'
+Completed 204 No Content in 14ms (Views: 0.1ms | ActiveRecord: 1.2ms | Allocations: 2249)
+
+
+Started DELETE "/employees/8" for ::1 at 2019-10-09 15:57:31 -0500
+Processing by EmployeesController#destroy as */*
+  Parameters: {"id"=>"8"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:24:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/employees_controller.rb:24:in `destroy'
+  [1m[36mEmployee Destroy (0.3ms)[0m  [1m[31mDELETE FROM "employees" WHERE "employees"."id" = $1[0m  [["id", 8]]
+  ↳ app/controllers/employees_controller.rb:24:in `destroy'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/employees_controller.rb:24:in `destroy'
+Completed 204 No Content in 4ms (Views: 0.1ms | ActiveRecord: 1.2ms | Allocations: 2238)
+
+
+Started DELETE "/employees/10" for ::1 at 2019-10-09 15:57:32 -0500
+Processing by EmployeesController#destroy as */*
+  Parameters: {"id"=>"10"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:24:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/employees_controller.rb:24:in `destroy'
+  [1m[36mEmployee Destroy (0.3ms)[0m  [1m[31mDELETE FROM "employees" WHERE "employees"."id" = $1[0m  [["id", 10]]
+  ↳ app/controllers/employees_controller.rb:24:in `destroy'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/employees_controller.rb:24:in `destroy'
+Completed 204 No Content in 5ms (Views: 0.1ms | ActiveRecord: 1.3ms | Allocations: 2238)
+
+
+Started POST "/employees" for ::1 at 2019-10-09 15:57:50 -0500
+Processing by EmployeesController#create as */*
+  Parameters: {"name"=>"Ahmad Taherian", "postion"=>"", "hire_date"=>"2019-10-01", "manager_id"=>1, "position"=>"Chef", "employee"=>{"name"=>"Ahmad Taherian", "position"=>"Chef", "hire_date"=>"2019-10-01", "manager_id"=>1}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/employees_controller.rb:12:in `create'
+  [1m[36mEmployee Create (1.0ms)[0m  [1m[32mINSERT INTO "employees" ("name", "position", "hire_date", "manager_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Ahmad Taherian"], ["position", "Chef"], ["hire_date", "2019-10-01"], ["manager_id", 1]]
+  ↳ app/controllers/employees_controller.rb:12:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/employees_controller.rb:12:in `create'
+Completed 201 Created in 5ms (Views: 0.3ms | ActiveRecord: 1.5ms | Allocations: 2410)
+
+
+Started POST "/employees" for ::1 at 2019-10-09 15:58:11 -0500
+Processing by EmployeesController#create as */*
+  Parameters: {"name"=>"Hossein Hosseiny", "postion"=>"", "hire_date"=>"", "manager_id"=>1, "position"=>"Civil Engineer", "employee"=>{"name"=>"Hossein Hosseiny", "position"=>"Civil Engineer", "hire_date"=>"", "manager_id"=>1}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/employees_controller.rb:12:in `create'
+  [1m[36mEmployee Create (0.6ms)[0m  [1m[32mINSERT INTO "employees" ("name", "position", "manager_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Hossein Hosseiny"], ["position", "Civil Engineer"], ["manager_id", 1]]
+  ↳ app/controllers/employees_controller.rb:12:in `create'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/employees_controller.rb:12:in `create'
+Completed 201 Created in 5ms (Views: 0.2ms | ActiveRecord: 1.3ms | Allocations: 2228)
+
+
+Started PUT "/employees/29" for ::1 at 2019-10-09 15:58:29 -0500
+Processing by EmployeesController#update as */*
+  Parameters: {"name"=>"Hossein Hosseiny", "position"=>"Civil Engineer", "hire_date"=>"2019-10-01", "manager_id"=>1, "id"=>"29", "modal"=>true, "employee"=>{"id"=>"29", "name"=>"Hossein Hosseiny", "position"=>"Civil Engineer", "hire_date"=>"2019-10-01", "manager_id"=>1}}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:19:in `update'
+[31mUnpermitted parameter: :id[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/employees_controller.rb:20:in `update'
+  [1m[36mEmployee Update (0.4ms)[0m  [1m[33mUPDATE "employees" SET "hire_date" = $1 WHERE "employees"."id" = $2[0m  [["hire_date", "2019-10-01"], ["id", 29]]
+  ↳ app/controllers/employees_controller.rb:20:in `update'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/employees_controller.rb:20:in `update'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.4ms | Allocations: 2883)
+
+
+Started GET "/employees/27" for ::1 at 2019-10-09 15:58:43 -0500
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"27"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:7:in `show'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 701)
+
+
+Started GET "/employees/29" for ::1 at 2019-10-09 15:58:58 -0500
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"29"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:7:in `show'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 701)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 15:59:04 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (10.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 13ms (Views: 2.2ms | ActiveRecord: 10.3ms | Allocations: 1454)
+
+
+Started PUT "/employees/29" for ::1 at 2019-10-09 15:59:11 -0500
+Processing by EmployeesController#update as */*
+  Parameters: {"name"=>"Hossein Hosseiny", "position"=>"Civil Engineer", "hire_date"=>"2019-10-04", "manager_id"=>1, "id"=>"29", "modal"=>true, "employee"=>{"id"=>"29", "name"=>"Hossein Hosseiny", "position"=>"Civil Engineer", "hire_date"=>"2019-10-04", "manager_id"=>1}}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:19:in `update'
+[31mUnpermitted parameter: :id[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/employees_controller.rb:20:in `update'
+  [1m[36mEmployee Update (0.3ms)[0m  [1m[33mUPDATE "employees" SET "hire_date" = $1 WHERE "employees"."id" = $2[0m  [["hire_date", "2019-10-04"], ["id", 29]]
+  ↳ app/controllers/employees_controller.rb:20:in `update'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/employees_controller.rb:20:in `update'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.1ms | Allocations: 2862)
+
+
+Started GET "/employees/29" for ::1 at 2019-10-09 15:59:15 -0500
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"29"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:7:in `show'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 701)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 15:59:29 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.4ms | Allocations: 1455)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 16:01:03 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 1454)
+
+
+Started GET "/employees/undefined" for ::1 at 2019-10-09 16:01:13 -0500
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:7:in `show'
+Completed 404 Not Found in 1ms (ActiveRecord: 0.3ms | Allocations: 602)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Employee with 'id'=undefined):
+  
+app/controllers/employees_controller.rb:7:in `show'
+Started GET "/employees/5" for ::1 at 2019-10-09 16:01:55 -0500
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:7:in `show'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.5ms | Allocations: 595)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Employee with 'id'=5):
+  
+app/controllers/employees_controller.rb:7:in `show'
+Started GET "/employees/13" for ::1 at 2019-10-09 16:02:08 -0500
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"13"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:7:in `show'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 700)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 16:02:11 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.4ms | Allocations: 1454)
+
+
+Started GET "/employees/13" for ::1 at 2019-10-09 16:02:23 -0500
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"13"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:7:in `show'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 701)
+
+
+Started GET "/employees/13" for ::1 at 2019-10-09 16:04:20 -0500
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"13"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:7:in `show'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 701)
+
+
+Started GET "/employees/13" for ::1 at 2019-10-09 16:38:58 -0500
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"13"}
+  [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:7:in `show'
+Completed 200 OK in 14ms (Views: 1.8ms | ActiveRecord: 3.1ms | Allocations: 798)
+
+
+Started GET "/employees/undefined" for ::1 at 2019-10-09 16:42:02 -0500
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mEmployee Load (3.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:7:in `show'
+Completed 404 Not Found in 5ms (ActiveRecord: 3.7ms | Allocations: 597)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Employee with 'id'=undefined):
+  
+app/controllers/employees_controller.rb:7:in `show'
+Started GET "/employees/13" for ::1 at 2019-10-09 16:42:22 -0500
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"13"}
+  [1m[36mEmployee Load (4.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:7:in `show'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 4.7ms | Allocations: 700)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 16:42:37 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (18.9ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 23ms (Views: 4.0ms | ActiveRecord: 18.9ms | Allocations: 1457)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 16:43:22 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms | Allocations: 1454)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 16:44:25 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms | Allocations: 1454)
+
+
+  [1m[35m (5.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5100334583198556555)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateManagers (20191009214636)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (22.0ms)[0m  [1m[35mCREATE TABLE "managers" ("id" bigserial primary key, "name" character varying, "email" character varying, "password" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191009214636"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5100334583198556555)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mManager Create (1.4ms)[0m  [1m[32mINSERT INTO "managers" ("name", "email", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Dr. Steven Lind"], ["email", "masetaherian@gmail.com"], ["password", "password"], ["created_at", "2019-10-09 21:58:37.290469"], ["updated_at", "2019-10-09 21:58:37.290469"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mManager Create (0.2ms)[0m  [1m[32mINSERT INTO "managers" ("name", "email", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Ms. Basil Fay"], ["email", "masetaherian@gmail.com"], ["password", "password"], ["created_at", "2019-10-09 21:58:37.295123"], ["updated_at", "2019-10-09 21:58:37.295123"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mManager Create (0.4ms)[0m  [1m[32mINSERT INTO "managers" ("name", "email", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Misha Gutkowski"], ["email", "masetaherian@gmail.com"], ["password", "password"], ["created_at", "2019-10-09 21:58:37.297897"], ["updated_at", "2019-10-09 21:58:37.297897"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mManager Create (0.3ms)[0m  [1m[32mINSERT INTO "managers" ("name", "email", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Lonnie Frami"], ["email", "masetaherian@gmail.com"], ["password", "password"], ["created_at", "2019-10-09 21:58:37.302601"], ["updated_at", "2019-10-09 21:58:37.302601"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mManager Create (0.3ms)[0m  [1m[32mINSERT INTO "managers" ("name", "email", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Felipe Koss"], ["email", "masetaherian@gmail.com"], ["password", "password"], ["created_at", "2019-10-09 21:58:37.305845"], ["updated_at", "2019-10-09 21:58:37.305845"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mManager Create (0.2ms)[0m  [1m[32mINSERT INTO "managers" ("name", "email", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Jammie Gerlach"], ["email", "masetaherian@gmail.com"], ["password", "password"], ["created_at", "2019-10-09 21:58:37.308906"], ["updated_at", "2019-10-09 21:58:37.308906"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mManager Create (0.2ms)[0m  [1m[32mINSERT INTO "managers" ("name", "email", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Reginald Keebler"], ["email", "masetaherian@gmail.com"], ["password", "password"], ["created_at", "2019-10-09 21:58:37.311795"], ["updated_at", "2019-10-09 21:58:37.311795"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mManager Create (0.2ms)[0m  [1m[32mINSERT INTO "managers" ("name", "email", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Douglass Kirlin"], ["email", "masetaherian@gmail.com"], ["password", "password"], ["created_at", "2019-10-09 21:58:37.314747"], ["updated_at", "2019-10-09 21:58:37.314747"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mManager Create (0.2ms)[0m  [1m[32mINSERT INTO "managers" ("name", "email", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Gordon Friesen"], ["email", "masetaherian@gmail.com"], ["password", "password"], ["created_at", "2019-10-09 21:58:37.317784"], ["updated_at", "2019-10-09 21:58:37.317784"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mManager Create (0.2ms)[0m  [1m[32mINSERT INTO "managers" ("name", "email", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Mignon Crist"], ["email", "masetaherian@gmail.com"], ["password", "password"], ["created_at", "2019-10-09 21:58:37.320871"], ["updated_at", "2019-10-09 21:58:37.320871"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mManager Load (0.6ms)[0m  [1m[34mSELECT "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mManager Load (0.6ms)[0m  [1m[34mSELECT "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mManager Destroy (0.3ms)[0m  [1m[31mDELETE FROM "managers" WHERE "managers"."id" = $1[0m  [["id", 1]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mManager Load (0.6ms)[0m  [1m[34mSELECT "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mManager Load (0.6ms)[0m  [1m[34mSELECT "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mManager Destroy (0.4ms)[0m  [1m[31mDELETE FROM "managers" WHERE "managers"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mManager Load (0.5ms)[0m  [1m[34mSELECT "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mManager Destroy (0.4ms)[0m  [1m[31mDELETE FROM "managers" WHERE "managers"."id" = $1[0m  [["id", 3]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mManager Destroy (0.4ms)[0m  [1m[31mDELETE FROM "managers" WHERE "managers"."id" = $1[0m  [["id", 4]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mManager Destroy (0.3ms)[0m  [1m[31mDELETE FROM "managers" WHERE "managers"."id" = $1[0m  [["id", 5]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mManager Destroy (0.4ms)[0m  [1m[31mDELETE FROM "managers" WHERE "managers"."id" = $1[0m  [["id", 6]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mManager Destroy (0.4ms)[0m  [1m[31mDELETE FROM "managers" WHERE "managers"."id" = $1[0m  [["id", 7]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mManager Destroy (0.4ms)[0m  [1m[31mDELETE FROM "managers" WHERE "managers"."id" = $1[0m  [["id", 8]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mManager Destroy (0.4ms)[0m  [1m[31mDELETE FROM "managers" WHERE "managers"."id" = $1[0m  [["id", 9]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mManager Destroy (0.4ms)[0m  [1m[31mDELETE FROM "managers" WHERE "managers"."id" = $1[0m  [["id", 10]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mManager Load (0.5ms)[0m  [1m[34mSELECT "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mManager Load (0.5ms)[0m  [1m[34mSELECT "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mManager Load (0.6ms)[0m  [1m[34mSELECT "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT "managers".* FROM "managers" WHERE "managers"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+Started GET "/employees" for ::1 at 2019-10-09 17:42:13 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 13ms (Views: 6.9ms | ActiveRecord: 4.8ms | Allocations: 5260)
+
+
+Started GET "/employees/13" for ::1 at 2019-10-09 17:42:20 -0500
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"13"}
+  [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:7:in `show'
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 1.2ms | Allocations: 1159)
+
+
+Started GET "/employees/13" for ::1 at 2019-10-09 17:42:58 -0500
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"13"}
+  [1m[36mEmployee Load (45.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:7:in `show'
+Completed 200 OK in 49ms (Views: 1.1ms | ActiveRecord: 45.1ms | Allocations: 715)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 17:48:08 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.9ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.9ms | Allocations: 1470)
+
+
+Started GET "/employees/13" for ::1 at 2019-10-09 17:48:23 -0500
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"13"}
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:7:in `show'
+Completed 200 OK in 5ms (Views: 1.3ms | ActiveRecord: 0.5ms | Allocations: 715)
+
+
+Started GET "/employees/13" for ::1 at 2019-10-09 18:58:30 -0500
+Started GET "/employees" for ::1 at 2019-10-09 18:58:30 -0500
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"13"}
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (4.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+  [1m[36mEmployee Load (1.8ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 7ms (Views: 2.4ms | ActiveRecord: 4.3ms | Allocations: 1574)
+
+
+  ↳ app/controllers/employees_controller.rb:7:in `show'
+Completed 200 OK in 23ms (Views: 0.4ms | ActiveRecord: 12.2ms | Allocations: 2913)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 18:58:39 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (1.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 1.0ms | Allocations: 1458)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 18:58:39 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.4ms | Allocations: 1454)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 19:08:45 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (1.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 1.0ms | Allocations: 1528)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 19:09:28 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (1.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 1.2ms | Allocations: 1454)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 19:10:29 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (1.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 21ms (Views: 19.3ms | ActiveRecord: 1.0ms | Allocations: 1454)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 19:35:04 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (12.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 32ms (Views: 14.3ms | ActiveRecord: 12.2ms | Allocations: 1526)
+
+
+Started GET "/employees/13" for ::1 at 2019-10-09 19:35:10 -0500
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"13"}
+  [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:7:in `show'
+Completed 200 OK in 15ms (Views: 3.9ms | ActiveRecord: 1.3ms | Allocations: 728)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 19:35:32 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 14ms (Views: 13.8ms | ActiveRecord: 0.4ms | Allocations: 1454)
+
+
+Started GET "/employees/13" for ::1 at 2019-10-09 19:35:35 -0500
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"13"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:7:in `show'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 701)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 19:35:38 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.3ms | Allocations: 1454)
+
+
+Started GET "/employees/13" for ::1 at 2019-10-09 19:35:40 -0500
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"13"}
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:7:in `show'
+Completed 200 OK in 6ms (Views: 1.5ms | ActiveRecord: 0.6ms | Allocations: 701)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 19:38:13 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.3ms | Allocations: 1454)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 19:38:31 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (2.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 3.1ms | ActiveRecord: 2.6ms | Allocations: 1454)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 19:39:06 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (2.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 2.1ms | Allocations: 1454)
+
+
+Started DELETE "/employees/29" for ::1 at 2019-10-09 19:39:10 -0500
+Processing by EmployeesController#destroy as */*
+  Parameters: {"id"=>"29"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:24:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/employees_controller.rb:24:in `destroy'
+  [1m[36mEmployee Destroy (12.1ms)[0m  [1m[31mDELETE FROM "employees" WHERE "employees"."id" = $1[0m  [["id", 29]]
+  ↳ app/controllers/employees_controller.rb:24:in `destroy'
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/employees_controller.rb:24:in `destroy'
+Completed 204 No Content in 20ms (Views: 0.2ms | ActiveRecord: 15.3ms | Allocations: 2308)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 19:39:52 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms | Allocations: 1351)
+
+
+Started PUT "/employees/12" for ::1 at 2019-10-09 19:40:04 -0500
+Processing by EmployeesController#update as */*
+  Parameters: {"name"=>"Mase Taherian", "position"=>"Burrito Makers", "hire_date"=>"2018-10-19", "manager_id"=>1, "id"=>"12", "modal"=>true, "employee"=>{"id"=>"12", "name"=>"Mase Taherian", "position"=>"Burrito Makers", "hire_date"=>"2018-10-19", "manager_id"=>1}}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:19:in `update'
+[31mUnpermitted parameter: :id[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/employees_controller.rb:20:in `update'
+  [1m[36mEmployee Update (1.9ms)[0m  [1m[33mUPDATE "employees" SET "position" = $1 WHERE "employees"."id" = $2[0m  [["position", "Burrito Makers"], ["id", 12]]
+  ↳ app/controllers/employees_controller.rb:20:in `update'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/employees_controller.rb:20:in `update'
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 2.8ms | Allocations: 2996)
+
+
+Started GET "/employees/13" for ::1 at 2019-10-09 19:40:27 -0500
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"13"}
+  [1m[36mEmployee Load (2.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:7:in `show'
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 2.4ms | Allocations: 701)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 19:40:32 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.7ms | Allocations: 1351)
+
+
+Started PUT "/employees/12" for ::1 at 2019-10-09 19:40:41 -0500
+Processing by EmployeesController#update as */*
+  Parameters: {"name"=>"Mase Taherians", "position"=>"Burrito Makers", "hire_date"=>"2018-10-19", "manager_id"=>1, "id"=>"12", "modal"=>true, "employee"=>{"id"=>"12", "name"=>"Mase Taherians", "position"=>"Burrito Makers", "hire_date"=>"2018-10-19", "manager_id"=>1}}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:19:in `update'
+[31mUnpermitted parameter: :id[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/employees_controller.rb:20:in `update'
+  [1m[36mEmployee Update (0.3ms)[0m  [1m[33mUPDATE "employees" SET "name" = $1 WHERE "employees"."id" = $2[0m  [["name", "Mase Taherians"], ["id", 12]]
+  ↳ app/controllers/employees_controller.rb:20:in `update'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/employees_controller.rb:20:in `update'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.0ms | Allocations: 2853)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 19:45:27 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (3.8ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 3.3ms | ActiveRecord: 3.8ms | Allocations: 1351)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 19:46:19 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.4ms | Allocations: 1351)
+
+
+Started GET "/employees/13" for ::1 at 2019-10-09 19:46:41 -0500
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"13"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:7:in `show'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 701)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 19:46:55 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms | Allocations: 1351)
+
+
+Started GET "/employees/13" for ::1 at 2019-10-09 19:46:58 -0500
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"13"}
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:7:in `show'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.7ms | Allocations: 701)
+
+
+Started GET "/employees/14" for ::1 at 2019-10-09 19:47:31 -0500
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"14"}
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:7:in `show'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 701)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 19:47:38 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (1.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 1.2ms | Allocations: 1351)
+
+
+Started GET "/employees/27" for ::1 at 2019-10-09 19:47:41 -0500
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"27"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:7:in `show'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 701)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 19:47:45 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.9ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.9ms | Allocations: 1351)
+
+
+Started GET "/employees/28" for ::1 at 2019-10-09 19:47:48 -0500
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"28"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:7:in `show'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 701)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 19:47:51 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms | Allocations: 1351)
+
+
+Started GET "/employees/12" for ::1 at 2019-10-09 19:47:54 -0500
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"12"}
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:7:in `show'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.5ms | Allocations: 701)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 19:48:25 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.4ms | Allocations: 1351)
+
+
+Started PUT "/employees/13" for ::1 at 2019-10-09 19:49:18 -0500
+Processing by EmployeesController#update as */*
+  Parameters: {"name"=>"Foster Naylo", "position"=>"Specialist", "hire_date"=>"2018-10-19", "manager_id"=>1, "id"=>"13", "modal"=>true, "employee"=>{"id"=>"13", "name"=>"Foster Naylo", "position"=>"Specialist", "hire_date"=>"2018-10-19", "manager_id"=>1}}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:19:in `update'
+[31mUnpermitted parameter: :id[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/employees_controller.rb:20:in `update'
+  [1m[36mEmployee Update (0.7ms)[0m  [1m[33mUPDATE "employees" SET "name" = $1, "position" = $2 WHERE "employees"."id" = $3[0m  [["name", "Foster Naylo"], ["position", "Specialist"], ["id", 13]]
+  ↳ app/controllers/employees_controller.rb:20:in `update'
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/employees_controller.rb:20:in `update'
+Completed 200 OK in 11ms (Views: 0.4ms | ActiveRecord: 2.8ms | Allocations: 2863)
+
+
+Started DELETE "/employees/13" for ::1 at 2019-10-09 19:49:24 -0500
+Processing by EmployeesController#destroy as */*
+  Parameters: {"id"=>"13"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:24:in `destroy'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/employees_controller.rb:24:in `destroy'
+  [1m[36mEmployee Destroy (0.3ms)[0m  [1m[31mDELETE FROM "employees" WHERE "employees"."id" = $1[0m  [["id", 13]]
+  ↳ app/controllers/employees_controller.rb:24:in `destroy'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/employees_controller.rb:24:in `destroy'
+Completed 204 No Content in 5ms (Views: 0.1ms | ActiveRecord: 1.0ms | Allocations: 2238)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 19:53:45 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (3.9ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 3.4ms | ActiveRecord: 3.9ms | Allocations: 1248)
+
+
+Started GET "/employees/14" for ::1 at 2019-10-09 19:53:58 -0500
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"14"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:7:in `show'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 701)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 19:54:04 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.5ms | Allocations: 1248)
+
+
+Started GET "/employees/14" for ::1 at 2019-10-09 19:54:12 -0500
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"14"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:7:in `show'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 701)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 19:54:31 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms | Allocations: 1248)
+
+
+Started GET "/employees/14" for ::1 at 2019-10-09 20:01:02 -0500
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"14"}
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:7:in `show'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 798)
+
+
+Started GET "/employees/14" for ::1 at 2019-10-09 20:08:49 -0500
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"14"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:7:in `show'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.5ms | Allocations: 797)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 20:09:04 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.3ms | Allocations: 1250)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 20:09:30 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (5.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 1.9ms | ActiveRecord: 5.4ms | Allocations: 1248)
+
+
+Started GET "/employees/14" for ::1 at 2019-10-09 20:09:34 -0500
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"14"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:7:in `show'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 701)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 20:09:36 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms | Allocations: 1248)
+
+
+Started GET "/employees/28" for ::1 at 2019-10-09 20:09:37 -0500
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"28"}
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:7:in `show'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 701)
+
+
+Started DELETE "/employees/28" for ::1 at 2019-10-09 20:09:42 -0500
+Processing by EmployeesController#destroy as */*
+  Parameters: {"id"=>"28"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:24:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/employees_controller.rb:24:in `destroy'
+  [1m[36mEmployee Destroy (0.2ms)[0m  [1m[31mDELETE FROM "employees" WHERE "employees"."id" = $1[0m  [["id", 28]]
+  ↳ app/controllers/employees_controller.rb:24:in `destroy'
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/employees_controller.rb:24:in `destroy'
+Completed 204 No Content in 5ms (Views: 0.1ms | ActiveRecord: 1.9ms | Allocations: 2238)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 20:09:46 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.3ms | Allocations: 1144)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 20:12:47 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.7ms | Allocations: 1144)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 20:13:33 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.3ms | Allocations: 1144)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 20:14:26 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (2.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 2.0ms | Allocations: 1144)
+
+
+Started GET "/employees/14" for ::1 at 2019-10-09 20:14:29 -0500
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"14"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:7:in `show'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 701)
+
+
+Started GET "/employees/14" for ::1 at 2019-10-09 20:18:00 -0500
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"14"}
+  [1m[36mEmployee Load (20.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:7:in `show'
+Completed 200 OK in 24ms (Views: 1.2ms | ActiveRecord: 20.1ms | Allocations: 701)
+
+
+Started GET "/employees/14" for ::1 at 2019-10-09 20:21:52 -0500
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"14"}
+  [1m[36mEmployee Load (24.8ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:7:in `show'
+Completed 200 OK in 32ms (Views: 1.5ms | ActiveRecord: 24.8ms | Allocations: 701)
+
+
+Started GET "/employees/14" for ::1 at 2019-10-09 20:22:43 -0500
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"14"}
+  [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:7:in `show'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.8ms | Allocations: 701)
+
+
+Started GET "/employees/14" for ::1 at 2019-10-09 20:23:17 -0500
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"14"}
+  [1m[36mEmployee Load (9.9ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:7:in `show'
+Completed 200 OK in 12ms (Views: 0.4ms | ActiveRecord: 9.9ms | Allocations: 701)
+
+
+Started PUT "/employees/14" for ::1 at 2019-10-09 20:23:33 -0500
+Processing by EmployeesController#update as */*
+  Parameters: {"modal"=>true, "name"=>"Neda Hossein", "position"=>"Compliance Manage", "hire_date"=>"2019-10-09", "id"=>"14", "employee"=>{"name"=>"Neda Hossein", "position"=>"Compliance Manage", "hire_date"=>"2019-10-09"}}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:19:in `update'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/employees_controller.rb:20:in `update'
+  [1m[36mEmployee Update (1.6ms)[0m  [1m[33mUPDATE "employees" SET "name" = $1, "position" = $2, "hire_date" = $3 WHERE "employees"."id" = $4[0m  [["name", "Neda Hossein"], ["position", "Compliance Manage"], ["hire_date", "2019-10-09"], ["id", 14]]
+  ↳ app/controllers/employees_controller.rb:20:in `update'
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/employees_controller.rb:20:in `update'
+Completed 200 OK in 10ms (Views: 0.3ms | ActiveRecord: 2.9ms | Allocations: 2835)
+
+
+Started GET "/employees/14" for ::1 at 2019-10-09 20:24:47 -0500
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"14"}
+  [1m[36mEmployee Load (3.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:7:in `show'
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 3.2ms | Allocations: 701)
+
+
+Started PUT "/employees/14" for ::1 at 2019-10-09 20:25:06 -0500
+Processing by EmployeesController#update as */*
+  Parameters: {"name"=>"Neda Hosseind", "position"=>"Compliance Managef", "modal"=>true, "id"=>"14", "employee"=>{"name"=>"Neda Hosseind", "position"=>"Compliance Managef"}}
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:19:in `update'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/employees_controller.rb:20:in `update'
+  [1m[36mEmployee Update (0.3ms)[0m  [1m[33mUPDATE "employees" SET "name" = $1, "position" = $2 WHERE "employees"."id" = $3[0m  [["name", "Neda Hosseind"], ["position", "Compliance Managef"], ["id", 14]]
+  ↳ app/controllers/employees_controller.rb:20:in `update'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/employees_controller.rb:20:in `update'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.7ms | Allocations: 2795)
+
+
+Started GET "/employees/14" for ::1 at 2019-10-09 20:25:57 -0500
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"14"}
+  [1m[36mEmployee Load (60.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:7:in `show'
+Completed 200 OK in 62ms (Views: 0.4ms | ActiveRecord: 60.1ms | Allocations: 701)
+
+
+Started PUT "/employees/14" for ::1 at 2019-10-09 20:26:10 -0500
+Processing by EmployeesController#update as */*
+  Parameters: {"position"=>"Compliance Managefr", "modal"=>true, "id"=>"14", "employee"=>{"position"=>"Compliance Managefr"}}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:19:in `update'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/employees_controller.rb:20:in `update'
+  [1m[36mEmployee Update (0.5ms)[0m  [1m[33mUPDATE "employees" SET "position" = $1 WHERE "employees"."id" = $2[0m  [["position", "Compliance Managefr"], ["id", 14]]
+  ↳ app/controllers/employees_controller.rb:20:in `update'
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/employees_controller.rb:20:in `update'
+Completed 200 OK in 53ms (Views: 0.2ms | ActiveRecord: 2.3ms | Allocations: 2776)
+
+
+Started GET "/employees/14" for ::1 at 2019-10-09 20:26:13 -0500
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"14"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:7:in `show'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 701)
+
+
+Started DELETE "/employees/14" for ::1 at 2019-10-09 20:26:26 -0500
+Processing by EmployeesController#destroy as */*
+  Parameters: {"id"=>"14"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:24:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/employees_controller.rb:24:in `destroy'
+  [1m[36mEmployee Destroy (0.3ms)[0m  [1m[31mDELETE FROM "employees" WHERE "employees"."id" = $1[0m  [["id", 14]]
+  ↳ app/controllers/employees_controller.rb:24:in `destroy'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/employees_controller.rb:24:in `destroy'
+Completed 204 No Content in 5ms (Views: 0.1ms | ActiveRecord: 1.3ms | Allocations: 2238)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 20:26:36 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.6ms | Allocations: 1041)
+
+
+Started POST "/employees" for ::1 at 2019-10-09 20:26:53 -0500
+Processing by EmployeesController#create as */*
+  Parameters: {"name"=>"Neda Hosseiny", "postion"=>"", "hire_date"=>"2019-10-03", "manager_id"=>1, "position"=>"P4", "employee"=>{"name"=>"Neda Hosseiny", "position"=>"P4", "hire_date"=>"2019-10-03", "manager_id"=>1}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/employees_controller.rb:12:in `create'
+  [1m[36mEmployee Create (3.0ms)[0m  [1m[32mINSERT INTO "employees" ("name", "position", "hire_date", "manager_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Neda Hosseiny"], ["position", "P4"], ["hire_date", "2019-10-03"], ["manager_id", 1]]
+  ↳ app/controllers/employees_controller.rb:12:in `create'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/employees_controller.rb:12:in `create'
+Completed 201 Created in 8ms (Views: 0.3ms | ActiveRecord: 3.7ms | Allocations: 2302)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 20:29:42 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.9ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.9ms | Allocations: 1144)
+
+
+Started GET "/employees/30" for ::1 at 2019-10-09 20:29:54 -0500
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"30"}
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:7:in `show'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 701)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 20:30:12 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.7ms | Allocations: 1144)
+
+
+Started POST "/employees" for ::1 at 2019-10-09 20:30:34 -0500
+Processing by EmployeesController#create as */*
+  Parameters: {"name"=>"Foster Naylor", "postion"=>"", "hire_date"=>"2019-10-07", "manager_id"=>1, "position"=>"Singer", "employee"=>{"name"=>"Foster Naylor", "position"=>"Singer", "hire_date"=>"2019-10-07", "manager_id"=>1}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/employees_controller.rb:12:in `create'
+  [1m[36mEmployee Create (0.4ms)[0m  [1m[32mINSERT INTO "employees" ("name", "position", "hire_date", "manager_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Foster Naylor"], ["position", "Singer"], ["hire_date", "2019-10-07"], ["manager_id", 1]]
+  ↳ app/controllers/employees_controller.rb:12:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/employees_controller.rb:12:in `create'
+Completed 201 Created in 5ms (Views: 0.3ms | ActiveRecord: 1.0ms | Allocations: 2255)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 20:31:17 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (57.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 60ms (Views: 1.8ms | ActiveRecord: 57.5ms | Allocations: 1248)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 20:32:04 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (60.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 63ms (Views: 2.0ms | ActiveRecord: 60.2ms | Allocations: 1248)
+
+
+Started POST "/employees" for ::1 at 2019-10-09 20:32:27 -0500
+Processing by EmployeesController#create as */*
+  Parameters: {"name"=>"Sean G", "postion"=>"", "hire_date"=>"1987-11-18", "manager_id"=>1, "position"=>"React Dev", "employee"=>{"name"=>"Sean G", "position"=>"React Dev", "hire_date"=>"1987-11-18", "manager_id"=>1}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/employees_controller.rb:12:in `create'
+  [1m[36mEmployee Create (0.3ms)[0m  [1m[32mINSERT INTO "employees" ("name", "position", "hire_date", "manager_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Sean G"], ["position", "React Dev"], ["hire_date", "1987-11-18"], ["manager_id", 1]]
+  ↳ app/controllers/employees_controller.rb:12:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/employees_controller.rb:12:in `create'
+Completed 201 Created in 4ms (Views: 0.3ms | ActiveRecord: 0.8ms | Allocations: 2255)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 20:33:42 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (2.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 2.6ms | Allocations: 1351)
+
+
+Started POST "/employees" for ::1 at 2019-10-09 20:34:01 -0500
+Processing by EmployeesController#create as */*
+  Parameters: {"employee"=>{}}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 128)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: employee):
+  
+app/controllers/employees_controller.rb:29:in `employee_params'
+app/controllers/employees_controller.rb:11:in `create'
+Started GET "/employees" for ::1 at 2019-10-09 20:34:49 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 1350)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 20:36:05 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (1.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 1.2ms | Allocations: 1351)
+
+
+Started GET "/employees/31" for ::1 at 2019-10-09 20:36:10 -0500
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"31"}
+  [1m[36mEmployee Load (1.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:7:in `show'
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 1.4ms | Allocations: 701)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 20:36:24 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (4.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 2.0ms | ActiveRecord: 4.4ms | Allocations: 1351)
+
+
+Started GET "/employees/31" for ::1 at 2019-10-09 20:39:03 -0500
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"31"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:7:in `show'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 701)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 20:39:31 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms | Allocations: 1351)
+
+
+Started GET "/employees/31" for ::1 at 2019-10-09 20:39:41 -0500
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"31"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:7:in `show'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 701)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 20:40:01 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms | Allocations: 1351)
+
+
+Started GET "/employees/32" for ::1 at 2019-10-09 20:40:06 -0500
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"32"}
+  [1m[36mEmployee Load (2.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:7:in `show'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 2.7ms | Allocations: 701)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 20:40:13 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 1351)
+
+
+Started POST "/employees" for ::1 at 2019-10-09 20:48:01 -0500
+Processing by EmployeesController#create as */*
+  Parameters: {"name"=>"Will Smith", "postion"=>"", "hire_date"=>"1992-01-13", "manager_id"=>1, "position"=>"Getting Jiggy", "employee"=>{"name"=>"Will Smith", "position"=>"Getting Jiggy", "hire_date"=>"1992-01-13", "manager_id"=>1}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/employees_controller.rb:12:in `create'
+  [1m[36mEmployee Create (0.8ms)[0m  [1m[32mINSERT INTO "employees" ("name", "position", "hire_date", "manager_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Will Smith"], ["position", "Getting Jiggy"], ["hire_date", "1992-01-13"], ["manager_id", 1]]
+  ↳ app/controllers/employees_controller.rb:12:in `create'
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/employees_controller.rb:12:in `create'
+Completed 201 Created in 5ms (Views: 0.4ms | ActiveRecord: 1.8ms | Allocations: 2274)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 20:48:32 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (27.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 30ms (Views: 2.9ms | ActiveRecord: 27.3ms | Allocations: 1509)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 20:49:12 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.4ms | Allocations: 1454)
+
+
+Started POST "/employees" for ::1 at 2019-10-09 20:49:27 -0500
+Processing by EmployeesController#create as */*
+  Parameters: {"name"=>"William Smith", "postion"=>"", "hire_date"=>"2019-10-02", "manager_id"=>1, "position"=>"Alien", "employee"=>{"name"=>"William Smith", "position"=>"Alien", "hire_date"=>"2019-10-02", "manager_id"=>1}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/employees_controller.rb:12:in `create'
+  [1m[36mEmployee Create (0.7ms)[0m  [1m[32mINSERT INTO "employees" ("name", "position", "hire_date", "manager_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "William Smith"], ["position", "Alien"], ["hire_date", "2019-10-02"], ["manager_id", 1]]
+  ↳ app/controllers/employees_controller.rb:12:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/employees_controller.rb:12:in `create'
+Completed 201 Created in 10ms (Views: 0.3ms | ActiveRecord: 1.3ms | Allocations: 2255)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 20:50:29 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.3ms | Allocations: 1557)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 20:56:10 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (6.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 2.4ms | ActiveRecord: 6.3ms | Allocations: 1557)
+
+
+Started POST "/employees" for ::1 at 2019-10-09 20:56:19 -0500
+Processing by EmployeesController#create as */*
+  Parameters: {"name"=>"Bench Press", "postion"=>"", "hire_date"=>"2019-10-07", "manager_id"=>1, "position"=>"P4", "employee"=>{"name"=>"Bench Press", "position"=>"P4", "hire_date"=>"2019-10-07", "manager_id"=>1}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/employees_controller.rb:12:in `create'
+  [1m[36mEmployee Create (0.4ms)[0m  [1m[32mINSERT INTO "employees" ("name", "position", "hire_date", "manager_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Bench Press"], ["position", "P4"], ["hire_date", "2019-10-07"], ["manager_id", 1]]
+  ↳ app/controllers/employees_controller.rb:12:in `create'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/employees_controller.rb:12:in `create'
+Completed 201 Created in 5ms (Views: 0.4ms | ActiveRecord: 1.1ms | Allocations: 2255)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 20:57:01 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (9.8ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 13ms (Views: 2.9ms | ActiveRecord: 9.8ms | Allocations: 1660)
+
+
+Started GET "/employees/35" for ::1 at 2019-10-09 20:57:04 -0500
+Processing by EmployeesController#show as */*
+  Parameters: {"id"=>"35"}
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:7:in `show'
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 1.0ms | Allocations: 727)
+
+
+Started DELETE "/employees/35" for ::1 at 2019-10-09 20:57:05 -0500
+Processing by EmployeesController#destroy as */*
+  Parameters: {"id"=>"35"}
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:24:in `destroy'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/employees_controller.rb:24:in `destroy'
+  [1m[36mEmployee Destroy (0.4ms)[0m  [1m[31mDELETE FROM "employees" WHERE "employees"."id" = $1[0m  [["id", 35]]
+  ↳ app/controllers/employees_controller.rb:24:in `destroy'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/employees_controller.rb:24:in `destroy'
+Completed 204 No Content in 6ms (Views: 0.1ms | ActiveRecord: 1.5ms | Allocations: 2238)
+
+
+Started GET "/employees" for ::1 at 2019-10-09 20:57:08 -0500
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (1.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 1.0ms | Allocations: 1557)
+
+

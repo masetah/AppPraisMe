@@ -1,21 +1,17 @@
 import React, {Component} from 'react';
-import UpdateEmployee from '../Components/EditEmployeeModal';
 import NewEmployee from './NewEmployee';
-import { Button } from 'reactstrap';
+import {Link} from 'react-router-dom'
 
 class EmployeeIndex extends Component {
     constructor(){
         super()
         this.state={
-            employees:[],
+            employees:[]
         }
     }
 
-    componentDidMount(){
-        this.getEmployees();
-    }
     updateEmployeeArray=(employee)=>{
-        console.log(employee, "from employee index line 18")
+        console.log(employee, "from employee index line 14")
         this.setState(prevState=>{
             prevState.employees.push(employee)
             return{
@@ -23,68 +19,17 @@ class EmployeeIndex extends Component {
             }
         })
     }
-    getEmployees = async () => {
-        const employees =await fetch("http://localhost:3001/employees");
-        const parsedResponse = await employees.json()
-        console.log(parsedResponse.employees);
-        this.setState({
-            employees:parsedResponse.employees
-        })
-    }
-
-    updateEmployee = async (id, formData) => {
-        const updatedEmployee = await fetch(`http://localhost:3001/employees/${id}`, {
-            method: "PUT",
-            body: JSON.stringify(formData),
-            headers: {
-                "Content-Type": "application/json"
-            }
-        })
-        const parsedResponse = await updatedEmployee.json();
-        this.setState(prevState=>{
-            const filterEmployeeArray = prevState.employees.filter(element=>element.id!==id)
-            const updatedEmployee = parsedResponse.employee
-            return{
-                employees:[...filterEmployeeArray, updatedEmployee]
-            }
-        })
-        console.log(parsedResponse)
-    }
-
-    deleteEmployee = async (id) => {
-        console.log(id);
-        try{
-            const deleteEmployee = await fetch(`http://localhost:3001/employees/${id}`, {
-            method:'DELETE',
-        });
-        console.log(deleteEmployee)
-        const parsedResponse = await deleteEmployee
-        console.log(parsedResponse, "Line 62")
-        if(parsedResponse.status===204){
-            this.setState({
-                employees: this.state.employees.filter((employee) => employee.id !==id)
-            });
-        }
-    }catch(err){
-        console.log(err)
-        }
-    }
 
     render(){
-        console.log(this.state.employees)
-        // if(this.state.employees.length!=0){
-            const employees = this.state.employees.map((employee, index)=>{
-                if(employee){
-                    return <div key={index}>
-                    <Button color="link">{employee.name} ({employee.position}) </Button>
-                    <UpdateEmployee updateEmployee={this.updateEmployee} employee={employee}/>
-                    <Button color="danger" onClick={()=>{
-                        this.deleteEmployee(employee.id)
-                    }}>Terminate</Button>
-                </div>
-                }
-                console.log(employee)
-        
+        console.log(this.props.employees)
+            const employees = this.props.employees.map((employee, index)=>{
+                return <div key={index}>
+                    <Link to={{pathname:`/employee/${employee.id}`,
+                        state:{
+                            employee_id: employee.id 
+                        }
+                    }}>{employee.name} </Link>
+                </div>     
             })
             return(
                 <div>
@@ -93,7 +38,6 @@ class EmployeeIndex extends Component {
                     {employees}
                 </div>
             )
-        // }else{return null}
     }
 
 }

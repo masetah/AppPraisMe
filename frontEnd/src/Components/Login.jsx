@@ -9,6 +9,7 @@ class Login extends Component {
             password:"",
         }
     }
+    
     handleChange=(e)=>{
         this.setState({
             [e.currentTarget.name] : e.currentTarget.value
@@ -19,7 +20,7 @@ class Login extends Component {
         e.preventDefault();
         this.props.handleLogin(this.state);
     }
-    
+
     render(){
         return(
             <div>

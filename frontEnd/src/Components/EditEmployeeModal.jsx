@@ -5,15 +5,13 @@ class UpdateEmployee extends Component {
   constructor(props) {
     super(props);
     this.state = {
-        name: props.employee.name,
+        name: this.props.employee.name,
         position: props.employee.position,
         hire_date: props.employee.hire_date,
         manager_id: props.employee.manager_id,
         id: props.employee.id,
         modal:false,
-        
     };
-    console.log(this.state)
   }
 
 toggle= () =>{
@@ -42,8 +40,8 @@ handleSubmit = (e)=> {
           <ModalBody>
             <form onSubmit={this.handleSubmit}>
                 Name:      <input type="text" name="name" value={this.state.name}  onChange={this.handleChange}></input><br></br>
-                Position:   <input type="text" name="position" value={this.state.position} onChange={this.handleChange}></input><br></br>
-                Hire Date: <input type="date" name="hire_date" value={this.state.hire_date} onChange={this.handleChange}></input><br></br>
+                Position:   <input type="text" name="position" value={this.props.employee.position} onChange={this.handleChange}></input><br></br>
+                Hire Date: <input type="date" name="hire_date" value={this.props.employee.hire_date} onChange={this.handleChange}></input><br></br>
             </form>
           </ModalBody>
           <ModalFooter>
