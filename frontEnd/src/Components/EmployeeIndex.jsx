@@ -12,6 +12,7 @@ class EmployeeIndex extends Component {
 
     updateEmployeeArray=(employee)=>{
         console.log(employee, "from employee index line 14")
+        // const prevState=this.state
         this.setState(prevState=>{
             prevState.employees.push(employee)
             return{
@@ -21,12 +22,12 @@ class EmployeeIndex extends Component {
     }
 
     render(){
-        console.log(this.props.employees)
+        console.log(this.state.employees)
             const employees = this.props.employees.map((employee, index)=>{
                 return <div key={index}>
                     <Link to={{pathname:`/employee/${employee.id}`,
                         state:{
-                            employee_id: employee.id 
+                            employee: employee 
                         }
                     }}>{employee.name} </Link>
                 </div>     

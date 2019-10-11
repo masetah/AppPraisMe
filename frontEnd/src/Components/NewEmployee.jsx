@@ -15,11 +15,10 @@ class NewEmployee extends Component {
             [e.currentTarget.name] : e.currentTarget.value
         })
     }
-    createEmployee = async (formData) => {
+    createEmployee = async (currentState) => {
         const createEmployee = await fetch("http://localhost:3001/employees",{
           method: "POST",
-          body:JSON.stringify(formData),
-        //   credentials: "include",
+          body:JSON.stringify(currentState),
           headers: {
             "Content-Type": "application/json"
           }
@@ -27,12 +26,9 @@ class NewEmployee extends Component {
         const parsedResponse = await createEmployee.json();
         console.log(parsedResponse);
         this.props.updateEmployeeArray(parsedResponse.employee);
-            this.setState({
-            name:"",
-            postion:"",
-            hire_date:"",
-            manager_id: 1
-            })
+            // this.setState({
+            // employees:parsedResponse.employee
+            // })
     }
     handleSubmit= (e) => {
         e.preventDefault();

@@ -11,6 +11,12 @@ class Dashboard extends Component {
     }
 }
 
+handleLogout=e=>{
+  e.preventDefault();
+  this.setUser(null);
+  this.props.history.push("/");
+}
+
 componentDidMount(){
     this.getEmployees();
 }
@@ -75,7 +81,7 @@ deleteEmployee = async (id) => {
     return (
         <div>
           <Navigation/>
-          <h1>Manager's Dashboard</h1>
+          <h1>Welcome to your Dashboard </h1>
           <EmployeeIndex
                     employees={this.state.employees}
                     updateEmpoyeeArray={this.updateEmployeeArray}
