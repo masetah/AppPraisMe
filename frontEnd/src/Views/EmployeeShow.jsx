@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import Navigation from '../Components/Navigation'
 import UpdateEmployee from '../Components/EditEmployeeModal';
 import { Button } from 'reactstrap';
-// import { history } from 'react-router-dom'
 
 class EmployeeShow extends Component {
   constructor(){
@@ -13,27 +12,14 @@ class EmployeeShow extends Component {
   }
  
   componentDidMount(){
-    // console.log(this.props.location.state.employee.id)
     this.setState({
       employee:this.props.location.state.employee
     })
-    // console.log("COMPONENT IS MOUNTING")
-    // this.getEmployee();
 }
-
-// getEmployee = async () => {
-//   // console.log();
-//   const employee =await fetch(`http://localhost:3001/employees/${this.props.location.state.employee_id}`);
-//   const parsedResponse = await employee.json()
-//   console.log(parsedResponse.employee);
-//   this.setState({
-//       employee:parsedResponse.employee
-//   })
-// }
 
 updateEmployee = async (formData) => {
   try{
-    console.log(this.state.employee.id)
+    console.log(formData)
     await fetch(`http://localhost:3001/employees/${this.state.employee.id}`, {
       method: "PUT",
       body: JSON.stringify(formData),
@@ -41,18 +27,9 @@ updateEmployee = async (formData) => {
           "Content-Type": "application/json"
       }
   })
-  // this.setState(formData={
-  //   employee:this.props.location.state.employee
-  // })
-  // const parsedResponse = await updatedEmployee.json();
-  // this.setState(prevState=>{
-  //     const filterEmployeeArray = prevState.employees.filter(element=>element.id!==id)
-  //     const updatedEmployee = parsedResponse.employee
-  //     return{
-  //         employees:[...filterEmployeeArray, updatedEmployee]
-  //     }
-  // })
-  // console.log(parsedResponse)
+  this.setState({
+    employee: formData
+  })
   }catch(err){
     console.log(err)
   }
@@ -60,7 +37,7 @@ updateEmployee = async (formData) => {
 
 //add a warning that this cannot be undone.
 deleteEmployee = async (id) => {
-  console.log(id);
+  console.log(this.props.history);
   try{
       await fetch(`http://localhost:3001/employees/${id}`, {
       method:'DELETE',
@@ -69,7 +46,6 @@ deleteEmployee = async (id) => {
     }
   });
   this.props.history.push("/dashboard/1")
-  
   }catch(err){
     console.log(err)
   }

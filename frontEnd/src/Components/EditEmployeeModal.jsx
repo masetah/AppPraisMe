@@ -28,6 +28,7 @@ handleChange = (e) => {
 
 handleSubmit = (e)=> {
     e.preventDefault();
+    console.log(this.state)
     this.props.updateEmployee(this.state);
     this.toggle();
 }
