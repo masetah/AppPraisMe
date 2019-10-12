@@ -34,7 +34,7 @@ updateEmployeeArray=(employee)=>{
 getEmployees = async () => {
     const employees =await fetch("http://localhost:3001/employees");
     const parsedResponse = await employees.json()
-    console.log(parsedResponse.employees);
+    // console.log(parsedResponse.employees);
     this.setState({
         employees:parsedResponse.employees
     })
@@ -84,7 +84,7 @@ deleteEmployee = async (id) => {
           <h1>Welcome to your Dashboard </h1>
           <EmployeeIndex
                     employees={this.state.employees}
-                    updateEmpoyeeArray={this.updateEmployeeArray}
+                    updateEmployeeArray={this.updateEmployeeArray}
                     updateEmployee={this.updateEmployee}
                     deleteEmployee={this.deleteEmployee}
           />
