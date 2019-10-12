@@ -5,6 +5,8 @@ class NewAppraisal extends Component {
   constructor(){
     super()
     this.state={
+      period_start_date:'',
+      period_end_date:'',
       leadership_score:1,
       leadership_description:'',
       people_development_score:1,
@@ -44,6 +46,24 @@ class NewAppraisal extends Component {
         <div>
           <h3>Here is New Appraisal</h3>
           <form onSubmit={this.handleSubmit}>
+          <FormGroup>
+          <Input
+          type="date"
+          name="period_start_date"
+          id="exampleDate"
+          placeholder="Period Start"
+          onChange={this.handleChange}
+          />
+          </FormGroup>
+          <FormGroup>
+          <Input
+          type="date"
+          name="period_end_date"
+          id="exampleDate"
+          placeholder="Period End"
+          onChange={this.handleChange}
+          />
+          </FormGroup>
             <Table striped>
             <thead>
               <tr>
