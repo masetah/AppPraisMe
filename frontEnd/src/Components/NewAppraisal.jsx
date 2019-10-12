@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
-import { Table, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Table, Button, FormGroup, Input } from 'reactstrap';
 
 class NewAppraisal extends Component {
   constructor(){
     super()
     this.state={
+      employee_id:32,
       period_start_date:'',
       period_end_date:'',
       leadership_score:1,
@@ -34,13 +35,25 @@ class NewAppraisal extends Component {
         [e.target.name]:e.target.value
     })
 }
-  
-  handleSubmit = (e)=> {
-    // e.preventDefault();
-    // console.log(this.state)
-    // this.props.updateEmployee(this.state);
-    // this.toggle();
-  }
+createAppraisal = async (currentState) => {
+  const createAppraisal = await fetch("http://localhost:3001/appraisals",{
+    method: "POST",
+    body:JSON.stringify(currentState),
+    headers: {
+      "Content-Type": "application/json"
+    }
+  })
+  const parsedResponse = await createAppraisal.json();
+  console.log(parsedResponse);
+  // this.props.updateAppraisalArray(parsedResponse.appraisal);
+}
+handleSubmit= (e) => {
+  e.preventDefault();
+  //seed data from state into appraisals table
+  this.createAppraisal(this.state)
+  //redirect to appraisal show
+
+}
   render(){
     return (
         <div>

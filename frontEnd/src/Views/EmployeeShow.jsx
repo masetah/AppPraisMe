@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
-import Navigation from '../Components/Navigation'
+import Navigation from '../Components/Navigation';
 import UpdateEmployee from '../Components/EditEmployeeModal';
-import NewAppraisal from '../Components/NewAppraisal'
+import NewAppraisal from '../Components/NewAppraisal';
+import AppraisalIndex from '../Components/AppraisalIndex';
 import { Button } from 'reactstrap';
 
 class EmployeeShow extends Component {
@@ -9,7 +10,6 @@ class EmployeeShow extends Component {
     super()
     this.state={
       employee:[],
-      appraisals: []
     }
   }
  
@@ -53,7 +53,6 @@ deleteEmployee = async (id) => {
   }
 }
   render(){
-    console.log(this.state.employee)
     return (
         <div>
           <Navigation/>
@@ -61,6 +60,7 @@ deleteEmployee = async (id) => {
           <h3>{this.state.employee.position}</h3>
           <p>Hired: {this.state.employee.hire_date}</p>
           <NewAppraisal/>
+          <AppraisalIndex />
           <UpdateEmployee updateEmployee={this.updateEmployee} employee={this.props.location.state.employee}/>
           <Button color="danger" onClick={()=>{
             this.deleteEmployee(this.state.employee.id)
