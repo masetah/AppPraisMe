@@ -8,14 +8,15 @@ class Dashboard extends Component {
     super()
     this.state={
         employees:[],
+
     }
 }
 
-handleLogout=e=>{
-  e.preventDefault();
-  this.setUser(null);
-  this.props.history.push("/");
-}
+// handleLogout=e=>{
+//   e.preventDefault();
+//   this.setUser(null);
+//   this.props.history.push("/");
+// }
 
 componentDidMount(){
     this.getEmployees();
@@ -34,7 +35,6 @@ updateEmployeeArray=(employee)=>{
 getEmployees = async () => {
     const employees =await fetch("http://localhost:3001/employees");
     const parsedResponse = await employees.json()
-    // console.log(parsedResponse.employees);
     this.setState({
         employees:parsedResponse.employees
     })

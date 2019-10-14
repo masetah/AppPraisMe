@@ -2,26 +2,10 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom'
 
 class AppraisalIndex extends Component {
-    constructor(){
-        super()
-        this.state={
-            appraisals:[]
-        }
-    }
 
-    componentDidMount(){
-        this.getAppraisals()
-    }
-    getAppraisals = async () => {
-        const appraisals =await fetch("http://localhost:3001/appraisals");
-        const parsedResponse = await appraisals.json()
-        this.setState({
-            appraisals:parsedResponse.appraisals
-        })
-      }
     render(){
-        console.log(this.state.appraisals)
-        const appraisals = this.state.appraisals.map((appraisal, index)=>{
+        // console.log(this.state.appraisals)
+        const appraisals = this.props.appraisals.map((appraisal, index)=>{
             return <div key={index}>
                 <Link to={{pathname:`/appraisal/${appraisal.id}`,
                     state:{
@@ -37,7 +21,6 @@ class AppraisalIndex extends Component {
                 </div>
             )
     }
-
 }
 
 export default AppraisalIndex;

@@ -10,13 +10,22 @@ class EmployeeShow extends Component {
     super()
     this.state={
       employee:[],
+      appraisals:[]
     }
   }
  
   componentDidMount(){
     this.setState({
       employee:this.props.location.state.employee
-    })
+    });
+    this.getAppraisals();
+}
+getAppraisals = async () => {
+  const appraisals =await fetch("http://localhost:3001/appraisals");
+  const parsedResponse = await appraisals.json()
+  this.setState({
+      appraisals:parsedResponse.appraisals
+  })
 }
 
 updateEmployee = async (formData) => {
@@ -60,7 +69,7 @@ deleteEmployee = async (id) => {
           <h3>{this.state.employee.position}</h3>
           <p>Hired: {this.state.employee.hire_date}</p>
           <NewAppraisal/>
-          <AppraisalIndex />
+          <AppraisalIndex appraisals={this.state.appraisals}/>
           <UpdateEmployee updateEmployee={this.updateEmployee} employee={this.props.location.state.employee}/>
           <Button color="danger" onClick={()=>{
             this.deleteEmployee(this.state.employee.id)

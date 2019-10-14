@@ -6,13 +6,13 @@ class EmployeeIndex extends Component {
     constructor(){
         super()
         this.state={
-            employees:[]
+            employees:[],
         }
     }
 
     componentDidMount(){
         this.setState({
-          employees:this.props.employees
+          employees:this.props.employees,
         })
     }
 
