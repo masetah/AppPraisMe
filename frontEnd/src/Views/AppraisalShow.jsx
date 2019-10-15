@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Navigation from '../Components/Navigation'
-import { Table } from 'reactstrap';
+import { Table, Button } from 'reactstrap';
 class AppraisalShow extends Component {
   constructor(){
     super()
@@ -12,8 +12,23 @@ class AppraisalShow extends Component {
     this.setState({
       appraisal:this.props.location.state.appraisal
     });
-    
   }
+
+  deleteAppraisal = async (id) => {
+    // console.log(this.props.history);
+    try{
+        await fetch(`http://localhost:3001/appraisals/${id}`, {
+        method:'DELETE',
+        headers: {
+          "Content-Type": "application/json"
+      }
+    });
+    this.props.history.push("/dashboard")
+    }catch(err){
+      console.log(err)
+    }
+  }
+
   render(){
     console.log(this.state)
     return (
@@ -93,6 +108,9 @@ class AppraisalShow extends Component {
         </tr>
       </tbody>
     </Table>
+    <Button color="danger" onClick={()=>{
+            this.deleteAppraisal(this.state.appraisal.id)
+            }}>Delete Appraisal </Button>
         </div>
     );
   }

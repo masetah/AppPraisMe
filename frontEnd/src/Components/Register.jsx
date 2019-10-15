@@ -36,15 +36,26 @@ class Register extends Component {
             console.log(err)
         }
     }
+    // createUser = async (userInfo) => {
+    //     const createUser = await fetch("http://localhost:3001/users",{
+    //       method: "POST",
+    //       body:JSON.stringify(userInfo),
+    //       headers: {
+    //         "Content-Type": "application/json"
+    //       }
+    //     })
+    //     const parsedResponse = await createUser.json();
+    //     console.log(parsedResponse);
+    // }
         
     render(){
         return(
             <div>
                 <h3>If you are new register below</h3>
             <form onSubmit={this.createNewUser}>
-                <input type="text" placeholder="Create a username." name="username" onChange={this.handleChange}/>
+                <input type="text" placeholder="Create a username" name="username" onChange={this.handleChange}/>
                 <br></br>
-                <input type="password" placeholder="password" name="password" onChange={this.handleChange}/>
+                <input type="password" placeholder="Create a password" name="password" onChange={this.handleChange}/>
                 <br></br>
                 <input type="submit" value="Register Now"/>
             </form>

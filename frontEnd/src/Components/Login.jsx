@@ -19,7 +19,7 @@ class Login extends Component {
     handleSubmit=(e)=>{
         e.preventDefault();
         fetch('http://localhost:3001/users', {
-            method: 'POST', 
+            method: 'GET', 
             body: JSON.stringify(this.state),
             headers: {
                 'content-type': 'application/json',
@@ -30,7 +30,7 @@ class Login extends Component {
             .then(data => {
                 localStorage.setItem('userId', data.user.id)
                 this.props.setUser(data.user)
-                this.props.history.push(`/dashboard/${data.user.id}`)
+                // this.props.history.push(`/dashboard`)
             })
         this.setState({
             username:'', 
@@ -46,7 +46,7 @@ class Login extends Component {
                 <form onSubmit={this.handleSubmit}>
                     <input type="text" placeholder="Username" name="username" onChange={this.handleChange}></input>
                     <br></br>
-                    <input type="password" placeholder="password" name="password" onChange={this.handleChange}></input>
+                    <input type="password" placeholder="Password" name="password" onChange={this.handleChange}></input>
                     <br></br>
                     <input type="submit" value="Login"></input>
                 </form>

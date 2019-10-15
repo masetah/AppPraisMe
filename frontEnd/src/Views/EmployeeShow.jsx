@@ -56,7 +56,7 @@ deleteEmployee = async (id) => {
         "Content-Type": "application/json"
     }
   });
-  this.props.history.push("/dashboard/1")
+  this.props.history.push("/dashboard")
   }catch(err){
     console.log(err)
   }

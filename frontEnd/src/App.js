@@ -29,7 +29,7 @@ class App extends Component {
               </div>
             )
           }} />
-          <Route path="/dashboard/:id" exact render={()=>{
+          <Route path="/dashboard" exact render={()=>{
             return (
               <div>
                 <Dashboard user={this.state.user} setUser={this.setUser} />
