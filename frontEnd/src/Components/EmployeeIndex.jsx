@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import NewEmployee from './NewEmployee';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
 
 class EmployeeIndex extends Component {
     constructor(){

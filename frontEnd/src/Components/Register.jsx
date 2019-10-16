@@ -1,11 +1,15 @@
 import React, {Component} from 'react';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap/lib';
+import {Link} from 'react-router-dom';
 
 class Register extends Component {
     constructor(){
         super();
         this.state = {
-            username:'',
-            password:'',
+            name:'',
+            email:'',
+            password_digest:'',
+            modal: false,
         }
     }
 
@@ -14,11 +18,20 @@ class Register extends Component {
             [e.target.name]:e.target.value
         })
     }
-
+    toggle= () =>{
+        this.setState({
+            modal: !this.state.modal
+        })
+    }
+    
     createNewUser= async (e) => {
         e.preventDefault();
         try{
                 console.log("everything matched")
+                this.toggle();
+                delete this.state.modal;
+                this.setState(this.state);
+                console.log(this.state)
                 const createUser = await fetch("http://localhost:3001/users",{
                     method: "POST",
                     body:JSON.stringify(this.state),
@@ -29,36 +42,36 @@ class Register extends Component {
                 const parsedResponse = await createUser.json();
                     console.log(parsedResponse);
                     this.setState({
-                        username:'',
+                        name:'',
+                        email:'',
                         password:'',
-                    })    
+                    })     
         }catch(err){
             console.log(err)
         }
     }
-    // createUser = async (userInfo) => {
-    //     const createUser = await fetch("http://localhost:3001/users",{
-    //       method: "POST",
-    //       body:JSON.stringify(userInfo),
-    //       headers: {
-    //         "Content-Type": "application/json"
-    //       }
-    //     })
-    //     const parsedResponse = await createUser.json();
-    //     console.log(parsedResponse);
-    // }
-        
+
     render(){
         return(
             <div>
-                <h3>If you are new register below</h3>
-            <form onSubmit={this.createNewUser}>
-                <input type="text" placeholder="Create a username" name="username" onChange={this.handleChange}/>
+        <Button color="warning" onClick={this.toggle}>Register</Button>
+        <Modal isOpen={this.state.modal} toggle={this.toggle}>
+          <ModalHeader toggle={this.toggle}>Register Here </ModalHeader>
+          <ModalBody>
+          <form>
+                <input type="text" placeholder="Full Name" name="name" onChange={this.handleChange}/>
                 <br></br>
-                <input type="password" placeholder="Create a password" name="password" onChange={this.handleChange}/>
+                <input type="email" placeholder="Email" name="email" onChange={this.handleChange}/>
                 <br></br>
-                <input type="submit" value="Register Now"/>
+                <input type="password" placeholder="Create a password" name="password_digest" onChange={this.handleChange}/>
+                <br></br>
             </form>
+          </ModalBody>
+          <ModalFooter>
+              <Button color="primary" onClick={this.createNewUser}><Link to={{pathname:`/dashboard`
+                    }}>Register </Link></Button>
+          </ModalFooter>
+        </Modal>
             </div>
         )
     }
