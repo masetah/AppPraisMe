@@ -45,7 +45,7 @@ class NewEmployee extends Component {
                     <Label for="hire_date">Hire date:</Label>
                     <input type="date" name="hire_date" onChange={this.handleChange}></input>
                     <br></br>
-                    <Button type="submit" color="primary" > Submit </Button>
+                    <Button type="submit" color="warning" > Submit </Button>
                 </form>
             </div>
         )

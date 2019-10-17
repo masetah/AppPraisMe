@@ -36,6 +36,15 @@ updateEmployeeArray=(employee)=>{
         }
     })
 }
+updateAppraisalArray=(appraisal)=>{
+    // console.log(employee, "from employee index line 18")
+    this.setState(prevState=>{
+        prevState.appraisals.push(appraisal)
+        return{
+            appraisals:prevState.appraisals
+        }
+    })
+}
 getAppraisals = async () => {
     const appraisals =await fetch("http://localhost:3001/appraisals");
     const parsedResponse = await appraisals.json()
@@ -102,7 +111,7 @@ deleteEmployee = async (id) => {
                     deleteEmployee={this.deleteEmployee}
           />
           <AppraisalIndex appraisals={this.state.appraisals}/>
-          <NewAppraisal/>
+          <NewAppraisal updateAppraisalArray={this.updateAppraisalArray}/>
         </div>
     );
   }

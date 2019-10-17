@@ -47,7 +47,7 @@ createAppraisal = async (currentState) => {
   })
   const parsedResponse = await createAppraisal.json();
   console.log(parsedResponse);
-  // this.props.updateAppraisalArray(parsedResponse.appraisal);
+  this.props.updateAppraisalArray(parsedResponse.appraisal);
 }
 handleSubmit= (e) => {
   e.preventDefault();
@@ -294,7 +294,7 @@ handleSubmit= (e) => {
               </tr>
             </tbody>
             </Table>
-            <Button type="submit" color="primary"> Submit </Button>
+            <Button type="submit" color="warning"> Submit </Button>
           </form>
         </div>
     );
