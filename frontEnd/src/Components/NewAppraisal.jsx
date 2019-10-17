@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
 import { Table, Button, FormGroup, Input } from 'reactstrap';
+import Label from 'reactstrap/lib/Label';
 
 class NewAppraisal extends Component {
   constructor(){
     super()
     this.state={
       employee_id:32,
+      appraisal_name:'',
       period_start_date:'',
       period_end_date:'',
       leadership_score:1,
@@ -56,28 +58,31 @@ handleSubmit= (e) => {
 }
   render(){
     return (
-        <div>
-          <h3>Here is New Appraisal</h3>
+        <div className="newAppraisal">
+          <h3>Add a New Appraisal Here</h3>
           <form onSubmit={this.handleSubmit}>
           <FormGroup>
-          <Input
-          type="date"
-          name="period_start_date"
-          id="exampleDate"
-          placeholder="Period Start"
-          onChange={this.handleChange}
-          />
+            <Input
+              type="text"
+              id="appraisalName"
+              name="appraisalName"
+              placeholder="Employee Full Name"
+              onChange={this.handleChange}/>
+            <br></br>
+            <Label id="dateLable" for="period_start_date">Start:</Label>
+            <Input
+              type="date"
+              name="period_start_date"
+              id="startDate"
+              onChange={this.handleChange}/>
+            <Label id="dateLable" for="period_end_date">End:</Label>
+            <Input
+              type="date"
+              name="period_end_date"
+              id="endDate"
+              onChange={this.handleChange}/>
           </FormGroup>
-          <FormGroup>
-          <Input
-          type="date"
-          name="period_end_date"
-          id="exampleDate"
-          placeholder="Period End"
-          onChange={this.handleChange}
-          />
-          </FormGroup>
-            <Table striped>
+          <Table striped>
             <thead>
               <tr>
                 <th>#</th>

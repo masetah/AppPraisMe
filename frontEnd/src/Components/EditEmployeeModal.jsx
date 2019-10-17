@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap/lib';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Label } from 'reactstrap/lib';
 
 class UpdateEmployee extends Component {
   constructor(props) {
@@ -34,15 +34,18 @@ handleSubmit = (e)=> {
 }
   render() {
     return (
-      <div>
+      <div className="updateEmployee">
         <Button color="warning" onClick={this.toggle}>Edit {this.state.name} </Button>
         <Modal isOpen={this.state.modal} toggle={this.toggle}>
           <ModalHeader toggle={this.toggle}>Update {this.state.name} </ModalHeader>
           <ModalBody>
             <form onSubmit={this.handleSubmit}>
-                Name:      <input type="text" name="name" value={this.state.name}  onChange={this.handleChange}></input><br></br>
-                Position:   <input type="text" name="position" value={this.state.position} onChange={this.handleChange}></input><br></br>
-                Hire Date: <input type="date" name="hire_date" value={this.state.hire_date} onChange={this.handleChange}></input><br></br>
+                <Label className="modalInput" for="name"> Name: </Label>
+                <input type="text" name="name" value={this.state.name}  onChange={this.handleChange}></input><br></br>
+                <Label className="modalInput" for="position"> Position: </Label>
+                <input type="text" name="position" value={this.state.position} onChange={this.handleChange}></input><br></br>
+                <Label className="modalInput" for="hire_date"> Hire Date: </Label>
+                <input type="date" name="hire_date" value={this.state.hire_date} onChange={this.handleChange}></input><br></br>
             </form>
           </ModalBody>
           <ModalFooter>

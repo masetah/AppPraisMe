@@ -63,7 +63,7 @@ deleteEmployee = async (id) => {
 }
   render(){
     return (
-        <div>
+        <div className="employeeShow">
           <Navigation/>
           <h1>{this.state.employee.name}</h1>
           <h3>{this.state.employee.position}</h3>

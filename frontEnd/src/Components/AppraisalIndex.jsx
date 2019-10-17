@@ -11,11 +11,11 @@ class AppraisalIndex extends Component {
                     state:{
                         appraisal: appraisal 
                     }
-                }}>{appraisal.period_start_date} to  {appraisal.period_end_date}</Link>
+                }}>{appraisal.period_start_date}</Link>
             </div>     
         })
             return(
-                <div>
+                <div className="appraisalIndex">
                     <h2>Past Appraisals</h2>
                     {appraisals}
                 </div>
