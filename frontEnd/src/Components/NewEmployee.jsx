@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import Label from 'reactstrap/lib/Label';
+import {Button} from 'reactstrap';
 
 class NewEmployee extends Component {
     constructor(){
@@ -34,15 +36,16 @@ class NewEmployee extends Component {
     render(){
         return(
             <div className="newEmployee">
-                <h3>Add a New Hire</h3>
+                <h3>Add a New Employee</h3>
                 <form onSubmit={this.handleSubmit}>
                     <input type="text" placeholder="Full Name" name="name" onChange={this.handleChange}></input>
                     <br></br>
                     <input type="text" placeholder="Postion" name="position" onChange={this.handleChange}></input>
                     <br></br>
+                    <Label for="hire_date">Hire date:</Label>
                     <input type="date" name="hire_date" onChange={this.handleChange}></input>
                     <br></br>
-                    <input type="submit" value="submit"></input>
+                    <Button type="submit" color="primary" > Submit </Button>
                 </form>
             </div>
         )

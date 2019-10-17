@@ -294,7 +294,7 @@ handleSubmit= (e) => {
               </tr>
             </tbody>
             </Table>
-            <Button><input type="submit" value="Submit"/></Button>
+            <Button type="submit" color="primary"> Submit </Button>
           </form>
         </div>
     );

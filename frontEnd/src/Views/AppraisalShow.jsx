@@ -34,7 +34,7 @@ class AppraisalShow extends Component {
     return (
         <div className="appraisalShow">
           <Navigation/>
-          <h1>Your Selected Appraisal</h1>
+          <h1>{this.state.appraisal.appraisal_name}</h1>
           <p>Period: {this.state.appraisal.period_start_date} to {this.state.appraisal.period_end_date}</p>
           <Table striped>
       <thead>
