@@ -3,6 +3,7 @@ import Navigation from '../Components/Navigation';
 import EmployeeIndex from '../Components/EmployeeIndex';
 import NewEmployee from '../Components/NewEmployee';
 import AppraisalIndex from '../Components/AppraisalIndex';
+import NewAppraisal from '../Components/NewAppraisal';
 
 class Dashboard extends Component {
   constructor(){
@@ -92,7 +93,7 @@ deleteEmployee = async (id) => {
         <div className="dashboard">
           <Navigation/>
           <h1>User Dashboard </h1>
-          <p>Keep track of your current employees and add new ones when you make a hire. Select one of your exisiting employees to view their profile page.</p>
+          <p>Keep track of your current employees, past appraisals and add new employees when you make a hire. Select one of your exisiting employees to view their profile page.</p>
           <NewEmployee updateEmployeeArray={this.updateEmployeeArray}/>
           <EmployeeIndex
                     employees={this.state.employees}
@@ -101,6 +102,7 @@ deleteEmployee = async (id) => {
                     deleteEmployee={this.deleteEmployee}
           />
           <AppraisalIndex appraisals={this.state.appraisals}/>
+          <NewAppraisal/>
         </div>
     );
   }

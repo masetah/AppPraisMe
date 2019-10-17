@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Navigation from '../Components/Navigation';
 import UpdateEmployee from '../Components/EditEmployeeModal';
-import NewAppraisal from '../Components/NewAppraisal';
+
 import { Button } from 'reactstrap';
 
 class EmployeeShow extends Component {
@@ -62,7 +62,7 @@ deleteEmployee = async (id) => {
           <Button color="danger" onClick={()=>{
             this.deleteEmployee(this.state.employee.id)
             }}>Terminate {this.state.employee.name}</Button>
-          <NewAppraisal/>
+          
         </div>
     );
   }
