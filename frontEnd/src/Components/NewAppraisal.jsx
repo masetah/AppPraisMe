@@ -6,7 +6,7 @@ class NewAppraisal extends Component {
   constructor(){
     super()
     this.state={
-      employee_id:32,
+      // employee_id:32,
       appraisal_name:'',
       period_start_date:'',
       period_end_date:'',
@@ -65,7 +65,7 @@ handleSubmit= (e) => {
             <Input
               type="text"
               id="appraisalName"
-              name="appraisalName"
+              name="appraisal_name"
               placeholder="Employee Full Name"
               onChange={this.handleChange}/>
             <br></br>

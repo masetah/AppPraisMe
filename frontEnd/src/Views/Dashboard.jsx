@@ -2,13 +2,15 @@ import React, {Component} from 'react';
 import Navigation from '../Components/Navigation';
 import EmployeeIndex from '../Components/EmployeeIndex';
 import NewEmployee from '../Components/NewEmployee';
+import AppraisalIndex from '../Components/AppraisalIndex';
 
 class Dashboard extends Component {
   constructor(){
     super()
     this.state={
         employees:[],
-        user:[]
+        user:[],
+        appraisals:[]
     }
 }
 
@@ -20,11 +22,8 @@ class Dashboard extends Component {
 
 componentDidMount(){
     this.getEmployees();
-    console.log(this.props.location)
-    this.setState({
-        user: this.props.location
-    })
-    console.log(this.state)
+    this.getAppraisals();
+
 }
 
 updateEmployeeArray=(employee)=>{
@@ -36,7 +35,13 @@ updateEmployeeArray=(employee)=>{
         }
     })
 }
-
+getAppraisals = async () => {
+    const appraisals =await fetch("http://localhost:3001/appraisals");
+    const parsedResponse = await appraisals.json()
+    this.setState({
+        appraisals:parsedResponse.appraisals
+    })
+  }
 getEmployees = async () => {
     const employees =await fetch("http://localhost:3001/employees");
     const parsedResponse = await employees.json()
@@ -95,6 +100,7 @@ deleteEmployee = async (id) => {
                     updateEmployee={this.updateEmployee}
                     deleteEmployee={this.deleteEmployee}
           />
+          <AppraisalIndex appraisals={this.state.appraisals}/>
         </div>
     );
   }
