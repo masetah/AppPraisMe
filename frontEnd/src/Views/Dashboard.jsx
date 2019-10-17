@@ -1,14 +1,14 @@
 import React, {Component} from 'react';
 import Navigation from '../Components/Navigation';
 import EmployeeIndex from '../Components/EmployeeIndex';
-
+import NewEmployee from '../Components/NewEmployee';
 
 class Dashboard extends Component {
   constructor(){
     super()
     this.state={
         employees:[],
-
+        user:[]
     }
 }
 
@@ -20,6 +20,11 @@ class Dashboard extends Component {
 
 componentDidMount(){
     this.getEmployees();
+    console.log(this.props.location)
+    this.setState({
+        user: this.props.location
+    })
+    console.log(this.state)
 }
 
 updateEmployeeArray=(employee)=>{
@@ -79,9 +84,11 @@ deleteEmployee = async (id) => {
 }
   render(){
     return (
-        <div>
+        <div className="dashboard">
           <Navigation/>
-          <h1>Welcome to your Dashboard </h1>
+          <h1>User Dashboard </h1>
+          <p>Keep track of your current employees and add new ones when you make a hire. Select one of your exisiting employees to view their profile page.</p>
+          <NewEmployee updateEmployeeArray={this.updateEmployeeArray}/>
           <EmployeeIndex
                     employees={this.state.employees}
                     updateEmployeeArray={this.updateEmployeeArray}

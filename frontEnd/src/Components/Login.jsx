@@ -7,8 +7,9 @@ class Login extends Component {
     constructor(){
         super();
         this.state = {
-            email: '',
-            password: '',
+            email: '123',
+            name: '', 
+            user_id: ''
         }
     }
 
@@ -31,26 +32,20 @@ class Login extends Component {
             })
             const parsedResponse = await login.json();
                         console.log(parsedResponse);
-                        // this.setState({
-                        //     name:'',
-                        //     email:'',
-                        //     password:'',
-                        // })     
+                        this.setState({
+                            name:parsedResponse.user.name,
+                            email:parsedResponse.user.email,
+                            user_id: parsedResponse.user.id, 
+                        }) 
+                        console.log(this.state)    
                 // .then(response => response.json())
                 // .then(data => {
                 //     localStorage.setItem('userId', data.user.id)
                 //     this.props.setUser(data.user)
-                // console.log(this.props.user)
-                    // this.props.history.push(`/dashboard`)
                 // })
-            this.setState({
-                email:'', 
-                password:''
-            })
         }catch(err){
             console.log(err)
         }
-
     }
 
     render(){
@@ -63,8 +58,11 @@ class Login extends Component {
                     <br></br>
                     <input type="password" placeholder="Password" name="password" onChange={this.handleChange}></input>
                     <br></br>
-                    <Button type="submit" ><Link to={{pathname:`/dashboard`
-                    }}>Login </Link></Button> 
+                    <Button type="submit">
+                        <Link to={{pathname:`/dashboard`, 
+                        state: this.state
+                    }}>Login </Link>
+                    </Button> 
                 </form>
                 <Register/>
             </div>

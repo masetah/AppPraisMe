@@ -30,18 +30,22 @@ class Navigation extends Component {
   }
   render() {
     return (
-      <div>
+      <div className="navBar">
         <Navbar color="light" light expand="md">
           <NavbarBrand href="/dashboard">Dashboard</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
-              {/* <NavItem>
-                <NavLink href="/employees">Employees</NavLink>
-              </NavItem> */}
+              <NavItem>
+                <NavLink >Employees</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink >Appraisals</NavLink>
+              </NavItem>
               <NavItem>
                 <NavLink href="/">Logout</NavLink>
               </NavItem>
+
               {/* <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
                   Menu

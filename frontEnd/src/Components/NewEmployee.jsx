@@ -33,8 +33,8 @@ class NewEmployee extends Component {
     }
     render(){
         return(
-            <div>
-                <h2>Add a New Employee</h2>
+            <div className="newEmployee">
+                <h3>Add a New Hire</h3>
                 <form onSubmit={this.handleSubmit}>
                     <input type="text" placeholder="Full Name" name="name" onChange={this.handleChange}></input>
                     <br></br>

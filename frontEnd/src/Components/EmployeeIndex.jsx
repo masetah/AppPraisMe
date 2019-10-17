@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import NewEmployee from './NewEmployee';
+// import NewEmployee from './NewEmployee';
 import {Link} from 'react-router-dom';
 
 class EmployeeIndex extends Component {
@@ -18,7 +18,7 @@ class EmployeeIndex extends Component {
 
     render(){
         const employees = this.props.employees.map((employee, index)=>{
-            return <div key={index}>
+            return <div key={index} >
                 <Link to={{pathname:`/employee/${employee.id}`,
                     state:{
                         employee: employee 
@@ -27,9 +27,9 @@ class EmployeeIndex extends Component {
             </div>     
         })
             return(
-                <div>
-                    <NewEmployee updateEmployeeArray={this.props.updateEmployeeArray}/>
-                    <h2>Employees</h2>
+                <div className='employeeIndex'>
+                    {/* <NewEmployee updateEmployeeArray={this.props.updateEmployeeArray}/> */}
+                    <h3>Current Employees</h3>
                     {employees}
                 </div>
             )
