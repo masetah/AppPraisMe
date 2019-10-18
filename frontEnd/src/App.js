@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
+import './App.css';
 import Login from './Components/Login';
 import Dashboard from './Views/Dashboard';
 import EmployeeShow from './Views/EmployeeShow';
 import AppraisalShow from './Views/AppraisalShow';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
-import './App.css';
+
 
 class App extends Component {
   constructor(){

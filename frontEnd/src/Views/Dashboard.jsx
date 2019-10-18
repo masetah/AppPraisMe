@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Navigation from '../Components/Navigation';
+import Footer from '../Components/Footer';
 import EmployeeIndex from '../Components/EmployeeIndex';
 import NewEmployee from '../Components/NewEmployee';
 import AppraisalIndex from '../Components/AppraisalIndex';
@@ -112,6 +113,7 @@ deleteEmployee = async (id) => {
           />
           <AppraisalIndex appraisals={this.state.appraisals}/>
           <NewAppraisal updateAppraisalArray={this.updateAppraisalArray}/>
+          <Footer/>
         </div>
     );
   }

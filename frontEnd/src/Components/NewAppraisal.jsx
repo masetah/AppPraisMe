@@ -59,7 +59,7 @@ handleSubmit= (e) => {
   render(){
     return (
         <div className="newAppraisal">
-          <h3>Add a New Appraisal Here</h3>
+          <h3>Add a New Appraisal</h3>
           <form onSubmit={this.handleSubmit}>
           <FormGroup>
             <Input

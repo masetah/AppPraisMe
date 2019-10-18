@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Navigation from '../Components/Navigation';
 import UpdateEmployee from '../Components/EditEmployeeModal';
+import Footer from '../Components/Footer';
 
 import { Button } from 'reactstrap';
 
@@ -61,8 +62,8 @@ deleteEmployee = async (id) => {
           <UpdateEmployee updateEmployee={this.updateEmployee} employee={this.props.location.state.employee}/>
           <Button color="danger" onClick={()=>{
             this.deleteEmployee(this.state.employee.id)
-            }}>Terminate {this.state.employee.name}</Button>
-          
+            }}>Terminate</Button>
+          <Footer/>
         </div>
     );
   }

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import Navigation from '../Components/Navigation'
+import Navigation from '../Components/Navigation';
+import Footer from '../Components/Footer';
 import { Table, Button } from 'reactstrap';
 class AppraisalShow extends Component {
   constructor(){
@@ -111,6 +112,7 @@ class AppraisalShow extends Component {
     <Button color="danger" onClick={()=>{
             this.deleteAppraisal(this.state.appraisal.id)
             }}>Delete Appraisal </Button>
+        <Footer/>
         </div>
     );
   }

@@ -16,7 +16,7 @@ class AppraisalIndex extends Component {
         })
             return(
                 <div className="appraisalIndex">
-                    <h2>Past Appraisals</h2>
+                    <h2>Appraisals</h2>
                     {appraisals}
                 </div>
             )

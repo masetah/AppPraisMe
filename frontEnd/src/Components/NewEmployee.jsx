@@ -38,11 +38,13 @@ class NewEmployee extends Component {
             <div className="newEmployee">
                 <h3>Add a New Employee</h3>
                 <form onSubmit={this.handleSubmit}>
-                    <input type="text" placeholder="Full Name" name="name" onChange={this.handleChange}></input>
+                    <Label id="Label" for="name">Name: </Label>
+                    <input type="text" placeholder="John Snow" name="name" onChange={this.handleChange}></input>
                     <br></br>
-                    <input type="text" placeholder="Postion" name="position" onChange={this.handleChange}></input>
+                    <Label id="Label" for="position">Position: </Label>
+                    <input type="text" placeholder="King of the North" name="position" onChange={this.handleChange}></input>
                     <br></br>
-                    <Label for="hire_date">Hire date:</Label>
+                    <Label id="Label" for="hire_date">Hire date: </Label>
                     <input type="date" name="hire_date" onChange={this.handleChange}></input>
                     <br></br>
                     <Button type="submit" color="warning" > Submit </Button>
