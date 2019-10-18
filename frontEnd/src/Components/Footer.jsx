@@ -11,8 +11,8 @@ class Footer extends Component {
     render() {
         return (
         <div className="footer">
-        <Navbar color="light" light expand="md">
-            <NavbarBrand href="https://github.com/masetah/AppPraisMe">AppPraise Me 2019</NavbarBrand>
+        <Navbar color="dark" light expand="md">
+            <NavbarBrand id="footerBrand" href="https://github.com/masetah/AppPraisMe">AppPraise Me 2019</NavbarBrand>
             <Nav className="ml-auto" navbar>
                 <NavItem>
                     <NavLink className="logo" id="github" href="https://github.com/masetah/AppPraisMe" ><img src="/Logos/github-logo.png" alt="Github Logo"/> </NavLink> 

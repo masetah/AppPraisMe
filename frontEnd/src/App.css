@@ -18,13 +18,17 @@ h3{
   font-family: Mansalva-Regular;
   text-shadow: 2px 1px black;
 }
-
+p{
+  text-shadow: 2px 1px black;
+  margin:15%;
+}
 .description{
   color:white;
   text-shadow: 2px 1px black;
   /* width: 70%;
   text-align: center; */
 }
+
 
 #registerButton{
   margin:1%;
@@ -33,10 +37,22 @@ h3{
   margin:1%;
 }
 
-.navBar{
-  
+#registerModalHeader{
+  color: rgb(252, 206, 121);
+  font-family: Mansalva-Regular;
+  text-shadow: 2px 1px black;
+  background: lightgrey;
 }
-
+#registerModalBody{
+  background: #648d6b;
+  text-align: center;
+}
+#registerModalFooter{
+  background: lightgrey;
+}
+.navBar{
+  color:lightgrey;
+}
 /* container */
 .dashboard {
   padding: 1% 0 0 0;
@@ -45,7 +61,7 @@ h3{
 
 /* component of dashboard */
 .newEmployee{
-  background: #f8f9fb;
+  background: #b8c0cf;
   border: black 15px;
   width: 90%;
   position: relative;
@@ -61,7 +77,7 @@ h3{
 }
 /* component of dashboard */
 .employeeIndex{
-  background: #f8f9fb;
+  background: #b8c0cf;
   border: black 15px;
   width: 90%;
   position: relative;
@@ -80,7 +96,7 @@ h3{
 
 /* component of dashboard */
 .appraisalIndex{
-  background: #f8f9fb;
+  background: #b8c0cf;
   border: black 15px;
   width: 90%;
   position: relative;
@@ -92,7 +108,7 @@ h3{
 }
 /* component of employeeIndex */
 .newAppraisal{
-  background: #f8f9fb;
+  background: #b8c0cf;
   border: black 15px;
   width: 90%;
   position: relative;
@@ -132,6 +148,10 @@ h3{
 
 .footer{
   height:5%;
+  background: lightgrey;
+}
+#footerBrand{
+  color:lightgrey;
 }
 .logo{
   display:inline;
