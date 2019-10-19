@@ -37,8 +37,8 @@ handleSubmit = (e)=> {
       <div className="updateEmployee">
         <Button color="warning" onClick={this.toggle}>Edit</Button>
         <Modal isOpen={this.state.modal} toggle={this.toggle}>
-          <ModalHeader toggle={this.toggle}>Update {this.state.name} </ModalHeader>
-          <ModalBody>
+          <ModalHeader id="ModalHeader" toggle={this.toggle}><h3>Update {this.state.name}</h3></ModalHeader>
+          <ModalBody id="ModalBody">
             <form onSubmit={this.handleSubmit}>
                 <Label className="modalInput" for="name"> Name: </Label>
                 <input type="text" name="name" value={this.state.name}  onChange={this.handleChange}></input><br></br>
@@ -48,7 +48,7 @@ handleSubmit = (e)=> {
                 <input type="date" name="hire_date" value={this.state.hire_date} onChange={this.handleChange}></input><br></br>
             </form>
           </ModalBody>
-          <ModalFooter>
+          <ModalFooter id="ModalFooter">
               <Button color="primary" onClick={this.handleSubmit}>Update </Button>
           </ModalFooter>
         </Modal>

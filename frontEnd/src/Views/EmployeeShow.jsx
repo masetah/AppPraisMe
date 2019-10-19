@@ -60,7 +60,7 @@ deleteEmployee = async (id) => {
           <h3>{this.state.employee.position}</h3>
           <p>Hired: {this.state.employee.hire_date}</p>
           <UpdateEmployee updateEmployee={this.updateEmployee} employee={this.props.location.state.employee}/>
-          <Button color="danger" onClick={()=>{
+          <Button id="employeeTerminateButton" color= "danger" onClick={()=>{
             this.deleteEmployee(this.state.employee.id)
             }}>Terminate</Button>
           <Footer/>

@@ -56,21 +56,21 @@ class Register extends Component {
             <div >
         <Button id="registerButton" color="warning" onClick={this.toggle}>Register</Button>
         <Modal  isOpen={this.state.modal} toggle={this.toggle}>
-          <ModalHeader id="registerModalHeader" toggle={this.toggle}><h3>Register Here </h3></ModalHeader>
-          <ModalBody id="registerModalBody">
+          <ModalHeader id="ModalHeader" toggle={this.toggle}><h3>Register Here </h3></ModalHeader>
+          <ModalBody id="ModalBody">
           <form>
-                <Label id="Label" for="name"> Full Name: </Label>
-                <input type="text" placeholder="Firstname Lastname" name="name" onChange={this.handleChange}/>
+                <Label className="Label" for="name"> Full Name: </Label>
+                <input type="text" placeholder="Bruce Wayne" name="name" onChange={this.handleChange}/>
                 <br></br>
-                <Label id="Label" for="email"> Email: </Label>
-                <input type="email" placeholder="Manager@business.com" name="email" onChange={this.handleChange}/>
+                <Label className="Label" id="emailLabel" for="email"> Email: </Label>
+                <input id="emailInput" type="email" placeholder="Manager@business.com" name="email" onChange={this.handleChange}/>
                 <br></br>
-                <Label id="Label" for="password_digest"> Password: </Label>
+                <Label className="Label" for="password_digest"> Password: </Label>
                 <input type="password" placeholder="Create a password" name="password_digest" onChange={this.handleChange}/>
                 <br></br>
             </form>
           </ModalBody>
-          <ModalFooter id="registerModalFooter">
+          <ModalFooter id="ModalFooter">
               <Button color="warning" onClick={this.createNewUser}><Link to={{pathname:`/dashboard`
                     }}>Register </Link></Button>
           </ModalFooter>

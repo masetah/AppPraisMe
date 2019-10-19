@@ -28,7 +28,6 @@ class EmployeeIndex extends Component {
         })
             return(
                 <div className='employeeIndex'>
-                    {/* <NewEmployee updateEmployeeArray={this.props.updateEmployeeArray}/> */}
                     <h3>Current Employees</h3>
                     {employees}
                 </div>

@@ -52,24 +52,24 @@ class Login extends Component {
 
     render(){
         return(
-            <div>
+            <div className="login">
                 <h1>AppPraise Me</h1>
-                <p className="description">Do you manage a team and find yourself scrambling during appraisal time? AppPraise has got your back. With this tool you are able to keep track of your employees and their appraisals all in one place. Register for free to get started.</p>
+                <p className="description">Do you manage a team and find yourself scrambling during appraisal time? AppPraise Me has got your back. With this tool you are able to keep track of your employees and their appraisals all in one place. Register for free to get started.</p>
                 <Register/>
                 <h3>Already Registered? Log in here.</h3>
                 <form onSubmit={this.handleLogin}>
-                    <Label id="Label" for="email">Email:</Label>
-                    <input type="text" placeholder="manger@business.com" name="email" onChange={this.handleChange}></input>
-                    <Label id="Label" for="password">Password:</Label>
-                    <input type="password" placeholder="Password" name="password" onChange={this.handleChange}></input>
+                    <Label className="Label" id="label-email" for="email">Email:</Label>
+                    <input type="text" placeholder="manger@business.com" name="email" autoComplete="off" onChange={this.handleChange}></input>
+                    <Label className="Label" for="password">Password:</Label>
+                    <input type="password" placeholder="Password" name="password" autoComplete="off" onChange={this.handleChange}></input>
+                    
                     <Button id="loginButton" color="warning" type="submit">
                         <Link to={{pathname:`/dashboard`, 
                         state: this.state
                     }}>Login</Link> 
                     </Button> 
                 </form>
-                
-                <iframe title="OfficeSpaceGif" src="https://giphy.com/embed/b7MdMkkFCyCWI" width="480" height="258" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p></p>
+                <iframe id="gif"title="OfficeSpaceGif" src="https://giphy.com/embed/b7MdMkkFCyCWI" width="480" height="258" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
                 <Footer/>
             </div>
         )

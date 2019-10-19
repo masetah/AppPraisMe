@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+
 import {
   Navbar,
   NavbarBrand,
@@ -11,9 +12,9 @@ class Footer extends Component {
     render() {
         return (
         <div className="footer">
-        <Navbar color="dark" light expand="md">
-            <NavbarBrand id="footerBrand" href="https://github.com/masetah/AppPraisMe">AppPraise Me 2019</NavbarBrand>
-            <Nav className="ml-auto" navbar>
+        <Navbar color="faded" light>
+        <NavbarBrand href="/" className="mr-auto">AppPraise Me 2019</NavbarBrand>
+            <Nav>
                 <NavItem>
                     <NavLink className="logo" id="github" href="https://github.com/masetah/AppPraisMe" ><img src="/Logos/github-logo.png" alt="Github Logo"/> </NavLink> 
                 </NavItem>

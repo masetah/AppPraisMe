@@ -34,10 +34,10 @@ class App extends Component {
           <Route path="/dashboard" exact render={()=>{
             return (
               <div>
-                <Dashboard user={this.state.user} setUser={this.setUser} />
+                <Dashboard user={this.state.user} setUser={this.setUser}/>
               </div>
             )
-          }} />
+          }}/>
           <Route path="/employee/:id" component={EmployeeShow} />
           <Route path="/appraisal/:id" component={AppraisalShow} />
           </Switch>
