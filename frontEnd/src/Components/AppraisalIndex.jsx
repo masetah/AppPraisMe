@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom'
+import {UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem} from 'reactstrap';
+import { Button } from 'semantic-ui-react'
+
 
 class AppraisalIndex extends Component {
 
@@ -17,7 +20,18 @@ class AppraisalIndex extends Component {
             return(
                 <div className="appraisalIndex">
                     <h2>Appraisals</h2>
-                    {appraisals}
+                    <Button>Click Here</Button>
+                    <UncontrolledDropdown setActiveFromChild>
+					    <DropdownToggle  caret>
+						    Appraisals
+                        </DropdownToggle>
+					    <DropdownMenu>
+						<DropdownItem >
+                            {appraisals}
+                        </DropdownItem>
+					</DropdownMenu>
+				    </UncontrolledDropdown>
+                    
                 </div>
             )
     }

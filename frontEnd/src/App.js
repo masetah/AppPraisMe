@@ -5,8 +5,7 @@ import Dashboard from './Views/Dashboard';
 import EmployeeShow from './Views/EmployeeShow';
 import AppraisalShow from './Views/AppraisalShow';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-
-
+import 'semantic-ui-less/semantic.less'
 
 class App extends Component {
   constructor(){
@@ -18,7 +17,6 @@ class App extends Component {
   setUser = user => {
   this.setState({user: user})
 }
-
   render(){
     return (
       <div className="App">

@@ -5,6 +5,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Fonts/Mansalva-Regular.ttf'
+import 'semantic-ui-less/semantic.less'
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
