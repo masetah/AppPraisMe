@@ -1,18 +1,30 @@
 import React, {Component} from 'react';
-import { Nav, NavLink } from 'reactstrap/lib';
+import EmployeeIndex from '../Components/EmployeeIndex';
+import AppraisalIndex from '../Components/AppraisalIndex';
+import NewAppraisal from '../Components/NewAppraisal';
 
 class Sidebar extends Component {
-  render() {
-    return (
-      <div className="sidebar">
-        <Nav defaultActiveKey="/home" className="flex-column">
-            <NavLink href="/home">Employees</NavLink>
-            <NavLink eventKey="link-1">Appraisals</NavLink>
-            <NavLink eventKey="link-2">New Appraisal</NavLink>
-        </Nav>
-      </div>
-    );
-  }
+    render(){
+        return(
+            <div className="sidebar">
+                <EmployeeIndex 
+                employees={this.props.employees}
+                updateEmployeeArray={this.props.updateEmployeeArray}
+                updateEmployee={this.props.updateEmployee}
+                deleteEmployee={this.props.deleteEmployee}
+                />
+                <AppraisalIndex
+                appraisals={this.props.appraisals}
+                />
+                <NewAppraisal
+                    updateAppraisalArray={this.props.updateAppraisalArray} 
+                    employees={this.props.employees}
+                />
+            </div>
+
+        )
+    }
+
 }
 
 export default Sidebar;

@@ -29,7 +29,6 @@ class EmployeeIndex extends Component {
         })
             return(
                 <div className='employeeIndex'>
-                    <h3>Current Employees</h3>
                     <UncontrolledDropdown setActiveFromChild>
 					    <DropdownToggle  caret>
 						    Employees

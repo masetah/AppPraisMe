@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { Table, FormGroup, Button, Input, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem} from 'reactstrap';
-// import {} from 'semanitc-ui-react'
-import Label from 'reactstrap/lib/Label';
+import { Modal, ModalHeader, ModalBody, ModalFooter, Label } from 'reactstrap/lib';
+// import Label from 'reactstrap/lib/Label';
 
 class NewAppraisal extends Component {
   constructor(){
@@ -30,7 +30,8 @@ class NewAppraisal extends Component {
       judgement_score:1,
       judgement_description:'',
       interpersonal_relations_score:1,
-      interpersonal_relations_description:'',        
+      interpersonal_relations_description:'',
+      modal: false        
     }
   }
   handleChange=(e)=>{
@@ -38,6 +39,13 @@ class NewAppraisal extends Component {
         [e.target.name]:e.target.value
     })
 }
+
+toggle= () =>{
+  this.setState({
+      modal: !this.state.modal
+  })
+}
+
 createAppraisal = async (currentState) => {
   const createAppraisal = await fetch("http://localhost:3001/appraisals",{
     method: "POST",
@@ -65,7 +73,11 @@ handleSubmit= (e) => {
   })
     return (
         <div className="newAppraisal">
-          <h3>Add a New Appraisal</h3>
+          <Button id="newAppraisalButton" color="secondary" onClick={this.toggle}>New Appraisal</Button>
+          
+          <Modal  isOpen={this.state.modal} toggle={this.toggle}>
+          <ModalHeader id="ModalHeader" toggle={this.toggle}>Add a New Appraisal</ModalHeader>
+          <ModalBody id="ModalBody">
           <form onSubmit={this.handleSubmit}>
           <FormGroup>
             <Input
@@ -313,6 +325,8 @@ handleSubmit= (e) => {
             </Table>
             <Button type="submit" color="warning"> Submit </Button>
           </form>
+          </ModalBody>
+          </Modal>
         </div>
     );
   }

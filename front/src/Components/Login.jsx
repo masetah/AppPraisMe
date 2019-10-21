@@ -69,7 +69,7 @@ class Login extends Component {
                     <Button id="forgot-password" color="link" >Forgot Password?</Button>
                     <Register />
                 </form>
-                <p id="disclaimer">This is only a demo site. Do not leave sensitive information. To gain access simply click log in.</p>
+                <p id="disclaimer">This application is a demo. Do not leave any sensitive information. Anyone can log in by clicking "login."</p>
                 
                 <Footer/>
             </div>

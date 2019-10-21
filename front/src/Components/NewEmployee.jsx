@@ -35,7 +35,7 @@ class NewEmployee extends Component {
     }
     render(){
         return(
-            <div className="newEmployee">
+            <div className="new-employee">
                 <h3>Add a New Employee</h3>
                 <form onSubmit={this.handleSubmit}>
                     {/* <Label className="Label" for="name">Name: </Label> */}

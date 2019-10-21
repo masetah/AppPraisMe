@@ -7,7 +7,6 @@ import {UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem} from '
 class AppraisalIndex extends Component {
 
     render(){
-        // console.log(this.state.appraisals)
         const appraisals = this.props.appraisals.map((appraisal, index)=>{
             return <div key={index}>
                 <Link to={{pathname:`/appraisal/${appraisal.id}`,
@@ -19,7 +18,6 @@ class AppraisalIndex extends Component {
         })
             return(
                 <div className="appraisalIndex">
-                    <h2>Appraisals</h2>
                     <UncontrolledDropdown setActiveFromChild>
 					    <DropdownToggle  caret>
 						    Appraisals

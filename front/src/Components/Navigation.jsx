@@ -28,16 +28,10 @@ class Navigation extends Component {
     return (
       <div className="navBar">
         <Navbar color="light" light expand="md">
-          <NavbarBrand href="/dashboard">Dashboard</NavbarBrand>
+          <NavbarBrand href="/dashboard">Your Logo</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
-              <NavItem>
-                <NavLink >Employees</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink >Appraisals</NavLink>
-              </NavItem>
               <NavItem>
                 <NavLink href="/">Logout</NavLink>
               </NavItem>

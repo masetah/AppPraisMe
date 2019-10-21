@@ -1,11 +1,9 @@
 import React, {Component} from 'react';
 import Navigation from '../Components/Navigation';
 import Sidebar from '../Components/Sidebar';
+import KPI from '../Components/KPI';
 import Footer from '../Components/Footer';
-import EmployeeIndex from '../Components/EmployeeIndex';
 import NewEmployee from '../Components/NewEmployee';
-import AppraisalIndex from '../Components/AppraisalIndex';
-import NewAppraisal from '../Components/NewAppraisal';
 
 class Dashboard extends Component {
   constructor(){
@@ -101,24 +99,20 @@ deleteEmployee = async (id) => {
 }
   render(){
     return (
-
         <div className="dashboard">
-            <Navigation/>
-            <Sidebar/>
-            <h1>User Dashboard </h1>
-            <p>Keep track of your current employees, past appraisals and add new employees when you make a hire. Select one of your exisiting employees to view their profile page.</p>
-            <NewEmployee updateEmployeeArray={this.updateEmployeeArray}/>
-            <EmployeeIndex
+            <Navigation className="navigation"/>
+            <h1 className="dashboard-heading">User Dashboard </h1>
+            <p className="dashboard-description">Keep track of your current employees, past appraisals and add new employees when you make a hire. Select one of your exisiting employees to view their profile page.</p>
+            <Sidebar
                 employees={this.state.employees}
                 updateEmployeeArray={this.updateEmployeeArray}
+                updateAppraisalArray={this.updateAppraisalArray} 
                 updateEmployee={this.updateEmployee}
                 deleteEmployee={this.deleteEmployee}
+                appraisals={this.state.appraisals}
             />
-            <AppraisalIndex appraisals={this.state.appraisals}/>
-            <NewAppraisal 
-                updateAppraisalArray={this.updateAppraisalArray} 
-                employees={this.state.employees}
-            />
+            <NewEmployee updateEmployeeArray={this.updateEmployeeArray}/>
+            <KPI/>
             <Footer/>
         </div>
     );

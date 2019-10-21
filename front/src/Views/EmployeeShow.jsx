@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import Navigation from '../Components/Navigation';
 import UpdateEmployee from '../Components/EditEmployeeModal';
 import Footer from '../Components/Footer';
-
 import { Button } from 'reactstrap';
 
 class EmployeeShow extends Component {
@@ -54,11 +53,11 @@ deleteEmployee = async (id) => {
 }
   render(){
     return (
-        <div className="employeeShow">
+        <div className="employee-show">
           <Navigation/>
-          <h1>{this.state.employee.name}</h1>
-          <h3>{this.state.employee.position}</h3>
-          <p>Hired: {this.state.employee.hire_date}</p>
+          <h1 className="employee-show-heading">{this.state.employee.name}</h1>
+          <h3 className="employee-show-position">{this.state.employee.position}</h3>
+          <p className="employee-show-hire-date">Hired: {this.state.employee.hire_date}</p>
           <UpdateEmployee updateEmployee={this.updateEmployee} employee={this.props.location.state.employee}/>
           <Button id="employeeTerminateButton" color= "danger" onClick={()=>{
             this.deleteEmployee(this.state.employee.id)
