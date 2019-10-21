@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Navigation from '../Components/Navigation';
+import Sidebar from '../Components/Sidebar';
 import Footer from '../Components/Footer';
 import EmployeeIndex from '../Components/EmployeeIndex';
 import NewEmployee from '../Components/NewEmployee';
@@ -100,23 +101,25 @@ deleteEmployee = async (id) => {
 }
   render(){
     return (
+
         <div className="dashboard">
-          <Navigation/>
-          <h1>User Dashboard </h1>
-          <p>Keep track of your current employees, past appraisals and add new employees when you make a hire. Select one of your exisiting employees to view their profile page.</p>
-          <NewEmployee updateEmployeeArray={this.updateEmployeeArray}/>
-          <EmployeeIndex
+            <Navigation/>
+            <Sidebar/>
+            <h1>User Dashboard </h1>
+            <p>Keep track of your current employees, past appraisals and add new employees when you make a hire. Select one of your exisiting employees to view their profile page.</p>
+            <NewEmployee updateEmployeeArray={this.updateEmployeeArray}/>
+            <EmployeeIndex
                 employees={this.state.employees}
                 updateEmployeeArray={this.updateEmployeeArray}
                 updateEmployee={this.updateEmployee}
                 deleteEmployee={this.deleteEmployee}
-          />
-          <AppraisalIndex appraisals={this.state.appraisals}/>
-          <NewAppraisal 
+            />
+            <AppraisalIndex appraisals={this.state.appraisals}/>
+            <NewAppraisal 
                 updateAppraisalArray={this.updateAppraisalArray} 
                 employees={this.state.employees}
             />
-          <Footer/>
+            <Footer/>
         </div>
     );
   }

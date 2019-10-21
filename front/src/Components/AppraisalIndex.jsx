@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom'
-import {UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem, Button} from 'reactstrap';
+import {UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem} from 'reactstrap';
 
 
 
@@ -20,7 +20,6 @@ class AppraisalIndex extends Component {
             return(
                 <div className="appraisalIndex">
                     <h2>Appraisals</h2>
-                    <Button>Click Here</Button>
                     <UncontrolledDropdown setActiveFromChild>
 					    <DropdownToggle  caret>
 						    Appraisals

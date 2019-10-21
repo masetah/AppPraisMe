@@ -3,7 +3,6 @@ import { Button } from 'reactstrap/lib';
 import Register from './Register';
 import {Link} from 'react-router-dom';
 import Footer from '../Components/Footer';
-import Label from 'reactstrap/lib/Label';
 
 class Login extends Component {
     constructor(){
@@ -48,24 +47,30 @@ class Login extends Component {
     render(){
         return(
             <div className="login">
-                <h1>AppPraise Me</h1>
-                <p className="description">Do you manage a team and find yourself scrambling during appraisal time? AppPraise Me has got your back. With this tool you are able to keep track of your employees and their appraisals all in one place. Register for free to get started.</p>
-                <p id="disclaimer">This is only a demo site. Do not leave sensitive information. To gain access simply click log in.</p>
-                <Register/>
-                <h3>Already Registered? Log in here.</h3>
-                <form onSubmit={this.handleLogin}>
-                    <Label className="Label" id="label-email" for="email">Email:</Label>
-                    <input type="text" placeholder="manger@business.com" name="email" autoComplete="off" onChange={this.handleChange}></input>
-                    <Label className="Label" for="password">Password:</Label>
-                    <input type="password" placeholder="Password" name="password" autoComplete="off" onChange={this.handleChange}></input>
-                    
-                    <Button id="loginButton" color="warning" type="submit">
-                        <Link to={{pathname:`/dashboard`, 
+                <form className="form-signin" onSubmit={this.handleLogin}>
+                <img className="loginLogo" src="Logos/web-page.png" alt="icon" height="75px" width="50px"/>
+                <h3 className="form-signin-heading">Log into AppPraise Me</h3>
+                    <input className="form-control" type="text" placeholder="Email Address" name="email" autoComplete="off" onChange={this.handleChange}></input>
+                    <input className="form-control" type="password" placeholder="Password" name="password" autoComplete="off" onChange={this.handleChange}></input>
+                    <label className="checkbox">
+                        <input
+                        type="checkbox"
+                        value="remember-me"
+                        id="rememberMe"
+                        name="rememberMe"
+                        />{" "}
+                        Remember me
+                    </label>
+                    <button className="btn btn-lg btn-primary btn-block" id="loginButton" type="submit">
+                        <Link id="loginLink" to={{pathname:`/dashboard`, 
                         state: this.state
                     }}>Login</Link> 
-                    </Button> 
+                    </button>
+                    <Button id="forgot-password" color="link" >Forgot Password?</Button>
+                    <Register />
                 </form>
-                <iframe id="gif"title="OfficeSpaceGif" src="https://giphy.com/embed/b7MdMkkFCyCWI" width="480" height="258" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+                <p id="disclaimer">This is only a demo site. Do not leave sensitive information. To gain access simply click log in.</p>
+                
                 <Footer/>
             </div>
         )

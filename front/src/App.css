@@ -1,3 +1,4 @@
+/* Application level */
 *{
   box-sizing: border-box
 }
@@ -5,16 +6,98 @@
 *:after{
   box-sizing: border-box;
 }
+
 html, body { 
-  height: 100%;
-  position: relative;
+  background: #16202a;
 }
+
 #root{
-  color: rgb(252, 206, 121);
-  /* background: #648d6b; */
   text-align: center;
   display: relative;
 }
+p{
+  /* text-shadow: 2px 1px black; */
+  margin:15%;
+}
+
+/* Login Page */
+.login {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  background: #16202a;
+}
+.form-signin{
+  max-width: 380px;
+  padding: 15px 35px 45px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+} 
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 30px;
+  color:black;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+
+}
+.form-signin .form-control {
+  position: relative;
+  font-size: 16px;
+  height: auto;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="text"] {
+  margin-bottom: -1px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 20px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+#loginLink{
+  color:white;
+}
+
+/* Dashboard View */
+.dashboard{
+  background: #16202a;
+  padding-bottom: 60px;
+  color:white;
+  display: grid;
+  grid-template-columns: 25% 75%;
+  /* grid-template-rows: 5% 90% 5%; */
+}
+
+/* Navbar */
+.navBar{
+  position: relative;
+  left: 0;
+  top: 0;
+  height: 60px;
+  width: 100%;
+  background-color: RGB(248, 249, 251);
+  color: black;
+  display: inline-block;
+  align-content: center;
+}
+
+
+
+
+
+
+
+/* Footer */
 .footer{
   position: fixed;
   left: 0;
@@ -26,6 +109,7 @@ html, body {
   display: inline-block;
   align-content: center;
 }
+
 img{
   height:30px;
   width:30px;
@@ -33,32 +117,17 @@ img{
 .logo{
   float: right;
 }
-h1{
-  font-family: 'Abril Fatface', cursive;
-  text-shadow: 2px 1px black;
-}
-h2{
-  font-family: 'Abril Fatface', cursive;
-  text-shadow: 2px 1px black;
-}
-h3{
-  font-family: 'Abril Fatface', cursive;
-  text-shadow: 2px 1px black;
-}
-p{
-  text-shadow: 2px 1px black;
-  margin:15%;
-}
+
 
 #employeeTerminateButton{
   margin: 1%;
 }
 .description{
-  color:white;
+  color:#ffffff;
   text-shadow: 2px 1px black;
 }
 .Label{
-  color:black;
+  color:#ffffff;
   margin: 1%;
 }
 #registerButton{
@@ -81,23 +150,13 @@ p{
 #ModalFooter{
   background: lightgrey;
 }
-#gif{
-  margin:2%;
-  border: 3px solid rgb(252, 206, 121);
-}
+
 .navBar{
   color:lightgrey;
 }
 
 /* containers (4) */
-.login {
-  border: 6px solid rgb(252, 206, 121);
-  padding-bottom: 60px;
-}
-.dashboard {
-  border: 6px solid rgb(252, 206, 121);
-  padding-bottom: 60px;
-}
+
 .employeeShow {
   border: 6px solid rgb(252, 206, 121);
   padding-bottom: 60px;
