@@ -10,7 +10,7 @@ class KPI extends Component {
     render(){
         return (
             <div className="KPI">
-              <h1 className="KPI-heading">This will be KPI</h1>
+              <h3 className="KPI-heading">This will be KPI</h3>
               <ul>
                   <li>average leadership</li>
                   <li>average people development</li>
