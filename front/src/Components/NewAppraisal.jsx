@@ -66,19 +66,18 @@ handleSubmit= (e) => {
 
 }
   render(){
-    const employees = this.props.employees.map((employee, index)=>{
-      return <div key={index} >
-          <li>{employee.name}</li>
-      </div>     
-  })
+  //   const employees = this.props.employees.map((employee, index)=>{
+  //     return <div key={index} >
+  //         <li>{employee.name}</li>
+  //     </div>     
+  // })
     return (
         <div className="newAppraisal">
           <Button id="newAppraisalButton" color="secondary" onClick={this.toggle}>New Appraisal</Button>
-          
           <Modal  isOpen={this.state.modal} toggle={this.toggle}>
           <ModalHeader id="ModalHeader" toggle={this.toggle}>Add a New Appraisal</ModalHeader>
           <ModalBody id="ModalBody">
-          <form onSubmit={this.handleSubmit}>
+          <form >
           <FormGroup>
             <Input
               type="text"
@@ -86,7 +85,7 @@ handleSubmit= (e) => {
               name="appraisal_name"
               placeholder="Employee Full Name"
               onChange={this.handleChange}>
-                    <UncontrolledDropdown setActiveFromChild>
+                    {/* <UncontrolledDropdown setActiveFromChild>
                     <DropdownToggle  caret>
                       Select Employee
                     </DropdownToggle>
@@ -95,7 +94,7 @@ handleSubmit= (e) => {
                       {employees}
                     </DropdownItem>
                     </DropdownMenu>
-                    </UncontrolledDropdown>
+                    </UncontrolledDropdown> */}
           </Input>
             <br></br>
             <Label id="dateLable" for="period_start_date">Start:</Label>
@@ -323,9 +322,11 @@ handleSubmit= (e) => {
               </tr>
             </tbody>
             </Table>
-            <Button type="submit" color="warning"> Submit </Button>
           </form>
           </ModalBody>
+          <ModalFooter>
+          <Button onClick={this.handleSubmit} color="warning"> Submit </Button>
+          </ModalFooter>
           </Modal>
         </div>
     );

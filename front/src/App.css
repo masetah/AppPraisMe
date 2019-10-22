@@ -69,7 +69,20 @@ p{
 #loginLink{
   color:white;
 }
-
+.description{
+  color:#ffffff;
+  text-shadow: 2px 1px black;
+}
+.Label{
+  color:#ffffff;
+  margin: 1%;
+}
+#registerButton{
+  margin:1%;
+}
+#loginButton{
+  margin:1%;
+}
 /* Dashboard Page */
 .dashboard{
   background: #16202a;
@@ -141,25 +154,23 @@ img{
 .logo{
   float: right;
 }
+/* EmployeeShow Page */
+.employee-show-container{
 
-
+  background: #16202a;
+}
+.employee-show{
+  margin-top: 80px;
+  margin-bottom: 80px;
+  color:#16202a;
+  max-width: 380px;
+  padding: 15px 35px 45px;
+  background-color: #fff;
+} 
 #employeeTerminateButton{
   margin: 1%;
 }
-.description{
-  color:#ffffff;
-  text-shadow: 2px 1px black;
-}
-.Label{
-  color:#ffffff;
-  margin: 1%;
-}
-#registerButton{
-  margin:1%;
-}
-#loginButton{
-  margin:1%;
-}
+
 #ModalHeader{
   color: rgb(252, 206, 121);
   font-family: Mansalva-Regular;
