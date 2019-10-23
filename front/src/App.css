@@ -170,20 +170,28 @@ img{
 #employeeTerminateButton{
   margin: 1%;
 }
-
+.new-appraisal-modal{
+  width: 50%;
+  max-width: none!important;
+}
+#dateLabel{
+  color: #fff;
+}
+th, td{
+  color: #fff;
+}
 #ModalHeader{
-  color: rgb(252, 206, 121);
-  font-family: Mansalva-Regular;
-  text-shadow: 2px 1px black;
-  background: lightgrey;
+  color: #16202a;
+  background:  #fff;
 }
 #ModalBody{
-  background: #648d6b;
+  background:#16202a;
+  color:  #fff;
+  
   text-align: center;
-  border: 3px solid rgb(252, 206, 121);
 }
 #ModalFooter{
-  background: lightgrey;
+  background:  #fff;;
 }
 
 /* containers (4) */

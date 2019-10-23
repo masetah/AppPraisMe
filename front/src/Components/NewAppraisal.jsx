@@ -72,13 +72,14 @@ handleSubmit= (e) => {
   //     </div>     
   // })
     return (
-        <div className="newAppraisal">
+        <div className="new-appraisal">
           <Button id="newAppraisalButton" color="secondary" onClick={this.toggle}>New Appraisal</Button>
-          <Modal  isOpen={this.state.modal} toggle={this.toggle}>
+          <Modal className="new-appraisal-modal" isOpen={this.state.modal} toggle={this.toggle}>
           <ModalHeader id="ModalHeader" toggle={this.toggle}>Add a New Appraisal</ModalHeader>
-          <ModalBody id="ModalBody">
+          <ModalBody  id="ModalBody">
           <form >
           <FormGroup>
+            
             <Input
               type="text"
               id="appraisalName"
@@ -96,21 +97,21 @@ handleSubmit= (e) => {
                     </DropdownMenu>
                     </UncontrolledDropdown> */}
           </Input>
-            <br></br>
-            <Label id="dateLable" for="period_start_date">Start:</Label>
+          <h4>Period</h4>
+            <Label id="dateLabel" for="period_start_date">Start:</Label>
             <Input
               type="date"
               name="period_start_date"
               id="startDate"
               onChange={this.handleChange}/>
-            <Label id="dateLable" for="period_end_date">End:</Label>
+            <Label id="dateLabel" for="period_end_date">End:</Label>
             <Input
               type="date"
               name="period_end_date"
               id="endDate"
               onChange={this.handleChange}/>
           </FormGroup>
-          <Table striped>
+          <Table className="appraisal-table" striped>
             <thead>
               <tr>
                 <th>#</th>
