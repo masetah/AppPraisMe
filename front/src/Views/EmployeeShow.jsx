@@ -4,6 +4,7 @@ import UpdateEmployee from '../Components/EditEmployeeModal';
 import Footer from '../Components/Footer';
 import EmployeeNotes from '../Components/EmployeeNotes';
 import { Button } from 'reactstrap';
+import NewEmployeeNote from '../Components/NewEmployeeNote';
 
 class EmployeeShow extends Component {
   constructor(){
@@ -65,6 +66,7 @@ deleteEmployee = async (id) => {
             this.deleteEmployee(this.state.employee.id)
             }}>Terminate</Button>
             </div>
+            <NewEmployeeNote/>
             <EmployeeNotes/>
           <Footer/>
         </div>
