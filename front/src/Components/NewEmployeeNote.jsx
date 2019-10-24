@@ -10,7 +10,7 @@ class NewEmployeeNote extends Component {
             type:"",
             intensity:"",
             note:"",
-            description:"",
+            description:""
         }
     }
     handleChange=(e)=>{
@@ -19,17 +19,21 @@ class NewEmployeeNote extends Component {
         })
     }
 
-    handleNoteSelect=(e)=>{
-        const addNote = e.currentTarget.value;
-        this.setState(prevState=>{
-            prevState.note.push(addNote)
-            return{
-                note:prevState.note
-            }
+    createNote = async (currentState) => {
+        const createNote = await fetch("http://localhost:3001/notes",{
+          method: "POST",
+          body:JSON.stringify(currentState),
+          headers: {
+            "Content-Type": "application/json"
+          }
         })
-    }
+        const parsedResponse = await createNote.json();
+        console.log(parsedResponse);
+        // this.props.updateAppraisalArray(parsedResponse.appraisal);
+      }
     handleSubmit= (e) => {
         e.preventDefault();
+        this.createNote(this.state);
         
     }
     render(){
@@ -52,19 +56,19 @@ class NewEmployeeNote extends Component {
                     {/* Praise Notes */}
                     <h5>Praise</h5>
                     <Label className="Label" >Habit 1: </Label>
-                    <input type="radio"  name="note"  value="Habit 1: Be Proactve" onChange={this.handleChange}/>
+                    <input type="radio"  name="note"  value="Habit 1" onChange={this.handleChange}/>
                     <Label className="Label" >Habit 2: </Label>
-                    <input type="radio"  name="note"  value="Habit 2: Begin with the End in Mind" onChange={this.handleChange}/>
+                    <input type="radio"  name="note"  value="Habit 2" onChange={this.handleChange}/>
                     <Label className="Label" >Habit 3: </Label>
-                    <input type="radio"  name="note"  value="Habit 3: Put First Things First" onChange={this.handleChange}/>
+                    <input type="radio"  name="note"  value="Habit 3" onChange={this.handleChange}/>
                     <Label className="Label" >Habit 4: </Label>
-                    <input type="radio"  name="note"  value="Habit 4: Think Win/Win" onChange={this.handleChange}/>
+                    <input type="radio"  name="note"  value="Habit 4" onChange={this.handleChange}/>
                     <Label className="Label" >Habit 5: </Label>
-                    <input type="radio"  name="note"  value="Habit 5: Seek First to Understand, Then to Be Understood" onChange={this.handleChange}/>
+                    <input type="radio"  name="note"  value="Habit 5" onChange={this.handleChange}/>
                     <Label className="Label" >Habit 6: </Label>
-                    <input type="radio"  name="note"  value="Habit 6: Synergize" onChange={this.handleChange}/>
+                    <input type="radio"  name="note"  value="Habit 6" onChange={this.handleChange}/>
                     <Label className="Label" >Habit 7: </Label>
-                    <input type="radio"  name="note"  value="Habit 7: Sharpen the Saw" onChange={this.handleChange}/>
+                    <input type="radio"  name="note"  value="Habit 7" onChange={this.handleChange}/>
                     <Label className="Label" >Other: </Label>
                     <input type="text"  name="note"  placeholder="Other Praise Note" onChange={this.handleChange}/>
                     
@@ -82,6 +86,7 @@ class NewEmployeeNote extends Component {
                     <input type="radio"  name="note"  value="Excused Absence" onChange={this.handleChange}/>
                     <Label className="Label" >Other: </Label>
                     <input type="text"  name="note"  placeholder="Other Neutral Note" onChange={this.handleChange}/>
+                    
                     {/* Infraction Notes */}
                     <h5>Infraction</h5>
                     <Label className="Label" >Unexcused Tardy:</Label>

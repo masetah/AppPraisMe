@@ -11,15 +11,23 @@ class EmployeeShow extends Component {
     super()
     this.state={
       employee:[],
+      notes:[],
     }
   }
  
   componentDidMount(){
     this.setState({
-      employee:this.props.location.state.employee
+      employee:this.props.location.state.employee,
     });
+    this.getNotes();
 }
-
+getNotes = async () => {
+  const notes =await fetch("http://localhost:3001/notes");
+  const parsedResponse = await notes.json()
+  this.setState({
+      notes:parsedResponse.notes
+  })
+}
 updateEmployee = async (formData) => {
   try{
     console.log(formData)
@@ -54,10 +62,12 @@ deleteEmployee = async (id) => {
   }
 }
   render(){
+    console.log(this.state)
     return (
         <div className="employee-show-container">
           <Navigation/>
           <div className="employee-show">
+          <img src="./Public/Images/Employee-Placeholder-Image.jpg" alt="employee picture"/>
           <h1 className="employee-show-heading">{this.state.employee.name}</h1>
           <h3 className="employee-show-position">{this.state.employee.position}</h3>
           <p className="employee-show-hire-date">Hired: {this.state.employee.hire_date}</p>
@@ -67,7 +77,7 @@ deleteEmployee = async (id) => {
             }}>Terminate</Button>
             </div>
             <NewEmployeeNote/>
-            <EmployeeNotes/>
+            <EmployeeNotes notes={this.state.notes}/>
           <Footer/>
         </div>
     );

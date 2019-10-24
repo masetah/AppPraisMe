@@ -34,7 +34,7 @@ class AppraisalShow extends Component {
   render(){
     console.log(this.state)
     return (
-        <div className="appraisalShow">
+        <div className="appraisal-show">
           <Navigation/>
           <h1>{this.state.appraisal.appraisal_name}</h1>
           <p>Period: {this.state.appraisal.period_start_date} to {this.state.appraisal.period_end_date}</p>

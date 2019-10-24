@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   resources :appraisals
   resources :users
   resources :sessions
+  resources :notes
 end

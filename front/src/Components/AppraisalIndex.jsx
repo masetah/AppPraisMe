@@ -5,7 +5,6 @@ import {UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem} from '
 
 
 class AppraisalIndex extends Component {
-
     render(){
         const appraisals = this.props.appraisals.map((appraisal, index)=>{
             return <div key={index}>

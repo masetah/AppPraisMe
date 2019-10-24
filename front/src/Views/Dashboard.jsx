@@ -103,6 +103,7 @@ deleteEmployee = async (id) => {
             <Navigation className="navigation"/>
             <h1 className="dashboard-heading">User Dashboard </h1>
             <p className="dashboard-description">Keep track of your current employees, past appraisals and add new employees when you make a hire. Select one of your exisiting employees to view their profile page.</p>
+            <img id="handshake-image" src="./Images/cytonn-photography-n95VMLxqM2I-unsplash.jpg" alt="handshake"/>
             <Sidebar
                 employees={this.state.employees}
                 updateEmployeeArray={this.updateEmployeeArray}

@@ -100,6 +100,13 @@ p{
   grid-column: 1/3;
   grid-row:2/3;
 }
+#handshake-image{
+  grid-column: 1/3;
+  grid-row:2/4;
+  height:100%;
+  width:100%;
+  /* background-attachment: fixed; */
+}
 .dashboard-description{
   grid-column: 1/3;
   grid-row:3/4;
@@ -168,7 +175,7 @@ img{
 .employee-show{
   grid-column: 1/2;
   grid-row:1/2;
-  display: grid;
+
   margin-top: 80px;
   margin-bottom: 10px;
   color:#16202a;
@@ -221,8 +228,8 @@ th, td{
   flex-direction: column;
 }
 
-.appraisalShow{
-  border: 6px solid rgb(252, 206, 121);
+.appraisal-show{
+  background: #16202a;
   padding-bottom: 60px;
 }
 
