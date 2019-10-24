@@ -7,9 +7,9 @@ class NewEmployeeNote extends Component {
         super()
         this.state={
             note_date:"",
-            type:"Praise",
+            note_type:"Praise",
             intensity: 0,
-            canned_note:"",
+            canned_note:"Habit 1",
             description:""
         }
     }
@@ -50,7 +50,7 @@ class NewEmployeeNote extends Component {
                     </Input>
                 </FormGroup>
                 <FormGroup>
-                    <Input type="select"  name="type" onChange={this.handleChange} >
+                    <Input type="select"  name="note_type" onChange={this.handleChange} >
                     <option disabled>Type</option>
                     <option>Praise</option>
                     <option>Neutral</option>
@@ -68,13 +68,13 @@ class NewEmployeeNote extends Component {
                   <FormGroup>
                     <Input type="select"  name="canned_note" onChange={this.handleChange} >
                     <option disabled>Praise</option>
-                    <option>Habit 1</option>
-                    <option>Habit 2</option>
-                    <option>Habit 3</option>
-                    <option>Habit 4</option>
-                    <option>Habit 5</option>
-                    <option>Habit 6</option>
-                    <option>Habit 7</option>
+                    <option>Habit 1: Be Proactive.</option>
+                    <option>Habit 2: Begin with the End in Mind.</option>
+                    <option>Habit 3: Put First Things First.</option>
+                    <option>Habit 4: Think Win/Win.</option>
+                    <option>Habit 5: Seek First to Understand, Then to Be Understood.</option>
+                    <option>Habit 6: Synergize.</option>
+                    <option>Habit 7: Sharpen the Saw.</option>
                     <option disabled>Neutral</option>
                     <option>Worked Holiday</option>
                     <option>Initiatied Shift Swap</option>

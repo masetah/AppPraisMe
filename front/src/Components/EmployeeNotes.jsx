@@ -5,15 +5,13 @@ class EmployeeNotes extends Component {
     render(){
         const notes = this.props.notes.map((note, index)=>{
                 return <div key={index}>
-                    <p>{note.id}</p>
+                    <p>{note.note_date}, {note.canned_note}</p>
                 </div>     
             })
                 return(
                     <div className="appraisalIndex">
                         <h3>Employee Notes</h3>
                                 {notes}
-
-                        
                     </div>
                 )
         }
