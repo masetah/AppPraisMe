@@ -67,7 +67,7 @@ deleteEmployee = async (id) => {
         <div className="employee-show-container">
           <Navigation/>
           <div className="employee-show">
-          <img src="./Public/Images/Employee-Placeholder-Image.jpg" alt="employee picture"/>
+          <img src="./Public/Images/Employee-Placeholder-Image.jpg" alt="employee"/>
           <h1 className="employee-show-heading">{this.state.employee.name}</h1>
           <h3 className="employee-show-position">{this.state.employee.position}</h3>
           <p className="employee-show-hire-date">Hired: {this.state.employee.hire_date}</p>
@@ -75,9 +75,10 @@ deleteEmployee = async (id) => {
           <Button id="employeeTerminateButton" color= "danger" onClick={()=>{
             this.deleteEmployee(this.state.employee.id)
             }}>Terminate</Button>
+            <EmployeeNotes notes={this.state.notes}/>
             </div>
             <NewEmployeeNote/>
-            <EmployeeNotes notes={this.state.notes}/>
+            
           <Footer/>
         </div>
     );

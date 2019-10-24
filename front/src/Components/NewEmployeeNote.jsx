@@ -1,15 +1,15 @@
 import React, {Component} from 'react';
-import Label from 'reactstrap/lib/Label';
-import {Button} from 'reactstrap';
+import {Button } from 'reactstrap';
+import {Label, FormGroup, Input } from 'reactstrap/lib';
 
 class NewEmployeeNote extends Component {
     constructor(){
         super()
         this.state={
             note_date:"",
-            type:"",
-            intensity:"",
-            note:"",
+            type:"Praise",
+            intensity: 0,
+            canned_note:"",
             description:""
         }
     }
@@ -41,80 +41,59 @@ class NewEmployeeNote extends Component {
             <div className="new-employee-note">
                 <h3>Add a New Employee Note</h3>
                 <form onSubmit={this.handleSubmit}>
-                    <Label className="Label" for="note_date">Date: </Label>
-                    <input type="date"  name="note_date" onChange={this.handleChange}></input>
-                    
-                    {/* Types */}
-                    <h5>Type</h5>
-                    <Label className="Label" >Praise: </Label>
-                    <input type="radio"  name="type"  value="Praise" onChange={this.handleChange}/>
-                    <Label className="Label" >Neutral: </Label>
-                    <input type="radio"  name="type"  value="Neutral" onChange={this.handleChange}/>
-                    <Label className="Label" >Infraction: </Label>
-                    <input type="radio"  name="type"  value="Infraction" onChange={this.handleChange}/>
-                    
-                    {/* Praise Notes */}
-                    <h5>Praise</h5>
-                    <Label className="Label" >Habit 1: </Label>
-                    <input type="radio"  name="note"  value="Habit 1" onChange={this.handleChange}/>
-                    <Label className="Label" >Habit 2: </Label>
-                    <input type="radio"  name="note"  value="Habit 2" onChange={this.handleChange}/>
-                    <Label className="Label" >Habit 3: </Label>
-                    <input type="radio"  name="note"  value="Habit 3" onChange={this.handleChange}/>
-                    <Label className="Label" >Habit 4: </Label>
-                    <input type="radio"  name="note"  value="Habit 4" onChange={this.handleChange}/>
-                    <Label className="Label" >Habit 5: </Label>
-                    <input type="radio"  name="note"  value="Habit 5" onChange={this.handleChange}/>
-                    <Label className="Label" >Habit 6: </Label>
-                    <input type="radio"  name="note"  value="Habit 6" onChange={this.handleChange}/>
-                    <Label className="Label" >Habit 7: </Label>
-                    <input type="radio"  name="note"  value="Habit 7" onChange={this.handleChange}/>
-                    <Label className="Label" >Other: </Label>
-                    <input type="text"  name="note"  placeholder="Other Praise Note" onChange={this.handleChange}/>
-                    
-                    {/* Neutral Notes */}
-                    <h5>Neutral</h5>
-                    <Label className="Label" >Worked Holiday:</Label>
-                    <input type="radio"  name="note"  value="Worked Holiday" onChange={this.handleChange}/>
-                    <Label className="Label" >Initiated Shift Swap:</Label>
-                    <input type="radio"  name="note"  value="Initiated Swapped Shift" onChange={this.handleChange}/>
-                    <Label className="Label" >Worked Overtime:</Label>
-                    <input type="radio"  name="note"  value="Worked Overtime" onChange={this.handleChange}/>
-                    <Label className="Label" >Excused Tardy:</Label>
-                    <input type="radio"  name="note"  value="Excused Tardy" onChange={this.handleChange}/>
-                    <Label className="Label" >Excused Absence:</Label>
-                    <input type="radio"  name="note"  value="Excused Absence" onChange={this.handleChange}/>
-                    <Label className="Label" >Other: </Label>
-                    <input type="text"  name="note"  placeholder="Other Neutral Note" onChange={this.handleChange}/>
-                    
-                    {/* Infraction Notes */}
-                    <h5>Infraction</h5>
-                    <Label className="Label" >Unexcused Tardy:</Label>
-                    <input type="radio"  name="note"  value="Unexcused Tardy" onChange={this.handleChange}/>
-                    <Label className="Label" >Unexcused Absence:</Label>
-                    <input type="radio"  name="note"  value="Unexcused Absence" onChange={this.handleChange}/>
-                    <Label className="Label" >Disprespectful:</Label>
-                    <input type="radio"  name="note"  value="Disrespectful" onChange={this.handleChange}/>
-                    <Label className="Label" >Damaged Property:</Label>
-                    <input type="radio"  name="note"  value="Damaged Property" onChange={this.handleChange}/>
-                    <Label className="Label" >Not Following Policy:</Label>
-                    <input type="radio"  name="note"  value="Not following Policy" onChange={this.handleChange}/>
-                    <Label className="Label" >Dresscode:</Label>
-                    <input type="radio"  name="note"  value="Dresscode" onChange={this.handleChange}/>
-                    <Label className="Label" >Other: </Label>
-                    <input type="text"  name="note"  placeholder="Other Infraction Note" onChange={this.handleChange}/>
-                    
-                    <h5>Intensity</h5>
-                    <Label className="Label">0</Label>
-                    <input type="radio"  name="intensity"  value="0" onChange={this.handleChange}/>
-                    <Label className="Label">1</Label>
-                    <input type="radio"  name="intensity"  value="1" onChange={this.handleChange}/>
-                    <Label className="Label">2</Label>
-                    <input type="radio"  name="intensity"  value="2" onChange={this.handleChange}/>
-                    
-                    <h5>Description</h5>
-                    <textarea  name="description"  placeholder="Describe the situation" onChange={this.handleChange}/>
-                    <br></br>
+                <FormGroup>
+                    <Input
+                    type="date"
+                    id="note_date"
+                    name="note_date"
+                    onChange={this.handleChange}>
+                    </Input>
+                </FormGroup>
+                <FormGroup>
+                    <Input type="select"  name="type" onChange={this.handleChange} >
+                    <option disabled>Type</option>
+                    <option>Praise</option>
+                    <option>Neutral</option>
+                    <option>Infraction</option>
+                    </Input>
+                  </FormGroup>
+                  <FormGroup>
+                    <Input type="select"  name="intensity" onChange={this.handleChange} >
+                    <option>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    </Input>
+                  </FormGroup>
+                  <FormGroup>
+                    <Input type="select"  name="canned_note" onChange={this.handleChange} >
+                    <option disabled>Praise</option>
+                    <option>Habit 1</option>
+                    <option>Habit 2</option>
+                    <option>Habit 3</option>
+                    <option>Habit 4</option>
+                    <option>Habit 5</option>
+                    <option>Habit 6</option>
+                    <option>Habit 7</option>
+                    <option disabled>Neutral</option>
+                    <option>Worked Holiday</option>
+                    <option>Initiatied Shift Swap</option>
+                    <option>Worked Overtime</option>
+                    <option>Excused Tardy</option>
+                    <option>Excused Absence</option>
+                    <option disabled>Infraction</option>
+                    <option>Unexcused Tardy</option>
+                    <option>Unexcused Absence</option>
+                    <option>Disrespectful</option>
+                    <option>Not Following Policy</option>
+                    <option>Dresscode</option>
+                    <option>Damaged Company Property</option>
+                    </Input>
+                  </FormGroup>
+                  <FormGroup>
+                    <Input type="textarea" placeholder="Describe the situation" name="description" onChange={this.handleChange} >
+                    </Input>
+                  </FormGroup>
                     <Button type="submit" color="warning" > Submit </Button>
                 </form>
             </div>

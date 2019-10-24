@@ -2,11 +2,13 @@ import React, {Component} from 'react';
 import EmployeeIndex from '../Components/EmployeeIndex';
 import AppraisalIndex from '../Components/AppraisalIndex';
 import NewAppraisal from '../Components/NewAppraisal';
+import NewEmployee from '../Components/NewEmployee';
 
 class Sidebar extends Component {
     render(){
         return(
             <div className="sidebar">
+                <NewEmployee updateEmployeeArray={this.props.updateEmployeeArray}/>
                 <EmployeeIndex 
                 employees={this.props.employees}
                 updateEmployeeArray={this.props.updateEmployeeArray}

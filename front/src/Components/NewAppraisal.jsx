@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Table, FormGroup, Button, Input, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem} from 'reactstrap';
+import { Table, FormGroup, Button, Input} from 'reactstrap';
 import { Modal, ModalHeader, ModalBody, ModalFooter, Label } from 'reactstrap/lib';
 // import Label from 'reactstrap/lib/Label';
 
@@ -79,23 +79,12 @@ handleSubmit= (e) => {
           <ModalBody  id="ModalBody">
           <form >
           <FormGroup>
-            
             <Input
               type="text"
               id="appraisalName"
               name="appraisal_name"
               placeholder="Employee Full Name"
               onChange={this.handleChange}>
-                    {/* <UncontrolledDropdown setActiveFromChild>
-                    <DropdownToggle  caret>
-                      Select Employee
-                    </DropdownToggle>
-                    <DropdownMenu>
-                    <DropdownItem >
-                      {employees}
-                    </DropdownItem>
-                    </DropdownMenu>
-                    </UncontrolledDropdown> */}
           </Input>
           <h4>Period</h4>
             <Label id="dateLabel" for="period_start_date">Start:</Label>
