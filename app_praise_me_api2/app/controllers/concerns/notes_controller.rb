@@ -36,7 +36,7 @@ class NotesController < ApplicationController
             :note_date,
             :type,
             :intensity,
-            :note,
+            :canned_note,
             :description)
         end
     end
