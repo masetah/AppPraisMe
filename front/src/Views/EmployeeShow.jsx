@@ -16,17 +16,19 @@ class EmployeeShow extends Component {
   }
  
   componentDidMount(){
+    this.getNotes();
     this.setState({
       employee:this.props.location.state.employee,
     });
-    this.getNotes();
+    
 }
 getNotes = async () => {
-  const notes =await fetch("http://localhost:3001/notes");
-  const parsedResponse = await notes.json()
-  this.setState({
+  const notes = await fetch("http://localhost:3001/notes");
+  const parsedResponse = await notes.json();
+    this.setState({
       notes:parsedResponse.notes
   })
+  console.log(this.state.notes)
 }
 updateEmployee = async (formData) => {
   try{
@@ -61,24 +63,47 @@ deleteEmployee = async (id) => {
     console.log(err)
   }
 }
+deleteNote = async (id) => {
+  console.log(this.props.history);
+
+//   try{
+//       await fetch(`http://localhost:3001/employees/${id}`, {
+//       method:'DELETE',
+//       headers: {
+//         "Content-Type": "application/json"
+//     }
+//   });
+//   this.props.history.push("/dashboard")
+//   }catch(err){
+//     console.log(err)
+//   }
+}
+updateNotesArray=(note)=>{
+  console.log(note, "line 65 EmployeeShow")
+  this.setState(prevState=>{
+      prevState.notes.push(note)
+      return{
+          notes:prevState.notes
+      }
+  })
+}
   render(){
-    console.log(this.state)
+    console.log(this.state.notes)
     return (
         <div className="employee-show-container">
           <Navigation/>
           <div className="employee-show">
-          <img src="./Public/Images/Employee-Placeholder-Image.jpg" alt="employee"/>
-          <h1 className="employee-show-heading">{this.state.employee.name}</h1>
-          <h3 className="employee-show-position">{this.state.employee.position}</h3>
-          <p className="employee-show-hire-date">Hired: {this.state.employee.hire_date}</p>
+            <img src="./public/Images/Employee-Placeholder-Image.jpg" alt="employee"/>
+            <h1>{this.state.employee.name}</h1>
+            <h3 >{this.state.employee.position}</h3>
+            <p >Hired: {this.state.employee.hire_date}</p>
           <UpdateEmployee updateEmployee={this.updateEmployee} employee={this.props.location.state.employee}/>
           <Button id="employeeTerminateButton" color= "danger" onClick={()=>{
             this.deleteEmployee(this.state.employee.id)
             }}>Terminate</Button>
-            <EmployeeNotes notes={this.state.notes}/>
+            <EmployeeNotes employee={this.props.location.state.employee} notes={this.state.notes}/>
             </div>
-            <NewEmployeeNote/>
-            
+            <NewEmployeeNote employee={this.props.location.state.employee} updateNotesArray={this.updateNotesArray}/>
           <Footer/>
         </div>
     );

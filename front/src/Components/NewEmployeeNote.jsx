@@ -3,16 +3,22 @@ import {Button } from 'reactstrap';
 import {Label, FormGroup, Input } from 'reactstrap/lib';
 
 class NewEmployeeNote extends Component {
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
         this.state={
             note_date:"",
             note_type:"Praise",
             intensity: 0,
             canned_note:"Habit 1",
-            description:""
+            description:"",
+            employee_id: this.props.employee.id
         }
     }
+
+    componentDidMount(){
+      // console.log(this.state)
+    }
+
     handleChange=(e)=>{
         this.setState({
             [e.currentTarget.name] : e.currentTarget.value
@@ -33,8 +39,10 @@ class NewEmployeeNote extends Component {
       }
     handleSubmit= (e) => {
         e.preventDefault();
+        console.log(this.state, "Handlesubmit NewEmployeeNote line 40")
         this.createNote(this.state);
-        
+        this.props.updateNotesArray(this.state)
+
     }
     render(){
         return(
@@ -42,22 +50,23 @@ class NewEmployeeNote extends Component {
                 <h3>Add a New Employee Note</h3>
                 <form onSubmit={this.handleSubmit}>
                 <FormGroup>
+                <Label for="note_date">Date</Label>
                     <Input
                     type="date"
-                    id="note_date"
                     name="note_date"
                     onChange={this.handleChange}>
                     </Input>
                 </FormGroup>
                 <FormGroup>
+                    <Label for="note_type">Type</Label>
                     <Input type="select"  name="note_type" onChange={this.handleChange} >
-                    <option disabled>Type</option>
                     <option>Praise</option>
                     <option>Neutral</option>
                     <option>Infraction</option>
                     </Input>
-                  </FormGroup>
+                  </FormGroup> 
                   <FormGroup>
+                  <Label for="intensity">Level</Label>
                     <Input type="select"  name="intensity" onChange={this.handleChange} >
                     <option>0</option>
                     <option>1</option>
@@ -66,8 +75,10 @@ class NewEmployeeNote extends Component {
                     </Input>
                   </FormGroup>
                   <FormGroup>
+                    <Label for="canned_note">Note</Label>
                     <Input type="select"  name="canned_note" onChange={this.handleChange} >
-                    <option disabled>Praise</option>
+                    {/* <optgroup label="Swedish Cars"> */}
+                    <option disabled>Postive</option>
                     <option>Habit 1: Be Proactive.</option>
                     <option>Habit 2: Begin with the End in Mind.</option>
                     <option>Habit 3: Put First Things First.</option>
@@ -75,12 +86,14 @@ class NewEmployeeNote extends Component {
                     <option>Habit 5: Seek First to Understand, Then to Be Understood.</option>
                     <option>Habit 6: Synergize.</option>
                     <option>Habit 7: Sharpen the Saw.</option>
+                    {/* <hr/> */}
                     <option disabled>Neutral</option>
                     <option>Worked Holiday</option>
                     <option>Initiatied Shift Swap</option>
                     <option>Worked Overtime</option>
                     <option>Excused Tardy</option>
                     <option>Excused Absence</option>
+                    {/* <hr/> */}
                     <option disabled>Infraction</option>
                     <option>Unexcused Tardy</option>
                     <option>Unexcused Absence</option>
@@ -91,6 +104,7 @@ class NewEmployeeNote extends Component {
                     </Input>
                   </FormGroup>
                   <FormGroup>
+                  <Label for="description">Description</Label>
                     <Input type="textarea" placeholder="Describe the situation" name="description" onChange={this.handleChange} >
                     </Input>
                   </FormGroup>

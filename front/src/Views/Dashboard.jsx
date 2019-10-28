@@ -3,6 +3,7 @@ import Navigation from '../Components/Navigation';
 import Sidebar from '../Components/Sidebar';
 import KPI from '../Components/KPI';
 import Footer from '../Components/Footer';
+import {Grid, Cell} from 'react-mdl';
 
 class Dashboard extends Component {
   constructor(){
@@ -98,21 +99,30 @@ deleteEmployee = async (id) => {
 }
   render(){
     return (
-        <div className="dashboard">
-            <Navigation className="navigation"/>
-            <h1 className="dashboard-heading">User Dashboard </h1>
-            <p className="dashboard-description">Keep track of your current employees, past appraisals and add new employees when you make a hire. Select one of your exisiting employees to view their profile page.</p>
-            {/* <img id="handshake-image" src="./Images/cytonn-photography-n95VMLxqM2I-unsplash.jpg" alt="handshake"/> */}
-            <Sidebar
-                employees={this.state.employees}
-                updateEmployeeArray={this.updateEmployeeArray}
-                updateAppraisalArray={this.updateAppraisalArray} 
-                updateEmployee={this.updateEmployee}
-                deleteEmployee={this.deleteEmployee}
-                appraisals={this.state.appraisals}
-            />
-            <KPI/>
-            <Footer/>
+        <div className="dashboard-body">
+            <Navigation />
+            <Grid className="dasboard-grid">
+                <Cell col={12}>
+                <h1>User Dashboard </h1>
+                <p>Keep track of your current employees, past appraisals and add new employees when you make a hire. Select one of your exisiting employees to view their profile page.</p>
+                </Cell>
+            </Grid>
+            <Grid>
+            <Cell col={4}>
+                <Sidebar
+                    employees={this.state.employees}
+                    updateEmployeeArray={this.updateEmployeeArray}
+                    updateAppraisalArray={this.updateAppraisalArray} 
+                    updateEmployee={this.updateEmployee}
+                    deleteEmployee={this.deleteEmployee}
+                    appraisals={this.state.appraisals}
+                />
+            </Cell>
+            <Cell col={8}>
+                <KPI />
+            </Cell>
+            </Grid>
+            <Footer />
         </div>
     );
   }

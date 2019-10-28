@@ -3,6 +3,7 @@ import { Button } from 'reactstrap/lib';
 import Register from './Register';
 import {Link} from 'react-router-dom';
 import Footer from '../Components/Footer';
+import {Grid, Cell} from 'react-mdl';
 
 class Login extends Component {
     constructor(){
@@ -46,33 +47,37 @@ class Login extends Component {
 
     render(){
         return(
-            <div className="login">
-                <form className="form-signin" onSubmit={this.handleLogin}>
-                <img className="loginLogo" src="Logos/web-page.png" alt="icon" height="75px" width="50px"/>
-                <h3 className="form-signin-heading">Log into AppPraise Me</h3>
-                    <input className="form-control" type="text" placeholder="Email Address" name="email" autoComplete="off" onChange={this.handleChange}></input>
-                    <input className="form-control" type="password" placeholder="Password" name="password" autoComplete="off" onChange={this.handleChange}></input>
-                    <label className="checkbox">
-                        <input
-                        type="checkbox"
-                        value="remember-me"
-                        id="rememberMe"
-                        name="rememberMe"
-                        />{" "}
-                        Remember me
-                    </label>
-                    <button className="btn btn-lg btn-primary btn-block" id="loginButton" type="submit">
-                        <Link id="loginLink" to={{pathname:`/dashboard`, 
-                        state: this.state
-                    }}>Login</Link> 
-                    </button>
-                    <Button id="forgot-password" color="link" >Forgot Password?</Button>
-                    <Register />
-                </form>
-                <p id="disclaimer">This application is a demo. Do not leave any sensitive information. Anyone can log in by clicking "login."</p>
-                
-                <Footer/>
+            <div className="login-page">
+                <Grid className="login">
+                    <Cell col={8}>
+                    <form className="form-signin" onSubmit={this.handleLogin}>
+                    <img className="loginLogo" src="Logos/web-page.png" alt="icon" height="75px" width="50px"/>
+                    <h3 className="form-signin-heading">Log into AppPraise Me</h3>
+                        <input className="form-control" type="text" placeholder="Email Address" name="email" autoComplete="off" onChange={this.handleChange}></input>
+                        <input className="form-control" type="password" placeholder="Password" name="password" autoComplete="off" onChange={this.handleChange}></input>
+                        <label className="checkbox">
+                            <input
+                            type="checkbox"
+                            value="remember-me"
+                            id="rememberMe"
+                            name="rememberMe"
+                            />{" "}
+                            Remember me
+                        </label>
+                        <button className="btn btn-lg btn-primary btn-block" id="loginButton" type="submit">
+                            <Link id="loginLink" to={{pathname:`/dashboard`, 
+                                state: this.state
+                            }}>Login</Link> 
+                        </button>
+                        <Button id="forgot-password" color="link" >Forgot Password?</Button>
+                        <Register />
+                        <p id="disclaimer">This application is a demo. Do not leave any sensitive information. Anyone can log in by clicking "login."</p>
+                    </form>
+                    </Cell>
+                    <Footer/>
+                </Grid>
             </div>
+ 
         )
     }
 }

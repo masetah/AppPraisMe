@@ -54,27 +54,28 @@ class Register extends Component {
     render(){
         return(
             <div >
-        <Button id="registerButton" color="link" onClick={this.toggle}>Sign up.</Button>
-        <Modal  isOpen={this.state.modal} toggle={this.toggle}>
-          <ModalHeader id="ModalHeader" toggle={this.toggle}><h3>Register Here </h3></ModalHeader>
-          <ModalBody id="ModalBody">
-          <form>
-                <Label className="Label" for="name"> Full Name: </Label>
-                <input type="text" placeholder="Bruce Wayne" name="name" onChange={this.handleChange}/>
+                <Button id="registerButton" color="link" onClick={this.toggle}>Sign up</Button>
+                <Modal  isOpen={this.state.modal} toggle={this.toggle}>
+                <ModalHeader id="ModalHeader" toggle={this.toggle}>Register Here </ModalHeader>
+                <ModalBody id="ModalBody">
+                    <form>
+                        <Label className="Label" for="name"> Full Name: </Label>
+                        <input type="text" placeholder="Bruce Wayne" name="name" onChange={this.handleChange}/>
                 <br></br>
-                <Label className="Label" id="emailLabel" for="email"> Email: </Label>
-                <input id="emailInput" type="email" placeholder="Manager@business.com" name="email" onChange={this.handleChange}/>
+                        <Label className="Label" id="emailLabel" for="email"> Email: </Label>
+                        <input id="emailInput" type="email" placeholder="Manager@business.com" name="email" onChange={this.handleChange}/>
                 <br></br>
-                <Label className="Label" for="password_digest"> Password: </Label>
-                <input type="password" placeholder="Create a password" name="password_digest" onChange={this.handleChange}/>
+                        <Label className="Label" for="password_digest"> Password: </Label>
+                        <input type="password" placeholder="Create a password" name="password_digest" onChange={this.handleChange}/>
                 <br></br>
-            </form>
-          </ModalBody>
-          <ModalFooter id="ModalFooter">
-              <Button color="warning" onClick={this.createNewUser}><Link to={{pathname:`/dashboard`
-                    }}>Register </Link></Button>
-          </ModalFooter>
-        </Modal>
+                    </form>
+                </ModalBody>
+                <ModalFooter id="ModalFooter">
+                    <Button color="warning" onClick={this.createNewUser}>
+                        <Link to={{pathname:`/dashboard`}}>Register</Link>
+                    </Button>
+                </ModalFooter>
+                </Modal>
             </div>
         )
     }

@@ -7,7 +7,7 @@ import NewEmployee from '../Components/NewEmployee';
 class Sidebar extends Component {
     render(){
         return(
-            <div className="sidebar">
+            <div className="sidebar-body">
                 <NewEmployee updateEmployeeArray={this.props.updateEmployeeArray}/>
                 <EmployeeIndex 
                 employees={this.props.employees}

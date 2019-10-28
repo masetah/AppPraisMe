@@ -4,7 +4,7 @@ import Login from './Components/Login';
 import Dashboard from './Views/Dashboard';
 import EmployeeShow from './Views/EmployeeShow';
 import AppraisalShow from './Views/AppraisalShow';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import { Route, Switch} from 'react-router-dom';
 
 
 class App extends Component {
@@ -20,7 +20,6 @@ class App extends Component {
   render(){
     return (
       <div className="App">
-        <Router>
           <Switch>
           <Route path="/" exact render={()=>{
             return (
@@ -39,7 +38,6 @@ class App extends Component {
           <Route path="/employee/:id" component={EmployeeShow} />
           <Route path="/appraisal/:id" component={AppraisalShow} />
           </Switch>
-        </Router>
       </div>
     );
   }
