@@ -5,30 +5,40 @@ import Footer from '../Components/Footer';
 import EmployeeNotes from '../Components/EmployeeNotes';
 import { Button } from 'reactstrap';
 import NewEmployeeNote from '../Components/NewEmployeeNote';
+import NewAppraisal from '../Components/NewAppraisal';
+import EmployeeAppraisal from '../Components/EmployeeAppraisal';
 
 class EmployeeShow extends Component {
   constructor(){
     super()
     this.state={
       employee:[],
+      appraisals:[],
       notes:[],
     }
   }
- 
   componentDidMount(){
+    console.log(this.props.location.state)
     this.getNotes();
+    this.getAppraisals();
     this.setState({
       employee:this.props.location.state.employee,
-    });
-    
-}
+    });  
+  }
 getNotes = async () => {
   const notes = await fetch("http://localhost:3001/notes");
   const parsedResponse = await notes.json();
     this.setState({
       notes:parsedResponse.notes
   })
-  console.log(this.state.notes)
+}
+getAppraisals = async () => {
+  const appraisals = await fetch("http://localhost:3001/appraisals");
+  const parsedResponse = await appraisals.json();
+    this.setState({
+      appraisals:parsedResponse.appraisals
+  })
+  console.log(this.state.appraisals)
 }
 updateEmployee = async (formData) => {
   try{
@@ -47,7 +57,6 @@ updateEmployee = async (formData) => {
     console.log(err)
   }
 }
-
 //add a warning that this cannot be undone.
 deleteEmployee = async (id) => {
   console.log(this.props.history);
@@ -87,25 +96,50 @@ updateNotesArray=(note)=>{
       }
   })
 }
-  render(){
-    console.log(this.state.notes)
-    return (
-        <div className="employee-show-container">
-          <Navigation/>
-          <div className="employee-show">
-            <img src="./public/Images/Employee-Placeholder-Image.jpg" alt="employee"/>
-            <h1>{this.state.employee.name}</h1>
-            <h3 >{this.state.employee.position}</h3>
-            <p >Hired: {this.state.employee.hire_date}</p>
-          <UpdateEmployee updateEmployee={this.updateEmployee} employee={this.props.location.state.employee}/>
-          <Button id="employeeTerminateButton" color= "danger" onClick={()=>{
-            this.deleteEmployee(this.state.employee.id)
-            }}>Terminate</Button>
-            <EmployeeNotes employee={this.props.location.state.employee} notes={this.state.notes}/>
-            </div>
-            <NewEmployeeNote employee={this.props.location.state.employee} updateNotesArray={this.updateNotesArray}/>
-          <Footer/>
-        </div>
+updateAppraisalArray=(appraisal)=>{
+  this.setState(prevState=>{
+      prevState.appraisals.push(appraisal)
+      return{
+          appraisals:prevState.appraisals
+      }
+  })
+}
+render(){
+  return (
+    <div className="employee-show-container">
+      <Navigation/>
+    <div className="employee-show">
+      <img src="./public/Images/Employee-Placeholder-Image.jpg" alt="employee"/>
+      <h1>{this.state.employee.name}</h1>
+      <h3 >{this.state.employee.position}</h3>
+      <p >Hired: {this.state.employee.hire_date}</p>
+      <UpdateEmployee 
+        updateEmployee={this.updateEmployee} 
+        employee={this.props.location.state.employee}
+      />
+      <EmployeeAppraisal
+      employee={this.props.location.state.employee}
+      appraisals={this.state.appraisals}
+      />
+      <NewAppraisal
+        updateAppraisalArray={this.updateAppraisalArray} 
+        employee={this.props.location.state.employee}
+      />
+      <Button id="employeeTerminateButton" color= "danger" onClick={()=>{
+        this.deleteEmployee(this.state.employee.id)
+        }}>Terminate
+      </Button>
+      <EmployeeNotes 
+        employee={this.props.location.state.employee} 
+        notes={this.state.notes}
+      />
+    </div>
+      <NewEmployeeNote 
+        employee={this.props.location.state.employee} 
+        updateNotesArray={this.updateNotesArray}
+      />
+      <Footer/>
+    </div>
     );
   }
 }

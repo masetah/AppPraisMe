@@ -6,7 +6,6 @@ import EmployeeShow from './Views/EmployeeShow';
 import AppraisalShow from './Views/AppraisalShow';
 import { Route, Switch} from 'react-router-dom';
 
-
 class App extends Component {
   constructor(){
     super()
@@ -37,6 +36,9 @@ class App extends Component {
           }}/>
           <Route path="/employee/:id" component={EmployeeShow} />
           <Route path="/appraisal/:id" component={AppraisalShow} />
+          <Route render={
+            () => 
+          <h3>Not Found</h3>}/>
           </Switch>
       </div>
     );

@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import Navigation from '../Components/Navigation';
-import Sidebar from '../Components/Sidebar';
+// import Sidebar from '../Components/Sidebar';
+import NewEmployee from '../Components/NewEmployee';
+import EmployeeIndex from '../Components/EmployeeIndex';
+import AppraisalIndex from '../Components/AppraisalIndex';
 import KPI from '../Components/KPI';
 import Footer from '../Components/Footer';
 import {Grid, Cell} from 'react-mdl';
@@ -24,7 +27,6 @@ class Dashboard extends Component {
 componentDidMount(){
     this.getEmployees();
     this.getAppraisals();
-
 }
 
 updateEmployeeArray=(employee)=>{
@@ -37,7 +39,6 @@ updateEmployeeArray=(employee)=>{
     })
 }
 updateAppraisalArray=(appraisal)=>{
-    // console.log(employee, "from employee index line 18")
     this.setState(prevState=>{
         prevState.appraisals.push(appraisal)
         return{
@@ -108,15 +109,29 @@ deleteEmployee = async (id) => {
                 </Cell>
             </Grid>
             <Grid>
-            <Cell col={4}>
-                <Sidebar
+                <Cell col={4}>
+                    <NewEmployee 
+                        updateEmployeeArray={this.updateEmployeeArray}
+                    />
+                <EmployeeIndex 
+                    employees={this.state.employees}
+                    appraisals={this.state.appraisals}
+                    updateEmployeeArray={this.updateEmployeeArray}
+                    updateAppraisalArray={this.updateAppraisalArray}
+                    updateEmployee={this.updateEmployee}
+                    deleteEmployee={this.deleteEmployee}
+                />
+                <AppraisalIndex
+                    appraisals={this.state.appraisals}
+                />
+                {/* <Sidebar
                     employees={this.state.employees}
                     updateEmployeeArray={this.updateEmployeeArray}
                     updateAppraisalArray={this.updateAppraisalArray} 
                     updateEmployee={this.updateEmployee}
                     deleteEmployee={this.deleteEmployee}
                     appraisals={this.state.appraisals}
-                />
+                /> */}
             </Cell>
             <Cell col={8}>
                 <KPI />

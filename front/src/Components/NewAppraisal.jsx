@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import { Table, FormGroup, Button, Input} from 'reactstrap';
 import { Modal, ModalHeader, ModalBody, ModalFooter, Label } from 'reactstrap/lib';
-// import Label from 'reactstrap/lib/Label';
+
 
 class NewAppraisal extends Component {
   constructor(){
     super()
     this.state={
-      // employee_id:32,
+      employee_id: '',
       appraisal_name:'',
       period_start_date:'',
       period_end_date:'',
@@ -34,6 +34,13 @@ class NewAppraisal extends Component {
       modal: false        
     }
   }
+  componentDidMount(){
+    this.setState({
+      employee_id:this.props.employee.id
+    })
+  }
+    
+ 
   handleChange=(e)=>{
     this.setState({
         [e.target.name]:e.target.value
@@ -54,23 +61,18 @@ createAppraisal = async (currentState) => {
       "Content-Type": "application/json"
     }
   })
-  const parsedResponse = await createAppraisal.json();
-  console.log(parsedResponse);
-  this.props.updateAppraisalArray(parsedResponse.appraisal);
+  const parsedResponse = await createAppraisal.json()
+  console.log(parsedResponse)
+  // this.props.updateAppraisalArray(parsedResponse.appraisal);
 }
+
 handleSubmit= (e) => {
   e.preventDefault();
   //seed data from state into appraisals table
   this.createAppraisal(this.state)
   //redirect to appraisal show
-
 }
   render(){
-  //   const employees = this.props.employees.map((employee, index)=>{
-  //     return <div key={index} >
-  //         <li>{employee.name}</li>
-  //     </div>     
-  // })
     return (
         <div className="new-appraisal">
           <Button id="newAppraisalButton" color="secondary" onClick={this.toggle}>New Appraisal</Button>

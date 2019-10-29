@@ -12,12 +12,14 @@ class EmployeeIndex extends Component {
     }
 
     componentDidMount(){
+        console.log(this.props.appraisals)
         this.setState({
-          employees:this.props.employees,
+          employees: this.props.employees,
         })
     }
 
     render(){
+        
         const employees = this.props.employees.map((employee, index)=>{
             return <div key={index} >
                 <Link to={{pathname:`/employee/${employee.id}`,
