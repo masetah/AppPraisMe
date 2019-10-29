@@ -32,7 +32,7 @@ class AppraisalsController < ApplicationController
 
     def appraisal_params
     params.required(:appraisal).permit(
-        # :employee_id,
+        :employee_id,
         :appraisal_name,
         :period_start_date,
         :period_end_date,

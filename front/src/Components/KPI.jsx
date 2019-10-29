@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
-
+// import * as CanvasJSReact from './assets/canvasjs.react';
+// var CanvasJS = CanvasJSReact.CanvasJS;
+// var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 class KPI extends Component {
     constructor(){
       super()
@@ -8,22 +10,24 @@ class KPI extends Component {
       }
     }
     render(){
+      const options = {
+        title: {
+          text: "Basic Column Chart in React"
+        },
+        data: [{				
+                  type: "column",
+                  dataPoints: [
+                      { label: "Apple",  y: 10  },
+                      { label: "Orange", y: 15  },
+                      { label: "Banana", y: 25  },
+                      { label: "Mango",  y: 30  },
+                      { label: "Grape",  y: 28  }
+                  ]
+         }]
+     }
         return (
             <div className="KPI-body">
-              <h3>This will be KPI</h3>
-              <ul>
-                  <li>average leadership</li>
-                  <li>average people development</li>
-                  <li>average planning</li>
-                  <li>average communication</li>
-                  <li>average productivity</li>
-                  <li>average knowledge</li>
-                  <li>average adapability</li>
-                  <li>average intiative</li>
-                  <li>average judgement</li>
-                  <li>average interpersonal</li>
-                  <li>Team score</li>
-              </ul>
+            {/* <CanvasJSChart options = {options}/> */}
             </div>
         );
       }

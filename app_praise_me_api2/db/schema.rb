@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_24_192319) do
+ActiveRecord::Schema.define(version: 2019_10_29_191156) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,6 +39,8 @@ ActiveRecord::Schema.define(version: 2019_10_24_192319) do
     t.integer "interpersonal_relations_score"
     t.string "interpersonal_relations_description"
     t.string "appraisal_name"
+    t.integer "employee_id"
+    t.index ["employee_id"], name: "index_appraisals_on_employee_id"
   end
 
   create_table "employees", force: :cascade do |t|

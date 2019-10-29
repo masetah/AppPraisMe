@@ -32,9 +32,9 @@ class NotesController < ApplicationController
 
     def note_params
         params.required(:note).permit(
-            # :employee_id,
+            :employee_id,
             :note_date,
-            :type,
+            :note_type,
             :intensity,
             :canned_note,
             :description)
