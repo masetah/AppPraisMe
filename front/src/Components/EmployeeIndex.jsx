@@ -11,7 +11,6 @@ class EmployeeIndex extends Component {
     }
 
     componentDidMount(){
-        console.log(this.props.appraisals)
         this.setState({
           employees: this.props.employees,
         })

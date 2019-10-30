@@ -2,10 +2,19 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom'
 import {UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem} from 'reactstrap';
 
-
-
 class AppraisalIndex extends Component {
-    render(){
+    // constructor(){
+    //     super()
+    //     this.state={
+    //         appraisals:[],
+    //     }
+    // }
+    // componentDidMount(){
+    //     this.setState({
+    //       appraisals: this.props.appraisals,
+    //     })
+    // }
+    render(props){
         const appraisals = this.props.appraisals.map((appraisal, index)=>{
             return <div key={index}>
                 <Link to={{pathname:`/appraisal/${appraisal.id}`,
@@ -26,8 +35,7 @@ class AppraisalIndex extends Component {
                             {appraisals}
                         </DropdownItem>
 					</DropdownMenu>
-				    </UncontrolledDropdown>
-                    
+				    </UncontrolledDropdown>  
                 </div>
             )
     }

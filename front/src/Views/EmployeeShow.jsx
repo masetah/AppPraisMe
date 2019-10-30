@@ -47,7 +47,6 @@ getAppraisals = async () => {
     this.setState({
       appraisals:parsedResponse.appraisals
   })
-  console.log(this.state.appraisals)
 }
 updateEmployee = async (formData) => {
   try{

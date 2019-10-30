@@ -7,15 +7,32 @@ class AppraisalShow extends Component {
   constructor(){
     super()
     this.state={
-      appraisal:[]
+      appraisal:[],
+      appraisals:[],
+      employees:[] 
     }
   }
   componentDidMount(){
+    this.getAppraisals();
+    this.getEmployees();
     this.setState({
       appraisal:this.props.location.state.appraisal
     });
   }
-
+  getEmployees = async () => {
+    const employees =await fetch("http://localhost:3001/employees");
+    const parsedResponse = await employees.json()
+    this.setState({
+        employees:parsedResponse.employees
+    })
+}
+getAppraisals = async () => {
+  const appraisals = await fetch("http://localhost:3001/appraisals");
+  const parsedResponse = await appraisals.json();
+    this.setState({
+      appraisals:parsedResponse.appraisals
+  })
+}
   deleteAppraisal = async (id) => {
     // console.log(this.props.history);
     try{
@@ -32,10 +49,12 @@ class AppraisalShow extends Component {
   }
 
   render(){
-    console.log(this.state)
     return (
         <div className="appraisal-show">
-          <Navigation/>
+          <Navigation
+            employees={this.state.employees}
+            appraisals={this.state.appraisals}
+          />
           <h1>{this.state.appraisal.appraisal_name}</h1>
           <p>Period: {this.state.appraisal.period_start_date} to {this.state.appraisal.period_end_date}</p>
           <Table striped>

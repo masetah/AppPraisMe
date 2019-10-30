@@ -17,6 +17,7 @@ class Navigation extends Component {
     super(props);
     this.state={
       employees:[],
+      appraisals:[]
   }
     this.toggle = this.toggle.bind(this);
     this.state = {
@@ -43,7 +44,7 @@ class Navigation extends Component {
               </NavItem>
               <NavItem>
               <AppraisalIndex
-                appraisals={this.props.employees}
+                appraisals={this.props.appraisals}
               />
               </NavItem>
               <NavItem>
