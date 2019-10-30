@@ -8,12 +8,6 @@ class EmployeeNotes extends Component {
             notes:'' 
         }
     }
-    componentDidMount(){
-        // this.getEmployeeNotes();
-        console.log(this.props.employee.id)
-        console.log(this.props.notes)
-    }
-
     render(){
         console.log(this.props.notes)
         const notes = this.props.notes.map((note, index)=> {

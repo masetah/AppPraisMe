@@ -12,6 +12,7 @@ class EmployeeShow extends Component {
   constructor(){
     super()
     this.state={
+      employees:[],
       employee:[],
       appraisals:[],
       notes:[],
@@ -21,10 +22,18 @@ class EmployeeShow extends Component {
     console.log(this.props.location.state)
     this.getNotes();
     this.getAppraisals();
+    this.getEmployees();
     this.setState({
       employee:this.props.location.state.employee,
     });  
   }
+  getEmployees = async () => {
+    const employees =await fetch("http://localhost:3001/employees");
+    const parsedResponse = await employees.json()
+    this.setState({
+        employees:parsedResponse.employees
+    })
+}
 getNotes = async () => {
   const notes = await fetch("http://localhost:3001/notes");
   const parsedResponse = await notes.json();
@@ -107,7 +116,10 @@ updateAppraisalArray=(appraisal)=>{
 render(){
   return (
     <div className="employee-show-container">
-      <Navigation/>
+      <Navigation 
+        employees={this.state.employees}
+        appraisals={this.state.appraisals}
+      />
     <div className="employee-show">
       <img src="./public/Images/Employee-Placeholder-Image.jpg" alt="employee"/>
       <h1>{this.state.employee.name}</h1>

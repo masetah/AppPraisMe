@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import Navigation from '../Components/Navigation';
-// import Sidebar from '../Components/Sidebar';
 import NewEmployee from '../Components/NewEmployee';
 import EmployeeIndex from '../Components/EmployeeIndex';
 import AppraisalIndex from '../Components/AppraisalIndex';
@@ -103,10 +102,6 @@ deleteEmployee = async (id) => {
         <div className="dashboard-body">
             <Navigation 
                 employees={this.state.employees}
-                updateEmployeeArray={this.updateEmployeeArray}
-                updateAppraisalArray={this.updateAppraisalArray} 
-                updateEmployee={this.updateEmployee}
-                deleteEmployee={this.deleteEmployee}
                 appraisals={this.state.appraisals}
             />
             <Grid className="dasboard-grid">
@@ -131,17 +126,11 @@ deleteEmployee = async (id) => {
                 <AppraisalIndex
                     appraisals={this.state.appraisals}
                 />
-                {/* <Sidebar
-                    employees={this.state.employees}
-                    updateEmployeeArray={this.updateEmployeeArray}
-                    updateAppraisalArray={this.updateAppraisalArray} 
-                    updateEmployee={this.updateEmployee}
-                    deleteEmployee={this.deleteEmployee}
-                    appraisals={this.state.appraisals}
-                /> */}
             </Cell>
             <Cell col={8}>
-                <KPI />
+                <KPI 
+                appraisals={this.state.appraisals}
+                />
             </Cell>
             </Grid>
             <Footer />

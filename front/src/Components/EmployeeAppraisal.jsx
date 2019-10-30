@@ -3,6 +3,9 @@ import {Link} from 'react-router-dom'
 import {UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem} from 'reactstrap';
 
 class EmployeeAppraisal extends Component {
+    componentDidMount(){
+        console.log(this.props.employee.name)
+    }
     render(){
         const appraisals = this.props.appraisals.map((appraisal, index)=>{
             if(this.props.employee.id===appraisal.employee_id){
@@ -19,7 +22,7 @@ class EmployeeAppraisal extends Component {
                 <div className="appraisalIndex">
                     <UncontrolledDropdown setActiveFromChild>
 					    <DropdownToggle  caret>
-						    Appraisals
+                        {this.props.employee.name}'s Appraisals
                         </DropdownToggle>
 					    <DropdownMenu>
 						<DropdownItem >

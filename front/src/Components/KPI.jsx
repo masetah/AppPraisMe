@@ -3,12 +3,7 @@ import CanvasJSReact from '../canvasjs.react';
 // var CanvasJS = CanvasJSReact.CanvasJS;
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 class KPI extends Component {
-    constructor(){
-      super()
-      this.state={
 
-      }
-    }
     render(){
       const options = {
         theme: "dark2",
