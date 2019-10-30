@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-// import NewEmployee from './NewEmployee';
 import {Link} from 'react-router-dom';
 import {UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem} from 'reactstrap';
 
@@ -19,7 +18,6 @@ class EmployeeIndex extends Component {
     }
 
     render(){
-        
         const employees = this.props.employees.map((employee, index)=>{
             return <div key={index} >
                 <Link to={{pathname:`/employee/${employee.id}`,

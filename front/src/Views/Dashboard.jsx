@@ -101,7 +101,14 @@ deleteEmployee = async (id) => {
   render(){
     return (
         <div className="dashboard-body">
-            <Navigation />
+            <Navigation 
+                employees={this.state.employees}
+                updateEmployeeArray={this.updateEmployeeArray}
+                updateAppraisalArray={this.updateAppraisalArray} 
+                updateEmployee={this.updateEmployee}
+                deleteEmployee={this.deleteEmployee}
+                appraisals={this.state.appraisals}
+            />
             <Grid className="dasboard-grid">
                 <Cell col={12}>
                 <h1>User Dashboard </h1>

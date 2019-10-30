@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import EmployeeIndex from './EmployeeIndex';
+import AppraisalIndex from './AppraisalIndex';
 import {
   Collapse,
   Navbar,
@@ -13,7 +15,9 @@ import {
 class Navigation extends Component {
   constructor(props) {
     super(props);
-
+    this.state={
+      employees:[],
+  }
     this.toggle = this.toggle.bind(this);
     this.state = {
       isOpen: false
@@ -32,6 +36,16 @@ class Navigation extends Component {
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
+            <NavItem>
+              <EmployeeIndex
+                employees={this.props.employees}
+              />
+              </NavItem>
+              <NavItem>
+              <AppraisalIndex
+                appraisals={this.props.employees}
+              />
+              </NavItem>
               <NavItem>
                 <NavLink href="/">Logout</NavLink>
               </NavItem>
