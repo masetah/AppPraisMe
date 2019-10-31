@@ -9,11 +9,11 @@ import NewAppraisal from '../Components/NewAppraisal';
 import EmployeeAppraisal from '../Components/EmployeeAppraisal';
 
 class EmployeeShow extends Component {
-  constructor(){
-    super()
+  constructor(props){
+    super(props)
     this.state={
       employees:[],
-      employee:[],
+      employee: '',
       appraisals:[],
       notes:[],
     }
@@ -121,9 +121,9 @@ render(){
       />
     <div className="employee-show">
       <img src="./public/Images/Employee-Placeholder-Image.jpg" alt="employee"/>
-      <h1>{this.state.employee.name}</h1>
-      <h3 >{this.state.employee.position}</h3>
-      <p >Hired: {this.state.employee.hire_date}</p>
+      <h1>{this.props.location.state.employee.name}</h1>
+      <h3 >{this.props.location.state.employee.position}</h3>
+      <p >Hired: {this.props.location.state.employee.hire_date}</p>
       <UpdateEmployee 
         updateEmployee={this.updateEmployee} 
         employee={this.props.location.state.employee}
@@ -146,7 +146,7 @@ render(){
       />
     </div>
       <NewEmployeeNote 
-        employee={this.props.location.state.employee} 
+        employeeID={this.props.location.state.employee.id} 
         updateNotesArray={this.updateNotesArray}
       />
       <Footer/>

@@ -49,7 +49,7 @@ class Login extends Component {
         return(
             <div className="login-page">
                 <Grid className="login">
-                    <Cell col={8}>
+                    <Cell col={12}>
                     <form className="form-signin" onSubmit={this.handleLogin}>
                     <img className="loginLogo" src="Logos/web-page.png" alt="icon" height="75px" width="50px"/>
                     <h3 className="form-signin-heading">Log into AppPraise Me</h3>

@@ -8,8 +8,7 @@ class NewAppraisal extends Component {
     super()
     this.state={
       employee_id: '',
-      appraisal_name:'',
-      period_start_date:'',
+      appraisal_name: '',
       period_end_date:'',
       leadership_score:1,
       leadership_description:'',
@@ -36,7 +35,8 @@ class NewAppraisal extends Component {
   }
   componentDidMount(){
     this.setState({
-      employee_id:this.props.employee.id
+      employee_id:this.props.employee.id,
+      appraisal_name:this.props.employee.name
     })
   }
     
@@ -81,13 +81,7 @@ handleSubmit= (e) => {
           <ModalBody  id="ModalBody">
           <form >
           <FormGroup>
-            <Input
-              type="text"
-              id="appraisalName"
-              name="appraisal_name"
-              placeholder="Employee Full Name"
-              onChange={this.handleChange}>
-          </Input>
+            <h3>{this.props.employee.name}</h3>
           <h4>Period</h4>
             <Label id="dateLabel" for="period_start_date">Start:</Label>
             <Input
@@ -317,7 +311,7 @@ handleSubmit= (e) => {
           </form>
           </ModalBody>
           <ModalFooter>
-          <Button onClick={this.handleSubmit} color="warning"> Submit </Button>
+          <Button onClick={this.handleSubmit} color="primary"> Submit </Button>
           </ModalFooter>
           </Modal>
         </div>

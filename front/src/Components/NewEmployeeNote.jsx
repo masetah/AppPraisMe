@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 import {Button } from 'reactstrap';
 import {Label, FormGroup, Input } from 'reactstrap/lib';
 
-class NewEmployeeNote extends Component {
-    constructor(props){
+class NewEmployeeNote extends Component {  
+  constructor(props){
         super(props)
         this.state={
             note_date:"",
@@ -11,12 +11,8 @@ class NewEmployeeNote extends Component {
             intensity: 0,
             canned_note:"Habit 1",
             description:"",
-            employee_id: this.props.employee.id
+            employee_id: this.props.employeeID
         }
-    }
-
-    componentDidMount(){
-      // console.log(this.state)
     }
 
     handleChange=(e)=>{
@@ -42,7 +38,6 @@ class NewEmployeeNote extends Component {
         console.log(this.state, "Handlesubmit NewEmployeeNote line 40")
         this.createNote(this.state);
         this.props.updateNotesArray(this.state)
-
     }
     render(){
         return(

@@ -37,15 +37,15 @@ handleSubmit = (e)=> {
       <div className="updateEmployee">
         <Button color="warning" onClick={this.toggle}>Edit</Button>
         <Modal isOpen={this.state.modal} toggle={this.toggle}>
-          <ModalHeader id="ModalHeader" toggle={this.toggle}>Update {this.state.name}</ModalHeader>
+          <ModalHeader id="ModalHeader" toggle={this.toggle}>Update {this.props.employee.name}</ModalHeader>
           <ModalBody id="ModalBody">
             <form onSubmit={this.handleSubmit}>
                 <Label className="modalInput" for="name"> Name: </Label>
-                <input type="text" name="name" value={this.state.name}  onChange={this.handleChange}></input><br></br>
+                <input type="text" name="name" value={this.props.employee.name}  onChange={this.handleChange}></input><br></br>
                 <Label className="modalInput" for="position"> Position: </Label>
-                <input type="text" name="position" value={this.state.position} onChange={this.handleChange}></input><br></br>
+                <input type="text" name="position" value={this.props.employee.position} onChange={this.handleChange}></input><br></br>
                 <Label className="modalInput" for="hire_date"> Hire Date: </Label>
-                <input type="date" name="hire_date" value={this.state.hire_date} onChange={this.handleChange}></input><br></br>
+                <input type="date" name="hire_date" value={this.props.employee.hire_date} onChange={this.handleChange}></input><br></br>
             </form>
           </ModalBody>
           <ModalFooter id="ModalFooter">

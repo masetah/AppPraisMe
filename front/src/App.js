@@ -34,8 +34,8 @@ class App extends Component {
               </div>
             )
           }}/>
-          <Route path="/employee/:id" component={EmployeeShow} />
-          <Route path="/appraisal/:id" component={AppraisalShow} />
+          <Route exact path="/employee/:id" component={EmployeeShow} />
+          <Route exact path="/appraisal/:id" component={AppraisalShow} />
           <Route render={
             () => 
           <h3>Not Found</h3>}/>

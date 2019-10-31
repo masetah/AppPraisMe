@@ -71,8 +71,8 @@ class Register extends Component {
                     </form>
                 </ModalBody>
                 <ModalFooter id="ModalFooter">
-                    <Button color="warning" onClick={this.createNewUser}>
-                        <Link to={{pathname:`/dashboard`}}>Register</Link>
+                    <Button color="primary" onClick={this.createNewUser}>
+                        <Link style={{color:'white'}} to={{pathname:`/dashboard`}}>Register</Link>
                     </Button>
                 </ModalFooter>
                 </Modal>

@@ -9,7 +9,6 @@ class EmployeeNotes extends Component {
         }
     }
     render(){
-        console.log(this.props.notes)
         const notes = this.props.notes.map((note, index)=> {
                 if(this.props.employee.id===note.employee_id){
                     return <div key={index}>

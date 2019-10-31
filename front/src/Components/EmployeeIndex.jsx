@@ -29,7 +29,7 @@ class EmployeeIndex extends Component {
             return(
                 <div className='employeeIndex'>
                     <UncontrolledDropdown setActiveFromChild>
-					    <DropdownToggle  caret>
+					    <DropdownToggle color="link" caret>
 						    Employees
                         </DropdownToggle>
 					    <DropdownMenu>

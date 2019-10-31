@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import Navigation from '../Components/Navigation';
 import NewEmployee from '../Components/NewEmployee';
-import AppraisalIndex from '../Components/AppraisalIndex';
 import KPI from '../Components/KPI';
 import Footer from '../Components/Footer';
 import {Grid, Cell} from 'react-mdl';
@@ -114,13 +113,10 @@ deleteEmployee = async (id) => {
                 </Cell>
             </Grid>
             <Grid>
-                <Cell col={4}>
+                <Cell className="dashboard-new-employee" col={4}>
                     <NewEmployee 
                         updateEmployeeArray={this.updateEmployeeArray}
                     />
-                <AppraisalIndex
-                    appraisals={this.state.appraisals}
-                />
             </Cell>
             <Cell col={8}>
                 <KPI 
