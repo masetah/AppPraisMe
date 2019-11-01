@@ -1,23 +1,7 @@
-/* Application level */
-/* *{
-  box-sizing: border-box;
-  background: #16202a;
-}
-*:before,
-*:after{
-  box-sizing: border-box;
-}
-
-html, body { 
-  size:100%;
- 
-} */
-
 #root{
   text-align: center;
   display: relative;
   color:white;
-  /* background: #16202a; */
 }
 p{
   margin:15%;
@@ -28,7 +12,6 @@ p{
   width: 100%;
   height: 100%;
   margin: auto;
-  
   background: #16202a;
   padding-top: 25px;
   padding-bottom: 200px;
@@ -92,42 +75,35 @@ p{
 /* Dashboard Page */
 .dashboard-body{
   margin: auto;
-  position: fixed;
   width: 100%;
   height: 100%;
-  justify-content: center;
-  /* padding-top: 2em; */
-  padding-bottom: 60px;
+  text-align: center;
+  padding-bottom: 100px;
   background: #16202a;
   color: white;
 }
-.dashboard-grid{
-  text-align: center;
-  justify-content: center;
-  width: 85%;
-  height: 100%;
-  background: white;
-  color: black;
-  margin-bottom: 20px;
-}
-
-.dashboard-grid p{
-  width: 50%;
-}
-.dashboard-new-employee{
-  max-width: 25%;
-  padding: 3%;
-  border: 1px solid #fff;
-  margin-right: 15px;
-}
-.dashboard-new-employee h3{
-  /* top */
+.dashboard-body h1{
+  font-family: 'Staatliches';
 }
 .KPI-body{
   margin:auto;
-  text-align: center;
   justify-content: center;
+  padding-left: 20%;
+  padding-right: 20%;
 }
+
+.new-employee-component{
+  text-align: center;
+  padding-left: 20%;
+  padding-right: 20%;
+  margin: 15px;
+  border: 1px solid white;
+} 
+
+
+
+
+
 .navBar{
   grid-column: 1/3;
   grid-row:1/2;
@@ -164,7 +140,7 @@ p{
   align-content: center;
 }
 
-img{
+.footer img{
   height:30px;
   width:30px;
 }
@@ -239,9 +215,6 @@ th, td{
   padding-bottom: 60px;
 }
 
-/* END OF SECTION*/
-
-/* component of employeeIndex */
 .updateEmployee{
   padding: 1% 3% 3% 1%;
 }

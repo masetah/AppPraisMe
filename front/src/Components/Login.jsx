@@ -51,7 +51,7 @@ class Login extends Component {
                 <Grid className="login">
                     <Cell col={12}>
                     <form className="form-signin" onSubmit={this.handleLogin}>
-                    <img className="loginLogo" src="Logos/web-page.png" alt="icon" height="75px" width="50px"/>
+                    <img className="loginLogo" src="Logos/web-page.png" alt="icon" />
                     <h3 className="form-signin-heading">Log into AppPraise Me</h3>
                         <input className="form-control" type="text" placeholder="Email Address" name="email" autoComplete="off" onChange={this.handleChange}></input>
                         <input className="form-control" type="password" placeholder="Password" name="password" autoComplete="off" onChange={this.handleChange}></input>

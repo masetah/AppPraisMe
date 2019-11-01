@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Navigation from '../Components/Navigation';
 import NewEmployee from '../Components/NewEmployee';
+import EmployeeKPI from '../Components/employeeKPI';
 import KPI from '../Components/KPI';
 import Footer from '../Components/Footer';
 import {Grid, Cell} from 'react-mdl';
@@ -78,14 +79,11 @@ updateEmployee = async (id, formData) => {
 }
 
 deleteEmployee = async (id) => {
-    console.log(id);
     try{
         const deleteEmployee = await fetch(`http://localhost:3001/employees/${id}`, {
         method:'DELETE',
     });
-    console.log(deleteEmployee)
     const parsedResponse = await deleteEmployee
-    console.log(parsedResponse, "Line 62")
     if(parsedResponse.status===204){
         this.setState({
             employees: this.state.employees.filter((employee) => employee.id !==id)
@@ -106,22 +104,29 @@ deleteEmployee = async (id) => {
                 deleteEmployee={this.deleteEmployee}
                 appraisals={this.state.appraisals}
             />
-            <Grid className="dasboard-grid">
+            <Grid >
                 <Cell col={12}>
                 <h1>User Dashboard </h1>
-                <p>Keep track of your current employees, past appraisals and add new employees when you make a hire. Select one of your exisiting employees to view their profile page.</p>
+                </Cell>
+                <Cell col={12}>
+                <p >Keep track of your current employees, past appraisals and add new employees when you make a hire. Select one of your exisiting employees to view their profile page.</p>
                 </Cell>
             </Grid>
             <Grid>
-                <Cell className="dashboard-new-employee" col={4}>
+            <Cell col={12}>
+                <KPI 
+                appraisals={this.state.appraisals}
+                />
+            </Cell>
+            </Grid>
+            <Grid>
+                <Cell col={6}>
                     <NewEmployee 
                         updateEmployeeArray={this.updateEmployeeArray}
                     />
             </Cell>
-            <Cell col={8}>
-                <KPI 
-                appraisals={this.state.appraisals}
-                />
+            <Cell col={6}>
+                    <EmployeeKPI/>
             </Cell>
             </Grid>
             <Footer />

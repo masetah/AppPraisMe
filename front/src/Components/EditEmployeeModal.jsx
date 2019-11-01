@@ -5,11 +5,7 @@ class UpdateEmployee extends Component {
   constructor(props) {
     super(props);
     this.state = {
-        name: this.props.employee.name,
-        position: props.employee.position,
-        hire_date: props.employee.hire_date,
-        manager_id: props.employee.manager_id,
-        id: props.employee.id,
+        employee: this.props.employee,
         modal:false,
     };
   }
@@ -37,15 +33,15 @@ handleSubmit = (e)=> {
       <div className="updateEmployee">
         <Button color="warning" onClick={this.toggle}>Edit</Button>
         <Modal isOpen={this.state.modal} toggle={this.toggle}>
-          <ModalHeader id="ModalHeader" toggle={this.toggle}>Update {this.props.employee.name}</ModalHeader>
+          <ModalHeader id="ModalHeader" toggle={this.toggle}>Update {this.state.name}</ModalHeader>
           <ModalBody id="ModalBody">
             <form onSubmit={this.handleSubmit}>
                 <Label className="modalInput" for="name"> Name: </Label>
-                <input type="text" name="name" value={this.props.employee.name}  onChange={this.handleChange}></input><br></br>
+                <input type="text" name="name" value={this.state.employee.name}  onChange={this.handleChange}></input><br></br>
                 <Label className="modalInput" for="position"> Position: </Label>
-                <input type="text" name="position" value={this.props.employee.position} onChange={this.handleChange}></input><br></br>
+                <input type="text" name="position" value={this.state.employee.position} onChange={this.handleChange}></input><br></br>
                 <Label className="modalInput" for="hire_date"> Hire Date: </Label>
-                <input type="date" name="hire_date" value={this.props.employee.hire_date} onChange={this.handleChange}></input><br></br>
+                <input type="date" name="hire_date" value={this.state.employee.hire_date} onChange={this.handleChange}></input><br></br>
             </form>
           </ModalBody>
           <ModalFooter id="ModalFooter">

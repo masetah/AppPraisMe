@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import CanvasJSReact from '../canvasjs.react';
-// var CanvasJS = CanvasJSReact.CanvasJS;
 let CanvasJSChart = CanvasJSReact.CanvasJSChart;
 class KPI extends Component {
   constructor(){
@@ -80,7 +79,6 @@ class KPI extends Component {
     this.setState({
         appraisals:parsedResponse.appraisals
     })
-    console.log(this.state.appraisals[1].leadership_score)
   }
 
   getLeadershipScores=()=>{

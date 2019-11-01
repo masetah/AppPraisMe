@@ -35,19 +35,18 @@ class NewEmployee extends Component {
     }
     render(){
         return(
-            <div>
-                <h3>Add a New Employee</h3>
-                <form onSubmit={this.handleSubmit}>
-                    <input type="text" placeholder="Employee Name" name="name" onChange={this.handleChange}></input>
-                    <br></br>
-                    <input type="text" placeholder="Employee Position" name="position" onChange={this.handleChange}></input>
-                    <br></br>
-                    <Label className="Label" for="hire_date">Hire date: </Label>
-                    <br></br>
-                    <input type="date" name="hire_date" onChange={this.handleChange}></input>
-                    <br></br>
-                    <Button type="submit" color="warning" > Submit </Button>
+            <div className="new-employee-component">
+                    <h3 className="form-new-employee-heading">Add a New Employee</h3>
+                    <form className="form-new-employee" onSubmit={this.handleSubmit}>
+                    <Label className="Label" for="name" >Employee Name </Label>
+                    <input className="form-control" type="text" placeholder="Tyrian Lanaster" name="name" autoComplete="off"  onChange={this.handleChange}></input>
+                    <Label className="Label" for="position">Employee's Position</Label>
+                    <input className="form-control" type="text" placeholder="King Slayer" name="position" autoComplete="off"  onChange={this.handleChange}></input>
+                    <Label className="Label" for="hire_date">Hire date </Label>
+                    <input className="form-control" type="date" name="hire_date" onChange={this.handleChange}></input>
+                    <Button type="submit" color="primary" > Submit </Button>
                 </form>
+
             </div>
         )
     }

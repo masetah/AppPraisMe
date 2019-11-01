@@ -13,7 +13,7 @@ class EmployeeShow extends Component {
     super(props)
     this.state={
       employees:[],
-      employee: '',
+      employee: this.props.location.state.employee,
       appraisals:[],
       notes:[],
     }
@@ -80,21 +80,7 @@ deleteEmployee = async (id) => {
     console.log(err)
   }
 }
-deleteNote = async (id) => {
-  console.log(this.props.history);
 
-//   try{
-//       await fetch(`http://localhost:3001/employees/${id}`, {
-//       method:'DELETE',
-//       headers: {
-//         "Content-Type": "application/json"
-//     }
-//   });
-//   this.props.history.push("/dashboard")
-//   }catch(err){
-//     console.log(err)
-//   }
-}
 updateNotesArray=(note)=>{
   console.log(note, "line 65 EmployeeShow")
   this.setState(prevState=>{
@@ -126,7 +112,7 @@ render(){
       <p >Hired: {this.props.location.state.employee.hire_date}</p>
       <UpdateEmployee 
         updateEmployee={this.updateEmployee} 
-        employee={this.props.location.state.employee}
+        employee={this.state.employee}
       />
       <EmployeeAppraisal
       employee={this.props.location.state.employee}
