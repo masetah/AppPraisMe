@@ -76,7 +76,7 @@ handleSubmit= (e) => {
   render(){
     return (
         <div className="new-appraisal">
-          <Button id="newAppraisalButton" color="secondary" onClick={this.toggle}>New Appraisal for {this.props.employee.name}</Button>
+          <Button id="newAppraisalButton" size="lg" block color="primary" onClick={this.toggle}>New Appraisal </Button>
           <Modal className="new-appraisal-modal" isOpen={this.state.modal} toggle={this.toggle}>
           <ModalHeader id="ModalHeader" toggle={this.toggle}>Add a New Appraisal</ModalHeader>
           <ModalBody  id="ModalBody">

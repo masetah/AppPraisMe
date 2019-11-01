@@ -111,7 +111,7 @@ render(){
       <div className="employee-show-info">
         <h1>{this.props.location.state.employee.name}</h1>
         <h3 >{this.props.location.state.employee.position}</h3>
-        <p >Hired: {this.props.location.state.employee.hire_date}</p>
+        <h5>Hired: {this.props.location.state.employee.hire_date}</h5>
       </div>
     </Cell>
     </Grid>
@@ -125,6 +125,7 @@ render(){
 
     <Cell col={8}>
       <div className="employee-show-actions" >
+      <h3>Employee Actions</h3>
       <UpdateEmployee 
         updateEmployee={this.updateEmployee} 
         employee={this.state.employee}

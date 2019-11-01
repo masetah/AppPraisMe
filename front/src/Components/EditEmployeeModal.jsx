@@ -31,7 +31,7 @@ handleSubmit = (e)=> {
   render() {
     return (
       <div className="updateEmployee">
-        <Button color="warning" onClick={this.toggle}>Edit</Button>
+        <Button color="primary" size="lg" block onClick={this.toggle}>Edit Employee</Button>
         <Modal isOpen={this.state.modal} toggle={this.toggle}>
           <ModalHeader id="ModalHeader" toggle={this.toggle}>Update {this.state.name}</ModalHeader>
           <ModalBody id="ModalBody">

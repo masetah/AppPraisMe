@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Button } from 'reactstrap';
+import { Button } from 'reactstrap';
 import {Label, FormGroup, Input, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap/lib';
 
 class NewEmployeeNote extends Component {  
@@ -48,7 +48,7 @@ class NewEmployeeNote extends Component {
     render(){
         return(
             <div className="new-employee-note">
-              <Button color="primary" onClick={this.toggle}>New Note</Button>
+              <Button color="primary" size="lg" block onClick={this.toggle}>New Note</Button>
               <Modal className="new-note-modal" isOpen={this.state.modal} toggle={this.toggle}>
                 <ModalHeader toggle={this.toggle}>Add a New Employee Note</ModalHeader> 
                 <ModalBody  id="ModalBody">

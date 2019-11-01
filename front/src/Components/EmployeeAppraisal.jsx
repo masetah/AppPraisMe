@@ -19,10 +19,10 @@ class EmployeeAppraisal extends Component {
             }
         })
             return(
-                <div className="appraisalIndex">
+                <div className="employee-appraisal">
                     <UncontrolledDropdown setActiveFromChild>
-					    <DropdownToggle  caret>
-                        {this.props.employee.name}'s Appraisals
+					    <DropdownToggle  color="primary" size="lg" block caret>
+                        Appraisals
                         </DropdownToggle>
 					    <DropdownMenu>
 						<DropdownItem >
