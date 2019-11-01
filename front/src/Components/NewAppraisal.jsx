@@ -71,6 +71,7 @@ handleSubmit= (e) => {
   //seed data from state into appraisals table
   this.createAppraisal(this.state)
   //redirect to appraisal show
+  this.toggle();
 }
   render(){
     return (

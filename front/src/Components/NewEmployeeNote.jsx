@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Button } from 'reactstrap';
-import {Label, FormGroup, Input } from 'reactstrap/lib';
+import {Label, FormGroup, Input, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap/lib';
 
 class NewEmployeeNote extends Component {  
   constructor(props){
@@ -11,7 +11,8 @@ class NewEmployeeNote extends Component {
             intensity: 0,
             canned_note:"Habit 1",
             description:"",
-            employee_id: this.props.employeeID
+            employee_id: this.props.employeeID,
+            modal: false
         }
     }
 
@@ -20,7 +21,11 @@ class NewEmployeeNote extends Component {
             [e.currentTarget.name] : e.currentTarget.value
         })
     }
-
+    toggle= () =>{
+      this.setState({
+          modal: !this.state.modal
+      })
+    }
     createNote = async (currentState) => {
         const createNote = await fetch("http://localhost:3001/notes",{
           method: "POST",
@@ -37,13 +42,17 @@ class NewEmployeeNote extends Component {
         e.preventDefault();
         console.log(this.state, "Handlesubmit NewEmployeeNote line 40")
         this.createNote(this.state);
-        this.props.updateNotesArray(this.state)
+        this.props.updateNotesArray(this.state);
+        this.toggle();
     }
     render(){
         return(
             <div className="new-employee-note">
-                <h3>Add a New Employee Note</h3>
-                <form onSubmit={this.handleSubmit}>
+              <Button color="primary" onClick={this.toggle}>New Note</Button>
+              <Modal className="new-note-modal" isOpen={this.state.modal} toggle={this.toggle}>
+                <ModalHeader toggle={this.toggle}>Add a New Employee Note</ModalHeader> 
+                <ModalBody  id="ModalBody">
+                <form >
                 <FormGroup>
                 <Label for="note_date">Date</Label>
                     <Input
@@ -72,7 +81,6 @@ class NewEmployeeNote extends Component {
                   <FormGroup>
                     <Label for="canned_note">Note</Label>
                     <Input type="select"  name="canned_note" onChange={this.handleChange} >
-                    {/* <optgroup label="Swedish Cars"> */}
                     <option disabled>Postive</option>
                     <option>Habit 1: Be Proactive.</option>
                     <option>Habit 2: Begin with the End in Mind.</option>
@@ -103,8 +111,12 @@ class NewEmployeeNote extends Component {
                     <Input type="textarea" placeholder="Describe the situation" name="description" onChange={this.handleChange} >
                     </Input>
                   </FormGroup>
-                    <Button type="submit" color="warning" > Submit </Button>
-                </form>
+                  </form> 
+                </ModalBody>
+                <ModalFooter>
+                <Button onClick={this.handleSubmit} color="primary" > Submit </Button>  
+                </ModalFooter>
+                </Modal>
             </div>
         )
     }

@@ -7,6 +7,7 @@ import { Button } from 'reactstrap';
 import NewEmployeeNote from '../Components/NewEmployeeNote';
 import NewAppraisal from '../Components/NewAppraisal';
 import EmployeeAppraisal from '../Components/EmployeeAppraisal';
+import {Grid, Cell} from 'react-mdl';
 
 class EmployeeShow extends Component {
   constructor(props){
@@ -101,22 +102,40 @@ updateAppraisalArray=(appraisal)=>{
 render(){
   return (
     <div className="employee-show-container">
-      <Navigation 
+        <Navigation 
         employees={this.state.employees}
         appraisals={this.state.appraisals}
       />
-    <div className="employee-show">
-      <img src="./public/Images/Employee-Placeholder-Image.jpg" alt="employee"/>
-      <h1>{this.props.location.state.employee.name}</h1>
-      <h3 >{this.props.location.state.employee.position}</h3>
-      <p >Hired: {this.props.location.state.employee.hire_date}</p>
+    <Grid>
+    <Cell col={12}>
+      <div className="employee-show-info">
+        <h1>{this.props.location.state.employee.name}</h1>
+        <h3 >{this.props.location.state.employee.position}</h3>
+        <p >Hired: {this.props.location.state.employee.hire_date}</p>
+      </div>
+    </Cell>
+    </Grid>
+
+    <Grid>
+      <Cell col={4}>
+      <div className="profile-pic">
+      <h2>PICTURE</h2>
+      </div>
+      </Cell>
+
+    <Cell col={8}>
+      <div className="employee-show-actions" >
       <UpdateEmployee 
         updateEmployee={this.updateEmployee} 
         employee={this.state.employee}
-      />
+        />
       <EmployeeAppraisal
       employee={this.props.location.state.employee}
       appraisals={this.state.appraisals}
+      />
+      <NewEmployeeNote 
+        employeeID={this.props.location.state.employee.id} 
+        updateNotesArray={this.updateNotesArray}
       />
       <NewAppraisal
         updateAppraisalArray={this.updateAppraisalArray} 
@@ -126,15 +145,21 @@ render(){
         this.deleteEmployee(this.state.employee.id)
         }}>Terminate
       </Button>
+      </div>
+    </Cell>
+    </Grid>
+
+    <Grid>
+      <Cell col={12}>
+      <div className="employee-notes">
       <EmployeeNotes 
         employee={this.props.location.state.employee} 
         notes={this.state.notes}
       />
     </div>
-      <NewEmployeeNote 
-        employeeID={this.props.location.state.employee.id} 
-        updateNotesArray={this.updateNotesArray}
-      />
+    </Cell>
+    </Grid>
+
       <Footer/>
     </div>
     );

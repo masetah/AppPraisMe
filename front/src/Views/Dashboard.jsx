@@ -109,7 +109,12 @@ deleteEmployee = async (id) => {
                 <h1>User Dashboard </h1>
                 </Cell>
                 <Cell col={12}>
-                <p >Keep track of your current employees, past appraisals and add new employees when you make a hire. Select one of your exisiting employees to view their profile page.</p>
+                <p> You've got a lot on your plate. We're here to lend a hand. 
+                    On you customized dashboard you are able to see how your team 
+                    is doing based on the appraisals you have filled out. You are 
+                    also able to add new employees and check on your current employees 
+                    by clicking on their name in your, "Current Employees" section. 
+                </p>
                 </Cell>
             </Grid>
             <Grid>
@@ -126,7 +131,9 @@ deleteEmployee = async (id) => {
                     />
             </Cell>
             <Cell col={6}>
-                    <EmployeeKPI/>
+                    <EmployeeKPI
+                    employees={this.state.employees}
+                    />
             </Cell>
             </Grid>
             <Footer />
