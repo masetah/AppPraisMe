@@ -245,4 +245,15 @@ th, td{
 .modalInput{
   margin: 2%;
 }
-
+.appraisal-show-container{
+  background: #16202a;
+  padding-bottom: 60px;
+  margin: 0 auto;
+}
+.appraisal-show-table{
+  padding-left:80px;
+  padding-right:80px;
+}
+.appraisal-show-table Table{
+  border: 1px solid white;
+}

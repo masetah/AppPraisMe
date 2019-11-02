@@ -14,7 +14,7 @@ class EmployeeShow extends Component {
     super(props)
     this.state={
       employees:[],
-      employee: this.props.location.state.employee,
+      employee: this.props.history.location.state.employee,
       appraisals:[],
       notes:[],
     }
@@ -24,9 +24,6 @@ class EmployeeShow extends Component {
     this.getNotes();
     this.getAppraisals();
     this.getEmployees();
-    this.setState({
-      employee:this.props.location.state.employee,
-    });  
   }
   getEmployees = async () => {
     const employees =await fetch("http://localhost:3001/employees");
@@ -99,12 +96,14 @@ updateAppraisalArray=(appraisal)=>{
       }
   })
 }
+
 render(){
   return (
     <div className="employee-show-container">
         <Navigation 
         employees={this.state.employees}
         appraisals={this.state.appraisals}
+        updateEmployeeState={this.updateEmployeeState}
       />
     <Grid>
     <Cell col={12}>
@@ -128,7 +127,7 @@ render(){
       <h3>Employee Actions</h3>
       <UpdateEmployee 
         updateEmployee={this.updateEmployee} 
-        employee={this.state.employee}
+        employee={this.props.location.state.employee}
         />
       <EmployeeAppraisal
       employee={this.props.location.state.employee}

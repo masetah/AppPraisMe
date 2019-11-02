@@ -5,8 +5,10 @@ class UpdateEmployee extends Component {
   constructor(props) {
     super(props);
     this.state = {
-        employee: this.props.employee,
-        modal:false,
+      name: this.props.employee.name,
+      position: this.props.employee.position,
+      hire_date: this.props.employee.hire_date,  
+      modal:false,
     };
   }
 
@@ -24,7 +26,6 @@ handleChange = (e) => {
 
 handleSubmit = (e)=> {
     e.preventDefault();
-    console.log(this.state)
     this.props.updateEmployee(this.state);
     this.toggle();
 }
@@ -37,11 +38,11 @@ handleSubmit = (e)=> {
           <ModalBody id="ModalBody">
             <form onSubmit={this.handleSubmit}>
                 <Label className="modalInput" for="name"> Name: </Label>
-                <input type="text" name="name" value={this.state.employee.name}  onChange={this.handleChange}></input><br></br>
+                <input type="text" name="name" value={this.state.name}  onChange={this.handleChange}></input><br></br>
                 <Label className="modalInput" for="position"> Position: </Label>
-                <input type="text" name="position" value={this.state.employee.position} onChange={this.handleChange}></input><br></br>
+                <input type="text" name="position" value={this.state.position} onChange={this.handleChange}></input><br></br>
                 <Label className="modalInput" for="hire_date"> Hire Date: </Label>
-                <input type="date" name="hire_date" value={this.state.employee.hire_date} onChange={this.handleChange}></input><br></br>
+                <input type="date" name="hire_date" value={this.state.hire_date} onChange={this.handleChange}></input><br></br>
             </form>
           </ModalBody>
           <ModalFooter id="ModalFooter">

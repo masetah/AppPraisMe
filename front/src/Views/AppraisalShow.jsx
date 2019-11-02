@@ -50,13 +50,15 @@ getAppraisals = async () => {
 
   render(){
     return (
-        <div className="appraisal-show">
+        <div className="appraisal-show-container">
           <Navigation
             employees={this.state.employees}
             appraisals={this.state.appraisals}
           />
-          <h1>{this.props.location.state.appraisal.appraisal_name}</h1>
+        <div className="appraisal-show">
+        <h1>{this.props.location.state.appraisal.appraisal_name}</h1>
           <p>Period: {this.props.location.state.appraisal.period_start_date} to {this.props.location.state.appraisal.period_end_date}</p>
+          <div className="appraisal-show-table">
           <Table striped>
             <thead>
               <tr>
@@ -129,9 +131,12 @@ getAppraisals = async () => {
               </tr>
               </tbody>
           </Table>
-    <Button color="danger" onClick={()=>{
-            this.deleteAppraisal(this.props.location.state.appraisal.id)
-            }}>Delete Appraisal </Button>
+              <Button color="danger" onClick={()=>{
+              this.deleteAppraisal(this.props.location.state.appraisal.id)
+              }}>Delete Appraisal </Button>
+            </div>
+        </div>
+
         <Footer/>
         </div>
     );

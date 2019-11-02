@@ -7,6 +7,7 @@ class EmployeeIndex extends Component {
         super()
         this.state={
             employees:[],
+            employee:[]
         }
     }
 
@@ -23,13 +24,13 @@ class EmployeeIndex extends Component {
                     state:{
                         employee: employee 
                     }
-                }}>{employee.name} </Link>
+                }}> {employee.name} </Link>
             </div>     
         })
             return(
                 <div className='employeeIndex'>
                     <UncontrolledDropdown setActiveFromChild>
-					    <DropdownToggle color="link" caret>
+					    <DropdownToggle color="link"  caret>
 						    Employees
                         </DropdownToggle>
 					    <DropdownMenu>
