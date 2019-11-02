@@ -15,7 +15,7 @@ class EmployeeNotes extends Component {
         const notes = this.props.notes.map((note, index)=>{
                 if(this.props.employee.id===note.employee_id){
                     return <div key={index}>
-                    <Card shadow={5} style={{width: '275px', margin: '15px'}}>
+                    <Card shadow={5} style={{width: '275px', margin: '15px', alignContent:'center'}}>
                     <CardTitle style={{color: 'black', height: '115px', background: 'url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXtUQMNzppAVEpRuLJr1G8RXlKcWVzoLTlaXik3Iy5O_bzZbTI&s) center / cover' }}>
                             {note.note_type}
                         </CardTitle>
