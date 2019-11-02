@@ -37,12 +37,12 @@ handleSubmit = (e)=> {
           <ModalHeader id="ModalHeader" toggle={this.toggle}>Update {this.state.name}</ModalHeader>
           <ModalBody id="ModalBody">
             <form onSubmit={this.handleSubmit}>
-                <Label className="modalInput" for="name"> Name: </Label>
-                <input type="text" name="name" value={this.state.name}  onChange={this.handleChange}></input><br></br>
-                <Label className="modalInput" for="position"> Position: </Label>
-                <input type="text" name="position" value={this.state.position} onChange={this.handleChange}></input><br></br>
-                <Label className="modalInput" for="hire_date"> Hire Date: </Label>
-                <input type="date" name="hire_date" value={this.state.hire_date} onChange={this.handleChange}></input><br></br>
+                <Label className="modalInput" for="name"> Name </Label>
+                <input className="form-control" type="text" name="name" value={this.state.name}  onChange={this.handleChange}></input><br></br>
+                <Label className="modalInput" for="position"> Position </Label>
+                <input className="form-control" type="text" name="position" value={this.state.position} onChange={this.handleChange}></input><br></br>
+                <Label className="modalInput" for="hire_date"> Hire Date </Label>
+                <input className="form-control" type="date" name="hire_date" value={this.state.hire_date} onChange={this.handleChange}></input><br></br>
             </form>
           </ModalBody>
           <ModalFooter id="ModalFooter">

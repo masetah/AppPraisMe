@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Navigation from '../Components/Navigation';
 import Footer from '../Components/Footer';
-import { Table, Button } from 'reactstrap';
+import { Table, Button, Input, Label } from 'reactstrap';
 
 class AppraisalShow extends Component {
   constructor(){
@@ -131,6 +131,14 @@ getAppraisals = async () => {
               </tr>
               </tbody>
           </Table>
+          <div className="signatures"> 
+          <Label for="Manager-Signature">Manager Signature</Label>
+            <Input size="lg" name="Manager-Signature" ></Input>
+          <Label for="Employee-Signature">Employee Signature</Label>
+            <Input size="lg" name="Employee-Signature"></Input>
+          <Label for="Date">Date Signed</Label>
+            <Input size="lg" name="Date"></Input>
+            </div>
               <Button color="danger" onClick={()=>{
               this.deleteAppraisal(this.props.location.state.appraisal.id)
               }}>Delete Appraisal </Button>

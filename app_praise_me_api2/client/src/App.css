@@ -249,10 +249,22 @@ th, td{
 .appraisal-show-container h1{
   font-family: 'Staatliches';
 }
+.appraisal-show-container Button{
+  margin-bottom: 3%;
+}
 .appraisal-show-table{
   padding-left:80px;
   padding-right:80px;
 }
 .appraisal-show-table Table{
   border: 1px solid white;
+  margin-bottom:3%;
+}
+.signatures{
+  padding-left:25%;
+  padding-right:25%;
+  padding-bottom: 2%;
+}
+.signatures Input{
+  margin-bottom: 3%;
 }
