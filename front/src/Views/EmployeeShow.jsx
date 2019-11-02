@@ -118,7 +118,7 @@ render(){
     <Grid>
       <Cell col={4}>
       <div className="profile-pic">
-      <h2>PICTURE</h2>
+      <img src="./public/EmployeeImage.jpg" alt="Employee-image"/>
       </div>
       </Cell>
 

@@ -8,7 +8,7 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
+  Button,
 } from 'reactstrap/lib';
 
 
@@ -48,7 +48,7 @@ class Navigation extends Component {
               />
               </NavItem>
               <NavItem>
-                <NavLink href="/">Logout</NavLink>
+                <Button color='link' size="lg" href="/">Logout</Button>
               </NavItem>
             </Nav>
           </Collapse>

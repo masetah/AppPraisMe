@@ -50,7 +50,7 @@ class NewEmployeeNote extends Component {
             <div className="new-employee-note">
               <Button color="primary" size="lg" block onClick={this.toggle}>New Note</Button>
               <Modal className="new-note-modal" isOpen={this.state.modal} toggle={this.toggle}>
-                <ModalHeader toggle={this.toggle}>Add a New Employee Note</ModalHeader> 
+                <ModalHeader id="ModalHeader" toggle={this.toggle}>Add a New Employee Note</ModalHeader> 
                 <ModalBody  id="ModalBody">
                 <form >
                 <FormGroup>
@@ -113,7 +113,7 @@ class NewEmployeeNote extends Component {
                   </FormGroup>
                   </form> 
                 </ModalBody>
-                <ModalFooter>
+                <ModalFooter id="ModalFooter">
                 <Button onClick={this.handleSubmit} color="primary" > Submit </Button>  
                 </ModalFooter>
                 </Modal>

@@ -16,12 +16,16 @@ class Dashboard extends Component {
     }
 }
 
-// handleLogout=e=>{
+// handleLogout=(e)=>{
 //   e.preventDefault();
-//   this.setUser(null);
+//   this.setUser();
 //   this.props.history.push("/");
 // }
-
+// setUser(){
+//     this.setState({
+//         user: null
+//     })
+// }
 componentDidMount(){
     this.getEmployees();
     this.getAppraisals();
@@ -103,6 +107,7 @@ deleteEmployee = async (id) => {
                 updateEmployee={this.updateEmployee}
                 deleteEmployee={this.deleteEmployee}
                 appraisals={this.state.appraisals}
+                logout={this.handleLogout}
             />
             <Grid >
                 <Cell col={12}>
@@ -125,14 +130,12 @@ deleteEmployee = async (id) => {
             </Cell>
             </Grid>
             <Grid>
-                <Cell col={6}>
-                    <NewEmployee 
-                        updateEmployeeArray={this.updateEmployeeArray}
-                    />
-            </Cell>
-            <Cell col={6}>
+            <Cell col={12}>
                     <EmployeeKPI
                     employees={this.state.employees}
+                    />
+                    <NewEmployee
+                    updateEmployeeArray={this.updateEmployeeArray}
                     />
             </Cell>
             </Grid>

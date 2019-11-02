@@ -78,9 +78,10 @@ p{
   width: 100%;
   height: 100%;
   text-align: center;
-  padding-bottom: 100px;
+  padding-bottom: 75px;
   background: #16202a;
   color: white;
+  align-content: center;
 }
 .dashboard-body h1{
   font-family: 'Staatliches';
@@ -88,25 +89,23 @@ p{
 .KPI-body{
   margin:auto;
   justify-content: center;
-  padding-left: 20%;
-  padding-right: 20%;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 .new-employee-component{
   text-align: center;
   padding-left: 20%;
   padding-right: 20%;
   padding-bottom: 5%;
-  margin: 15px;
-  border: 1px solid white;
 } 
+
 .current-employees{
   color:white;
   text-align: center;
+  margin:auto;
   padding-left: 20%;
   padding-right: 20%;
-  padding-bottom: 15%;
-  margin: 15px;
-  border: 1px solid white;
+  padding-bottom: 25px;
 } 
 
 /* Navbar */
@@ -148,6 +147,9 @@ p{
   background: #16202a;
   padding-bottom: 60px;
 }
+.employee-show-container h1{
+  font-family: 'Staatliches';
+}
 
 .employee-show{
   margin-top: 80px;
@@ -188,22 +190,20 @@ th, td{
 }
 #ModalHeader{
   color: #16202a;
-  background:  #fff;
+  background: grey;
 }
 #ModalBody{
   background:#16202a;
   color:  #fff;
   text-align: center;
+  padding-left: 15%;
+  padding-right: 15%;
 }
+
+
 #ModalFooter{
-  background:  #fff;;
+  background:  grey;;
 }
-
-.appraisal-show{
-  background: #16202a;
-  padding-bottom: 60px;
-}
-
 .updateEmployee{
   padding-left: 20%;
   padding-right: 20%;
@@ -249,6 +249,9 @@ th, td{
   background: #16202a;
   padding-bottom: 60px;
   margin: 0 auto;
+}
+.appraisal-show-container h1{
+  font-family: 'Staatliches';
 }
 .appraisal-show-table{
   padding-left:80px;

@@ -27,7 +27,7 @@ class AppraisalIndex extends Component {
             return(
                 <div className="appraisalIndex">
                     <UncontrolledDropdown setActiveFromChild>
-					    <DropdownToggle color="link" caret>
+					    <DropdownToggle color="link" size="lg" caret>
 						    Appraisals
                         </DropdownToggle>
 					    <DropdownMenu>

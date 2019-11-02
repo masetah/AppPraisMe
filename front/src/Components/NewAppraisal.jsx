@@ -311,7 +311,7 @@ handleSubmit= (e) => {
             </Table>
           </form>
           </ModalBody>
-          <ModalFooter>
+          <ModalFooter id="ModalFooter">
           <Button onClick={this.handleSubmit} color="primary"> Submit </Button>
           </ModalFooter>
           </Modal>
