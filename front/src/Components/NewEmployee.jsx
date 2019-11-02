@@ -45,7 +45,7 @@ class NewEmployee extends Component {
             <div className="new-employee-component">
                 <Button color="primary" size="lg" block onClick={this.toggle}>New Employee</Button>
                 <Modal className="new-employee-modal" isOpen={this.state.modal} toggle={this.toggle}>
-                    <ModalHeader id="ModalHeader" toggle={this.toggle}>Add a new Employee</ModalHeader>
+                    <ModalHeader id="ModalHeader" toggle={this.toggle}>Add a New Employee</ModalHeader>
                     <ModalBody  id="ModalBody">
                     <form className="form-new-employee" >
                     <Label className="Label" for="name" >Employee Name </Label>

@@ -9,6 +9,8 @@ import NewAppraisal from '../Components/NewAppraisal';
 import EmployeeAppraisal from '../Components/EmployeeAppraisal';
 import {Grid, Cell} from 'react-mdl';
 
+const employeeImage = require('./EmployeeImage.jpg')
+
 class EmployeeShow extends Component {
   constructor(props){
     super(props)
@@ -118,7 +120,7 @@ render(){
     <Grid>
       <Cell col={4}>
       <div className="profile-pic">
-      <img src="./public/EmployeeImage.jpg" alt="Employee-image"/>
+      <img height='328px' src={employeeImage} alt="Employee"/>
       </div>
       </Cell>
 

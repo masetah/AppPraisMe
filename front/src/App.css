@@ -157,23 +157,17 @@ p{
   color:#16202a;
   border: 1px solid white;
 }
-.profile-pic{
-  border: 1px solid white;
-}
+
 .employee-show-info{
   border: 1px solid white;
   background-image: url("/wood.jpg");
 }
-
-.employee-show-actions{
-  border: 1px solid white;
-}
-
 .employee-notes{
   border: 1px solid white;
 }
-.employee-notes ul li{
-  color:white;
+.notes-index{
+  display:flex;
+  margin: 15px;
 }
 #employeeTerminateButton{
   margin: 1%;
@@ -199,8 +193,6 @@ th, td{
   padding-left: 15%;
   padding-right: 15%;
 }
-
-
 #ModalFooter{
   background:  grey;;
 }

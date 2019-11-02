@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
-
+import {
+    Card, 
+    CardTitle, 
+    CardText } from 'react-mdl';
 class EmployeeNotes extends Component {
     constructor(){
         super()
@@ -9,21 +12,30 @@ class EmployeeNotes extends Component {
         }
     }
     render(){
-        const notes = this.props.notes.map((note, index)=> {
+        const notes = this.props.notes.map((note, index)=>{
                 if(this.props.employee.id===note.employee_id){
                     return <div key={index}>
-                    <ol> {note.note_type}
-                        <li>{note.note_date}</li>
-                        <li>{note.canned_note}</li>
-                        <li>{note.description}</li>
-                    </ol>
+                    <Card shadow={5} style={{width: '275px', margin: '15px'}}>
+                    <CardTitle style={{color: 'black', height: '115px', background: 'url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXtUQMNzppAVEpRuLJr1G8RXlKcWVzoLTlaXik3Iy5O_bzZbTI&s) center / cover' }}>
+                            {note.note_type}
+                        </CardTitle>
+                        <CardText style={{color: 'black', height:'115px'}}>
+                            <p>{note.note_date}</p>
+                            <p>{note.canned_note} /<br></br> {note.description}</p>
+                            {/* <p></p> */}
+                        </CardText>
+
+                    </Card>
+
                 </div>
                 }   
             })
                 return(
-                    <div className="notes-index">
+                    <div>
                         <h3>Employee Notes</h3>
-                                {notes}
+                    <div className="notes-index">
+                        {notes}
+                    </div>   
                     </div>
                 )
                 
