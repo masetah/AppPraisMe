@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import { Button } from 'reactstrap/lib';
 import Register from './Register';
-import {Link} from 'react-router-dom';
 import Footer from '../Components/Footer';
 import {Grid, Cell} from 'react-mdl';
 
@@ -64,11 +63,12 @@ class Login extends Component {
                             />{" "}
                             Remember me
                         </label>
-                        <button className="btn btn-lg btn-primary btn-block" id="loginButton" type="submit">
-                            <Link id="loginLink" to={{pathname:`/dashboard`, 
+                        <Button className="btn btn-lg btn-primary btn-block" id="loginButton" color="primary" href="/dashboard">
+                            Login
+                            {/* <Link id="loginLink" to={{pathname:`/dashboard`, 
                                 state: this.state
-                            }}>Login</Link> 
-                        </button>
+                            }}>Login</Link>  */}
+                        </Button>
                         <Button id="forgot-password" color="link" >Forgot Password?</Button>
                         <Register />
                         <p id="disclaimer">This application is a demo. Do not leave any sensitive information. Anyone can log in by clicking "login."</p>

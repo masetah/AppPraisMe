@@ -109,19 +109,22 @@ deleteEmployee = async (id) => {
                 appraisals={this.state.appraisals}
                 logout={this.handleLogout}
             />
+            <div className="heading">
             <Grid >
                 <Cell col={12}>
+                
                 <h1>User Dashboard </h1>
                 </Cell>
-                <Cell col={12}>
+                {/* <Cell col={12}> */}
                 <p> You've got a lot on your plate. We're here to lend a hand. 
                     On you customized dashboard you are able to see how your team 
                     is doing based on the appraisals you have filled out. You are 
                     also able to add new employees and check on your current employees 
                     by clicking on their name in your, "Current Employees" section. 
                 </p>
-                </Cell>
+                {/* </Cell> */}
             </Grid>
+            </div>
             <Grid>
             <Cell col={12}>
                 <KPI 

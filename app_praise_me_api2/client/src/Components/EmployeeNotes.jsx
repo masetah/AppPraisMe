@@ -1,8 +1,5 @@
 import React, {Component} from 'react';
-import {
-    Card, 
-    CardTitle, 
-    CardText } from 'react-mdl';
+import { Table } from 'reactstrap';
 class EmployeeNotes extends Component {
     constructor(){
         super()
@@ -14,29 +11,54 @@ class EmployeeNotes extends Component {
     render(){
         const notes = this.props.notes.map((note, index)=>{
                 if(this.props.employee.id===note.employee_id){
-                    return <div key={index}>
-                    <Card shadow={5} style={{width: '275px', margin: '10px', alignContent:'center'}}>
-                    <CardTitle style={{color: 'black', height: '115px', background: 'url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXtUQMNzppAVEpRuLJr1G8RXlKcWVzoLTlaXik3Iy5O_bzZbTI&s) center / cover' }}>
-                            {note.note_type}
-                        </CardTitle>
-                        <CardText style={{color: 'black', height:'115px'}}>
-                            <p>{note.note_date}</p>
-                            <p>{note.canned_note} /<br></br> {note.description}</p>
-                            {/* <p></p> */}
-                        </CardText>
-
-                    </Card>
-
-                </div>
+                    if(note.note_type==="Neutral") {
+                        return <React.Fragment>
+                            <tr>
+                            <th scope="row">{note.note_date}</th>
+                            <td><i style={{color:"gold", height:"25px", width:"25px"}} class="fa fa-minus-circle"></i></td>
+                            <td>{note.canned_note}</td>
+                            <td>{note.description}</td>
+                            </tr> 
+                            </React.Fragment>
+                    }else if(note.note_type==="Praise") {
+                        return <React.Fragment>
+                            <tr>
+                            <th scope="row">{note.note_date}</th>
+                            <td><i style={{color:"lightGreen", height:"25px", width:"25px"}} class="fa fa-plus-circle"></i></td>
+                            <td>{note.canned_note}</td>
+                            <td>{note.description}</td>
+                        </tr> 
+                    </React.Fragment>
+                    }else if(note.note_type==="Infraction") {
+                        return <React.Fragment>
+                            <tr>
+                            <th scope="row">{note.note_date}</th>
+                            <td><i style={{color:"red", height:"25px", width:"25px"}} class="fa fa-minus-circle"></i></td>
+                            <td>{note.canned_note}</td>
+                            <td>{note.description}</td>
+                            </tr> 
+                            </React.Fragment>
+                    }
                 }   
             })
                 return(
-                    <div>
+                    <div >
                         <h3>Employee Notes</h3>
-                    <div className="notes-index">
-                        {notes}
+                    <Table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Type</th>
+                            <th>Note</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {notes}
+                    </tbody> 
+                    </Table>
                     </div>   
-                    </div>
+
                 )
                 
         }

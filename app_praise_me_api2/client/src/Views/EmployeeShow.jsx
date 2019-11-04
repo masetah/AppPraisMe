@@ -107,26 +107,15 @@ render(){
         appraisals={this.state.appraisals}
         updateEmployeeState={this.updateEmployeeState}
       />
-    <Grid>
-    <Cell col={12}>
+      <div className="employee-show-body">
       <div className="employee-show-info">
         <h1>{this.props.location.state.employee.name}</h1>
         <h3 >{this.props.location.state.employee.position}</h3>
         <h5>Hired: {this.props.location.state.employee.hire_date}</h5>
       </div>
-    </Cell>
-    </Grid>
 
-    <Grid>
-      <Cell col={4}>
       <div className="profile-pic">
-      <img height='328px' src={employeeImage} alt="Employee"/>
-      </div>
-      </Cell>
-
-    <Cell col={8}>
-      <div className="employee-show-actions" >
-      <h3>Employee Actions</h3>
+      <img src={employeeImage} alt="Employee"/>
       <UpdateEmployee 
         updateEmployee={this.updateEmployee} 
         employee={this.props.location.state.employee}
@@ -148,20 +137,14 @@ render(){
         }}>Terminate
       </Button>
       </div>
-    </Cell>
-    </Grid>
-
-    <Grid>
-      <Cell col={12}>
       <div className="employee-notes">
       <EmployeeNotes 
         employee={this.props.location.state.employee} 
         notes={this.state.notes}
       />
-    </div>
-    </Cell>
-    </Grid>
-
+      </div>
+      </div>
+      
       <Footer/>
     </div>
     );

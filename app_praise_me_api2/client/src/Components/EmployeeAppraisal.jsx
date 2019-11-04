@@ -14,7 +14,7 @@ class EmployeeAppraisal extends Component {
                     state:{
                         appraisal: appraisal 
                     }
-                }}>{appraisal.employee_id}, {appraisal.period_start_date}  to  {appraisal.period_end_date}</Link>
+                }}>{appraisal.period_start_date}  to  {appraisal.period_end_date}</Link>
             </div>  
             }
         })
