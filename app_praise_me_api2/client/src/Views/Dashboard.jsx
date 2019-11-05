@@ -117,10 +117,13 @@ deleteEmployee = async (id) => {
                 </Cell>
                 {/* <Cell col={12}> */}
                 <p> You've got a lot on your plate. We're here to lend a hand. 
-                    On you customized dashboard you are able to see how your team 
+                    On your customized dashboard you are able to see how your team 
                     is doing based on the appraisals you have filled out. You are 
-                    also able to add new employees and check on your current employees 
-                    by clicking on their name in your, "Current Employees" section. 
+                    also able to add new employees and navigate to your current employees 
+                    by clicking on their name in your, "Current Employees" section. When on 
+                    their employee profile page you are able to edit their information, review
+                    any notes you have taken, create a new note, read through their past
+                    appraisals, or create a new appraisal for review.  
                 </p>
                 {/* </Cell> */}
             </Grid>

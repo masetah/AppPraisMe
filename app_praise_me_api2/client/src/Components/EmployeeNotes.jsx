@@ -12,28 +12,28 @@ class EmployeeNotes extends Component {
         const notes = this.props.notes.map((note, index)=>{
                 if(this.props.employee.id===note.employee_id){
                     if(note.note_type==="Neutral") {
-                        return <React.Fragment>
+                        return <React.Fragment key={index}>
                             <tr>
                             <th scope="row">{note.note_date}</th>
-                            <td><i style={{color:"gold", height:"25px", width:"25px"}} class="fa fa-minus-circle"></i></td>
+                            <td><i style={{color:"gold"}} className="fa fa-minus-circle"></i></td>
                             <td>{note.canned_note}</td>
                             <td>{note.description}</td>
                             </tr> 
                             </React.Fragment>
                     }else if(note.note_type==="Praise") {
-                        return <React.Fragment>
+                        return <React.Fragment key={index}>
                             <tr>
                             <th scope="row">{note.note_date}</th>
-                            <td><i style={{color:"lightGreen", height:"25px", width:"25px"}} class="fa fa-plus-circle"></i></td>
+                            <td><i style={{color:"lightGreen"}} className="fa fa-plus-circle"></i></td>
                             <td>{note.canned_note}</td>
                             <td>{note.description}</td>
                         </tr> 
                     </React.Fragment>
                     }else if(note.note_type==="Infraction") {
-                        return <React.Fragment>
+                        return <React.Fragment key={index}>
                             <tr>
                             <th scope="row">{note.note_date}</th>
-                            <td><i style={{color:"red", height:"25px", width:"25px"}} class="fa fa-minus-circle"></i></td>
+                            <td><i style={{color:"red"}} className="fa fa-minus-circle"></i></td>
                             <td>{note.canned_note}</td>
                             <td>{note.description}</td>
                             </tr> 
@@ -44,7 +44,7 @@ class EmployeeNotes extends Component {
                 return(
                     <div >
                         <h3>Employee Notes</h3>
-                    <Table>
+                    <Table className="notes-table">
                     <thead>
                         <tr>
                             <th>Date</th>
