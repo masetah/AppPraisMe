@@ -35421,3 +35421,68 @@ Processing by NotesController#create as */*
 Completed 201 Created in 23ms (Views: 1.0ms | ActiveRecord: 8.2ms | Allocations: 3460)
 
 
+Started GET "/appraisals" for ::1 at 2019-11-05 11:47:20 -0600
+Started GET "/employees" for ::1 at 2019-11-05 11:47:20 -0600
+  [1m[35m (4.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (4.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AppraisalsController#index as */*
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (4.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+  [1m[36mAppraisal Load (9.7ms)[0m  [1m[34mSELECT "appraisals".* FROM "appraisals"[0m
+  ↳ app/controllers/appraisals_controller.rb:4:in `index'
+Completed 200 OK in 60ms (Views: 21.3ms | ActiveRecord: 34.2ms | Allocations: 22132)
+
+
+Completed 200 OK in 60ms (Views: 6.3ms | ActiveRecord: 49.2ms | Allocations: 24148)
+
+
+Started GET "/appraisals" for ::1 at 2019-11-05 11:47:20 -0600
+Processing by AppraisalsController#index as */*
+  [1m[36mAppraisal Load (1.0ms)[0m  [1m[34mSELECT "appraisals".* FROM "appraisals"[0m
+  ↳ app/controllers/appraisals_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 1.0ms | Allocations: 2312)
+
+
+Started GET "/notes" for ::1 at 2019-11-05 11:47:28 -0600
+Processing by NotesController#index as */*
+Started GET "/appraisals" for ::1 at 2019-11-05 11:47:28 -0600
+Started GET "/employees" for ::1 at 2019-11-05 11:47:28 -0600
+Processing by AppraisalsController#index as */*
+  [1m[36mAppraisal Load (0.5ms)[0m  [1m[34mSELECT "appraisals".* FROM "appraisals"[0m
+  ↳ app/controllers/appraisals_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.5ms | Allocations: 2312)
+
+
+  [1m[36mNote Load (15.5ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  ↳ app/controllers/concerns/notes_controller.rb:4:in `index'
+Processing by EmployeesController#index as */*
+Completed 200 OK in 35ms (Views: 13.0ms | ActiveRecord: 20.4ms | Allocations: 16971)
+
+
+  [1m[36mEmployee Load (11.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+Completed 200 OK in 16ms (Views: 4.7ms | ActiveRecord: 11.0ms | Allocations: 10726)
+
+
+Started GET "/employees" for ::1 at 2019-11-05 11:47:48 -0600
+Started GET "/appraisals" for ::1 at 2019-11-05 11:47:48 -0600
+Processing by AppraisalsController#index as */*
+Processing by EmployeesController#index as */*
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:4:in `index'
+  [1m[36mAppraisal Load (1.2ms)[0m  [1m[34mSELECT "appraisals".* FROM "appraisals"[0m
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 1708)
+
+
+  ↳ app/controllers/appraisals_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 1.2ms | Allocations: 4229)
+
+
+Started GET "/appraisals" for ::1 at 2019-11-05 11:47:48 -0600
+Processing by AppraisalsController#index as */*
+  [1m[36mAppraisal Load (1.7ms)[0m  [1m[34mSELECT "appraisals".* FROM "appraisals"[0m
+  ↳ app/controllers/appraisals_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 1.7ms | Allocations: 2296)
+
+

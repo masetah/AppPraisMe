@@ -1,0 +1,2 @@
+web: cd client npm start 
+web: rails start
